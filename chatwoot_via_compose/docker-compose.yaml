@@ -36,7 +36,7 @@ services:
       - chatwoot-net
 
   chatwoot:
-    image: chatwoot-no-brand:latest
+    image: sha256:fd45d67fa86998d38b45628133f914d8c19674735cb4d14a1711aaa59166727d
     depends_on:
       postgres:
         condition: service_healthy
