@@ -155,14 +155,14 @@ img { display: block; max-width: 100%; }
   max-width: 520px; margin: 0 auto; line-height: var(--leading-relaxed);
 }
 
-/* ── Toolbar ─────────────────────────────────────────────────── */
-.toolbar {
-  position: sticky; top: 56px; z-index: 90;
-  background: rgba(255,255,255,.92);
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--c-border); padding: var(--s-3) 0;
+/* ── Table Toolbar ────────────────────────────────────────────── */
+.table-toolbar {
+  background: var(--c-bg); border: 1px solid var(--c-border);
+  border-bottom: none; border-radius: var(--r-lg) var(--r-lg) 0 0;
+  padding: var(--s-4);
 }
-.toolbar-inner { display: flex; gap: var(--s-3); align-items: center; flex-wrap: wrap; }
+.table-toolbar + .table-wrap { border-radius: 0 0 var(--r-lg) var(--r-lg); }
+.toolbar-row { display: flex; gap: var(--s-3); align-items: center; flex-wrap: wrap; }
 .search-box {
   position: relative; flex: 1; min-width: 200px;
 }
@@ -263,6 +263,11 @@ img { display: block; max-width: 100%; }
 .tbl tbody tr:hover td { background: #f8fafd; }
 .tbl tbody tr:hover td:first-child { background: #f1f5f9; }
 .tbl tbody tr.is-hidden { display: none; }
+
+/* Column highlighting when age filter is active */
+.tbl th.col-dim, .tbl td.col-dim { opacity: .3; }
+.tbl th.col-highlight { background: var(--c-primary-soft); }
+.tbl td.col-highlight { background: var(--c-primary-soft); }
 
 /* Pills */
 .pill {
@@ -467,7 +472,7 @@ img { display: block; max-width: 100%; }
   .hero { padding: var(--s-10) 0 var(--s-8); }
   .hero-title { font-size: 1.625rem; }
   .hero-sub { font-size: var(--text-base); }
-  .toolbar-inner { flex-wrap: wrap; }
+  .toolbar-row { flex-wrap: wrap; }
   .search-box { min-width: 100%; }
   .section { padding: var(--s-8) 0; }
   .card-grid { grid-template-columns: 1fr; }

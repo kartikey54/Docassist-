@@ -53,15 +53,15 @@
   /* ── Schedule Table ─────────────────────────────────────────── */
   function buildTable(){
     var head=$('#tableHead'),body=$('#tableBody');
-    var h='<tr><th>Vaccine</th>';
-    AGE_COLS.forEach(function(c){h+='<th>'+c.label+'</th>';});
+    var h='<tr><th data-col="name">Vaccine</th>';
+    AGE_COLS.forEach(function(c){h+='<th data-col="'+c.key+'">'+c.label+'</th>';});
     head.innerHTML=h+'</tr>';
     var r='';
     VACCINES.forEach(function(v){
       var ages=Object.keys(v.schedule);
       r+='<tr data-ages="'+ages.join(',')+'" data-name="'+v.name.toLowerCase()+' '+v.abbr.toLowerCase()+'" data-types="'+ages.map(function(a){return v.schedule[a].t;}).join(',')+'">';
-      r+='<td>'+v.name+' <span style="opacity:.4;font-weight:400">('+v.abbr+')</span></td>';
-      AGE_COLS.forEach(function(c){r+='<td>'+pill(v.schedule[c.key],v.id)+'</td>';});
+      r+='<td data-col="name">'+v.name+' <span style="opacity:.4;font-weight:400">('+v.abbr+')</span></td>';
+      AGE_COLS.forEach(function(c){r+='<td data-col="'+c.key+'">'+pill(v.schedule[c.key],v.id)+'</td>';});
       r+='</tr>';
     });
     body.innerHTML=r;
@@ -93,6 +93,7 @@
   function applyFilters(){
     var s=filters.search.toLowerCase(), a=filters.age, t=filters.type;
     var anyVisible=false;
+
     // Desktop table rows
     $$('#tableBody tr').forEach(function(tr){
       var nameMatch=!s||tr.dataset.name.indexOf(s)!==-1;
@@ -102,6 +103,16 @@
       tr.classList.toggle('is-hidden',!show);
       if(show) anyVisible=true;
     });
+
+    // Column highlighting: when an age is selected, highlight that column and dim others
+    $$('#scheduleTable th, #scheduleTable td').forEach(function(cell){
+      cell.classList.remove('col-highlight','col-dim');
+      if(a!=='all' && cell.dataset.col){
+        if(cell.dataset.col===a) cell.classList.add('col-highlight');
+        else if(cell.dataset.col!=='name') cell.classList.add('col-dim');
+      }
+    });
+
     // Mobile cards
     $$('.mobile-card').forEach(function(c){
       var nameMatch=!s||c.dataset.name.indexOf(s)!==-1;
@@ -109,6 +120,7 @@
       var typeMatch=t==='all'||c.dataset.types.split(',').indexOf(t)!==-1;
       c.style.display=(nameMatch&&ageMatch&&typeMatch)?'':'none';
     });
+
     var empty=$('#tableEmpty');
     if(empty) empty.hidden=anyVisible;
     renderChips();
