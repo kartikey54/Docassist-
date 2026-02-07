@@ -1,0 +1,12 @@
+{
+  "name": "tinyhumanmd",
+  "version": "1.0.0",
+  "description": "Pediatric clinical toolkit and vaccine calculator",
+  "scripts": {
+    "deploy": "wrangler pages deploy .",
+    "dev": "wrangler pages dev ."
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
