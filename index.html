@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Immunization Schedule &mdash; Birth to 18 Years</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>
+        <span>DocAssist</span>
+      </div>
+      <nav class="header-nav">
+        <a href="#schedule" class="nav-link active">Schedule</a>
+        <a href="#timeline" class="nav-link">Timeline</a>
+        <a href="#vaccines" class="nav-link">Vaccines</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">CDC Recommended &middot; 2025</p>
+      <h1 class="hero-title">Child &amp; Adolescent<br/>Immunization Schedule</h1>
+      <p class="hero-subtitle">A clearer way to see what vaccines are recommended from birth through age 18 &mdash; designed for healthcare providers.</p>
+
+      <div class="age-picker" id="agePicker">
+        <label class="age-label" for="ageSelect">Show vaccines for age</label>
+        <div class="select-wrap">
+          <select id="ageSelect">
+            <option value="all">All ages</option>
+            <option value="birth">Birth</option>
+            <option value="1mo">1 month</option>
+            <option value="2mo">2 months</option>
+            <option value="4mo">4 months</option>
+            <option value="6mo">6 months</option>
+            <option value="9mo">9 months</option>
+            <option value="12mo">12 months</option>
+            <option value="15mo">15 months</option>
+            <option value="18mo">18 months</option>
+            <option value="2yr">2 &ndash; 3 years</option>
+            <option value="4yr">4 &ndash; 6 years</option>
+            <option value="7yr">7 &ndash; 10 years</option>
+            <option value="11yr">11 &ndash; 12 years</option>
+            <option value="13yr">13 &ndash; 15 years</option>
+            <option value="16yr">16 years</option>
+            <option value="17yr">17 &ndash; 18 years</option>
+          </select>
+          <svg class="select-chevron" width="16" height="16" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEGEND ============ -->
+  <section class="legend-bar">
+    <div class="legend-inner">
+      <div class="legend-item"><span class="legend-dot dot-recommended"></span> Recommended</div>
+      <div class="legend-item"><span class="legend-dot dot-catchup"></span> Catch-up</div>
+      <div class="legend-item"><span class="legend-dot dot-highrisk"></span> High-risk / Special</div>
+      <div class="legend-item"><span class="legend-dot dot-shared"></span> Shared decision</div>
+    </div>
+  </section>
+
+  <!-- ============ SCHEDULE TABLE ============ -->
+  <section class="section" id="schedule">
+    <div class="section-inner">
+      <h2 class="section-title">Schedule by Age</h2>
+      <p class="section-desc">Scroll horizontally to see all age groups. Tap a cell for details.</p>
+      <div class="table-container" id="tableContainer">
+        <table class="schedule-table" id="scheduleTable">
+          <thead id="tableHead"></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section class="section section-alt" id="timeline">
+    <div class="section-inner">
+      <h2 class="section-title">Visual Timeline</h2>
+      <p class="section-desc">Each row is a vaccine. Dots mark individual doses across the age axis.</p>
+      <div class="timeline-container" id="timelineContainer"></div>
+    </div>
+  </section>
+
+  <!-- ============ VACCINE CARDS ============ -->
+  <section class="section" id="vaccines">
+    <div class="section-inner">
+      <h2 class="section-title">Vaccine Reference Cards</h2>
+      <p class="section-desc">Everything about each vaccine in one place &mdash; schedule, notes, and contraindications.</p>
+      <div class="cards-grid" id="cardsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Data sourced from the <a href="https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-age.html" target="_blank" rel="noopener">CDC Immunization Schedule</a> (Oct 2025). This tool is for informational purposes only&hairsp;&mdash;&hairsp;always consult the full CDC guidance.</p>
+      <p class="footer-copy">&copy; 2025 DocAssist &middot; Built for healthcare providers</p>
+    </div>
+  </footer>
+
+  <!-- ============ DETAIL MODAL ============ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
