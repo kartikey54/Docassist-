@@ -97,7 +97,7 @@ img { display: block; max-width: 100%; }
   text-decoration: none; white-space: nowrap;
 }
 .logo:hover { text-decoration: none; }
-.nav { flex: 1; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.nav { flex: 1; }
 .nav-list { display: flex; gap: var(--s-1); }
 .nav-link {
   padding: 6px 12px; border-radius: var(--r-full); font-size: var(--text-sm);
@@ -120,22 +120,21 @@ img { display: block; max-width: 100%; }
 .nav-dropdown:hover .nav-chev,
 .nav-dropdown.is-open .nav-chev { opacity: .8; transform: rotate(180deg); }
 .nav-dd-panel {
-  position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%);
-  min-width: 180px; padding: 6px;
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  min-width: 180px; padding: 14px 6px 6px;
   background: rgba(255,255,255,.92); backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid rgba(0,0,0,.06); border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0,0,0,.08), 0 1px 3px rgba(0,0,0,.04);
   z-index: 100;
-  opacity: 0; visibility: hidden;
+  opacity: 0; pointer-events: none;
   transform: translateX(-50%) translateY(4px);
-  transition: opacity 180ms var(--ease), transform 180ms var(--ease), visibility 0s 180ms;
+  transition: opacity 180ms var(--ease), transform 180ms var(--ease);
 }
 .nav-dropdown:hover .nav-dd-panel,
 .nav-dropdown.is-open .nav-dd-panel {
-  opacity: 1; visibility: visible;
+  opacity: 1; pointer-events: auto;
   transform: translateX(-50%) translateY(0);
-  transition: opacity 180ms var(--ease), transform 180ms var(--ease), visibility 0s 0s;
 }
 .nav-dd-link {
   display: block; padding: 7px 12px; border-radius: 8px;
