@@ -6,7 +6,7 @@
   <title>TinyHumanMD | Immunization Schedule, Birth to 18 Years</title>
   <meta name="description" content="Interactive CDC immunization schedule for children, adolescents, adults, pregnancy, and travel. A clinical decision support tool." />
   <meta name="keywords" content="immunization schedule, vaccine schedule, CDC vaccines, child vaccines, adult vaccines, travel vaccines, pregnancy vaccines" />
-  <link rel="canonical" href="https://kartikey54.github.io/Docassist-/" />
+  <link rel="canonical" href="https://tinyhumanmd.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
@@ -138,6 +138,7 @@
           <button class="tab is-active" role="tab" aria-selected="true" data-group="young" id="tab-young" aria-controls="catchupPanel">4 months &ndash; 6 years</button>
           <button class="tab" role="tab" aria-selected="false" data-group="older" id="tab-older" aria-controls="catchupPanel">7 &ndash; 18 years</button>
         </div>
+        <div class="catchup-scroll-hint" aria-hidden="true"><span>Swipe to see more</span> <span class="scroll-hint-arrow">&rarr;</span></div>
         <div class="table-wrap" id="catchupPanel" role="tabpanel" aria-labelledby="tab-young">
           <table class="tbl catchup-tbl" id="catchupTable">
             <thead id="catchupHead"></thead>
@@ -152,6 +153,7 @@
       <div class="container">
         <h2 class="section-heading">Visual Timeline</h2>
         <p class="section-sub">Each row is a vaccine. Dots mark individual doses across the age axis.</p>
+        <div class="timeline-scroll-hint" aria-hidden="true"><span>Swipe to see more</span> <span class="scroll-hint-arrow">&rarr;</span></div>
         <div class="timeline-wrap" id="timelineContainer"></div>
       </div>
     </section>

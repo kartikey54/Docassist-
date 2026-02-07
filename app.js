@@ -71,22 +71,31 @@
   }
 
   /* ── Mobile Cards ───────────────────────────────────────────── */
+  var CHIP_CLS = {rec:'mc-chip-rec',catch:'mc-chip-catch',risk:'mc-chip-risk',shared:'mc-chip-shared',note:'mc-chip-note'};
   function buildMobileCards(){
     var wrap=$('#mobileCards');
     var html='';
     VACCINES.forEach(function(v){
       var ages=Object.keys(v.schedule);
-      var chips=Object.entries(v.schedule).filter(function(e){return e[1].t==='rec';}).map(function(e){
+      // Show ALL dose ages, not just recommended
+      var chips=Object.entries(v.schedule).map(function(e){
         var al=(AGE_COLS.find(function(a){return a.key===e[0];})||{}).label||e[0];
-        return '<span class="card-chip">'+e[1].l+' | '+al+'</span>';
+        return '<span class="mc-chip '+(CHIP_CLS[e[1].t]||'mc-chip-note')+'">'+e[1].l+' | '+al+'</span>';
       }).join('');
-      html+='<div class="card mobile-card" data-ages="'+ages.join(',')+'" data-name="'+v.name.toLowerCase()+' '+v.abbr.toLowerCase()+'" data-types="'+ages.map(function(a){return v.schedule[a].t;}).join(',')+'">';
+      html+='<div class="card mobile-card" data-ages="'+ages.join(',')+'" data-name="'+v.name.toLowerCase()+' '+v.abbr.toLowerCase()+'" data-types="'+ages.map(function(a){return v.schedule[a].t;}).join(',')+'" data-vid="'+v.id+'">';
       html+='<div class="card-top"><div class="card-title">'+v.name+'</div><span class="card-abbr">'+v.abbr+'</span></div>';
       html+='<div class="card-body">'+v.desc+'</div>';
-      if(chips) html+='<div class="card-chips">'+chips+'</div>';
+      if(chips) html+='<div class="mc-chips">'+chips+'</div>';
       html+='</div>';
     });
     wrap.innerHTML=html;
+    // Tap a mobile card to open modal
+    $$('.mobile-card',wrap).forEach(function(c){
+      c.addEventListener('click',function(){
+        var v=VACCINES.find(function(x){return x.id===c.dataset.vid;});
+        if(v)openModal(v);
+      });
+    });
   }
 
   /* ── Filtering ──────────────────────────────────────────────── */
