@@ -1,0 +1,181 @@
+{
+  "_source": "Standard pediatric dosing references. Always verify with pharmacy and current drug reference.",
+  "_disclaimer": "This tool is for clinical decision support only. Verify all calculations before administration.",
+  "medications": [
+    {
+      "id": "acetaminophen",
+      "name": "Acetaminophen (Tylenol)",
+      "dosePerKg": 15,
+      "unit": "mg",
+      "frequency": "q4-6h",
+      "maxSingleDose": 1000,
+      "maxDailyDose": 75,
+      "maxDailyUnit": "mg/kg/day",
+      "maxDailyAbsolute": 4000,
+      "route": "PO/PR",
+      "concentrations": [
+        {"label": "Infant drops (160mg/5mL)", "mgPerMl": 32},
+        {"label": "Children's liquid (160mg/5mL)", "mgPerMl": 32},
+        {"label": "Children's chewable (160mg tab)", "mgPerTab": 160}
+      ],
+      "notes": "Max 5 doses in 24 hours. Use weight-based dosing, not age-based."
+    },
+    {
+      "id": "ibuprofen",
+      "name": "Ibuprofen (Advil/Motrin)",
+      "dosePerKg": 10,
+      "unit": "mg",
+      "frequency": "q6-8h",
+      "maxSingleDose": 400,
+      "maxDailyDose": 40,
+      "maxDailyUnit": "mg/kg/day",
+      "maxDailyAbsolute": 1200,
+      "route": "PO",
+      "minAge": "6 months",
+      "concentrations": [
+        {"label": "Infant drops (50mg/1.25mL)", "mgPerMl": 40},
+        {"label": "Children's liquid (100mg/5mL)", "mgPerMl": 20},
+        {"label": "Children's chewable (100mg tab)", "mgPerTab": 100}
+      ],
+      "notes": "Not for infants under 6 months. Give with food. Avoid in dehydrated patients."
+    },
+    {
+      "id": "amoxicillin-standard",
+      "name": "Amoxicillin (standard dose)",
+      "dosePerKg": 25,
+      "unit": "mg",
+      "frequency": "q12h (or 13.3 mg/kg q8h)",
+      "maxSingleDose": 500,
+      "maxDailyDose": 50,
+      "maxDailyUnit": "mg/kg/day",
+      "maxDailyAbsolute": 1500,
+      "route": "PO",
+      "concentrations": [
+        {"label": "125mg/5mL", "mgPerMl": 25},
+        {"label": "250mg/5mL", "mgPerMl": 50},
+        {"label": "400mg/5mL", "mgPerMl": 80}
+      ],
+      "notes": "Standard dose for URIs, UTIs, skin infections."
+    },
+    {
+      "id": "amoxicillin-high",
+      "name": "Amoxicillin (high dose - AOM)",
+      "dosePerKg": 45,
+      "unit": "mg",
+      "frequency": "q12h",
+      "maxSingleDose": 1000,
+      "maxDailyDose": 90,
+      "maxDailyUnit": "mg/kg/day",
+      "maxDailyAbsolute": 3000,
+      "route": "PO",
+      "concentrations": [
+        {"label": "250mg/5mL", "mgPerMl": 50},
+        {"label": "400mg/5mL", "mgPerMl": 80}
+      ],
+      "notes": "High dose for acute otitis media, sinusitis. Preferred first-line for AOM."
+    },
+    {
+      "id": "augmentin",
+      "name": "Amoxicillin-Clavulanate (Augmentin)",
+      "dosePerKg": 45,
+      "unit": "mg",
+      "frequency": "q12h (amoxicillin component)",
+      "maxSingleDose": 875,
+      "maxDailyDose": 90,
+      "maxDailyUnit": "mg/kg/day",
+      "maxDailyAbsolute": 1750,
+      "route": "PO",
+      "concentrations": [
+        {"label": "ES-600 (600mg/5mL)", "mgPerMl": 120},
+        {"label": "200mg/5mL", "mgPerMl": 40},
+        {"label": "400mg/5mL", "mgPerMl": 80}
+      ],
+      "notes": "Dose based on amoxicillin component. Use ES-600 for high-dose regimen. Give with food."
+    },
+    {
+      "id": "azithromycin",
+      "name": "Azithromycin (Zithromax)",
+      "dosePerKg": 10,
+      "unit": "mg",
+      "frequency": "Day 1, then 5mg/kg days 2-5",
+      "maxSingleDose": 500,
+      "maxDailyDose": 10,
+      "maxDailyUnit": "mg/kg day 1",
+      "maxDailyAbsolute": 500,
+      "route": "PO",
+      "concentrations": [
+        {"label": "100mg/5mL", "mgPerMl": 20},
+        {"label": "200mg/5mL", "mgPerMl": 40}
+      ],
+      "notes": "Day 1: 10mg/kg (max 500mg). Days 2-5: 5mg/kg (max 250mg). May give with or without food."
+    },
+    {
+      "id": "cephalexin",
+      "name": "Cephalexin (Keflex)",
+      "dosePerKg": 12.5,
+      "unit": "mg",
+      "frequency": "q6h (or 25mg/kg q12h)",
+      "maxSingleDose": 500,
+      "maxDailyDose": 50,
+      "maxDailyUnit": "mg/kg/day",
+      "maxDailyAbsolute": 4000,
+      "route": "PO",
+      "concentrations": [
+        {"label": "125mg/5mL", "mgPerMl": 25},
+        {"label": "250mg/5mL", "mgPerMl": 50}
+      ],
+      "notes": "First-gen cephalosporin. Good for skin/soft tissue, UTIs. Check for cephalosporin allergy."
+    },
+    {
+      "id": "prednisolone",
+      "name": "Prednisolone",
+      "dosePerKg": 1,
+      "unit": "mg",
+      "frequency": "once daily",
+      "maxSingleDose": 60,
+      "maxDailyDose": 2,
+      "maxDailyUnit": "mg/kg/day",
+      "maxDailyAbsolute": 60,
+      "route": "PO",
+      "concentrations": [
+        {"label": "15mg/5mL", "mgPerMl": 3},
+        {"label": "5mg/5mL (Prelone)", "mgPerMl": 1}
+      ],
+      "notes": "Asthma exacerbation: 1-2mg/kg/day for 3-5 days. Croup: 1mg/kg single dose. Give with food."
+    },
+    {
+      "id": "ondansetron",
+      "name": "Ondansetron (Zofran)",
+      "dosePerKg": 0.15,
+      "unit": "mg",
+      "frequency": "q8h PRN",
+      "maxSingleDose": 4,
+      "maxDailyDose": 0.45,
+      "maxDailyUnit": "mg/kg/day",
+      "maxDailyAbsolute": 16,
+      "route": "PO/IV",
+      "concentrations": [
+        {"label": "4mg/5mL oral solution", "mgPerMl": 0.8},
+        {"label": "4mg ODT", "mgPerTab": 4}
+      ],
+      "notes": "Anti-emetic. Can prolong QTc. Consider single dose for acute gastroenteritis."
+    },
+    {
+      "id": "diphenhydramine",
+      "name": "Diphenhydramine (Benadryl)",
+      "dosePerKg": 1.25,
+      "unit": "mg",
+      "frequency": "q6h",
+      "maxSingleDose": 50,
+      "maxDailyDose": 5,
+      "maxDailyUnit": "mg/kg/day",
+      "maxDailyAbsolute": 300,
+      "route": "PO/IV/IM",
+      "minAge": "2 years",
+      "concentrations": [
+        {"label": "12.5mg/5mL", "mgPerMl": 2.5}
+      ],
+      "notes": "Not recommended under 2 years. Causes sedation. Use for allergic reactions, not as sleep aid."
+    }
+  ]
+}

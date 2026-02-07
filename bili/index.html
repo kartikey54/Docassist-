@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newborn Bilirubin Calculator — AAP 2022 Jaundice Phototherapy & Exchange Thresholds | TinyHumanMD</title>
+  <link rel="canonical" href="https://tinyhumanmd.com/bili/" />
+  <meta name="description" content="Free AAP 2022 neonatal bilirubin risk assessment tool. Calculate phototherapy and exchange transfusion thresholds for newborns ≥35 weeks. TSB nomogram, neurotoxicity risk factors, hyperbilirubinemia management." />
+  <meta name="keywords" content="bilirubin calculator, jaundice newborn, phototherapy threshold, exchange transfusion, AAP 2022, neonatal hyperbilirubinemia, TSB nomogram, total serum bilirubin, newborn jaundice treatment, neonatal jaundice risk assessment, bili tool, bilirubin level chart, kernicterus prevention, phototherapy guidelines, hyperbilirubinemia calculator, neonatal bilirubin nomogram, jaundice in babies, newborn yellow skin, indirect bilirubin" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tinyhumanmd.com/bili/" />
+  <meta property="og:title" content="Newborn Bilirubin Calculator — AAP 2022 Jaundice Thresholds | TinyHumanMD" />
+  <meta property="og:description" content="Free neonatal bilirubin calculator. AAP 2022 phototherapy and exchange transfusion thresholds. TSB nomogram, neurotoxicity risk factors, hyperbilirubinemia management." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Newborn Bilirubin Calculator — AAP 2022 | TinyHumanMD" />
+  <meta name="twitter:description" content="Free neonatal jaundice risk assessment. AAP 2022 phototherapy and exchange transfusion thresholds. Works offline." />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/design.css" />
+  <link rel="stylesheet" href="bili.css" />
+  <link rel="manifest" href="../manifest.json" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="tool-nav-placeholder"></div>
+
+  <main id="main-content">
+    <section class="tool-hero">
+      <div class="container tool-hero-inner">
+        <span class="badge badge-amber">AAP 2022 Guidelines</span>
+        <h1 class="tool-title">Bilirubin Risk Assessment</h1>
+        <p class="tool-subtitle">Assess phototherapy and exchange transfusion thresholds for newborns &ge; 35 weeks gestation using the AAP 2022 clinical practice guidelines.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="tool-card">
+        <h3>Patient Information</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ga">Gestational Age (weeks)</label>
+            <select id="ga">
+              <option value="35">35 weeks</option>
+              <option value="36">36 weeks</option>
+              <option value="37">37 weeks</option>
+              <option value="38" selected>38 weeks</option>
+              <option value="39">39 weeks</option>
+              <option value="40">40+ weeks</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="postnatalAge">Postnatal Age (hours)</label>
+            <input type="number" id="postnatalAge" step="1" placeholder="e.g. 48" min="0" max="168" />
+            <span class="helper">Hours since birth (0-168)</span>
+          </div>
+          <div class="form-group">
+            <label for="tsbLevel">Total Serum Bilirubin (mg/dL)</label>
+            <input type="number" id="tsbLevel" step="0.1" placeholder="e.g. 12.5" min="0" max="40" />
+          </div>
+        </div>
+
+        <h3 style="margin-top:var(--s-6)">Neurotoxicity Risk Factors</h3>
+        <p style="font-size:var(--text-sm);color:var(--c-text-secondary);margin-bottom:var(--s-3)">Check any that apply — these lower the treatment threshold.</p>
+        <div class="risk-checklist" id="riskChecklist"></div>
+
+        <div class="form-row" style="margin-top:var(--s-6)">
+          <button class="btn btn-primary" id="calcBtn">Assess Risk</button>
+          <button class="btn btn-secondary" id="clearBtn">Clear</button>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="tool-card" id="resultsCard" style="display:none">
+        <h3>Assessment</h3>
+        <div id="riskBanner" class="risk-banner"></div>
+        <div class="result-grid" id="resultsGrid"></div>
+      </div>
+
+      <!-- Nomogram Chart -->
+      <div class="chart-wrap" id="chartSection" style="display:none">
+        <canvas id="biliChart"></canvas>
+      </div>
+
+      <div class="privacy-banner">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Your data never leaves this device. No accounts. No servers. No tracking.
+      </div>
+    </div>
+  </main>
+
+  <!-- FAQ Section — bilirubin/jaundice keywords -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions About Newborn Jaundice &amp; Bilirubin</h2>
+
+      <div class="faq-item"><button class="faq-question">What is neonatal jaundice and what causes high bilirubin in newborns?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p><strong>Neonatal jaundice</strong> (newborn jaundice) is a yellowing of the skin and eyes caused by elevated <strong>bilirubin</strong> levels in the blood. Bilirubin is produced when red blood cells break down. Newborns produce more bilirubin than adults because of higher red blood cell turnover, and their immature livers are slower to process and excrete it.</p><p>Common causes include <strong>physiologic jaundice</strong> (normal and self-limiting), <strong>breastfeeding jaundice</strong> (inadequate milk intake), <strong>breast milk jaundice</strong> (substances in breast milk affecting bilirubin metabolism), <strong>ABO/Rh incompatibility</strong> (hemolytic disease), and <strong>G6PD deficiency</strong>. Risk factors include prematurity, bruising from delivery, East Asian ethnicity, and a sibling who required phototherapy.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">What are the AAP 2022 phototherapy thresholds for hyperbilirubinemia?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The <strong>AAP 2022 Clinical Practice Guideline</strong> updated the thresholds for initiating phototherapy in newborns &ge; 35 weeks gestational age. Thresholds are based on the infant's <strong>gestational age</strong>, <strong>postnatal age in hours</strong>, and the presence of <strong>neurotoxicity risk factors</strong> (isoimmune hemolytic disease, G6PD deficiency, asphyxia, sepsis, acidosis, or albumin &lt; 3.0 g/dL).</p><p>For a term infant (38+ weeks) with no risk factors, phototherapy is typically indicated when total serum bilirubin (TSB) reaches approximately <strong>18 mg/dL at 24 hours or 21 mg/dL at 48+ hours</strong>. With risk factors, thresholds are <strong>2-4 mg/dL lower</strong>. Lower gestational ages (35-37 weeks) have progressively lower thresholds.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">When is exchange transfusion needed for neonatal jaundice?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p><strong>Exchange transfusion</strong> is a procedure where the newborn's blood is gradually replaced to rapidly lower dangerously high bilirubin levels and prevent <strong>kernicterus</strong> (bilirubin-induced brain damage). AAP 2022 guidelines specify exchange transfusion thresholds that are generally <strong>5-7 mg/dL above the phototherapy threshold</strong>.</p><p>Exchange transfusion is considered a medical emergency and is indicated when: (1) TSB exceeds the exchange threshold despite intensive phototherapy, (2) TSB continues to rise rapidly despite phototherapy, or (3) there are signs of acute bilirubin encephalopathy (lethargy, hypotonia, high-pitched cry, retrocollis/opisthotonus).</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">How does phototherapy work for treating newborn jaundice?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p><strong>Phototherapy</strong> uses blue-green light (wavelength 460-490 nm) to convert unconjugated bilirubin in the skin into water-soluble isomers that can be excreted without liver conjugation. The process involves <strong>photo-isomerization</strong> and <strong>photo-oxidation</strong> of bilirubin molecules.</p><p>Effective phototherapy requires: maximum <strong>skin surface area exposure</strong> (infant undressed except diaper), light source as close as safely possible (to maximize <strong>irradiance</strong>), and eye protection. <strong>Intensive phototherapy</strong> delivers &ge; 30 &micro;W/cm&sup2;/nm using LED or fiber-optic devices. Response is typically seen within 4-6 hours, and TSB should decrease by 1-2 mg/dL within 4-6 hours of starting treatment.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">What is kernicterus and how is it prevented?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p><strong>Kernicterus</strong> (chronic bilirubin encephalopathy) is a permanent form of brain damage caused by very high unconjugated bilirubin levels crossing the blood-brain barrier. It can cause cerebral palsy, hearing loss, gaze abnormalities, and intellectual disability. It is almost entirely preventable with proper monitoring and treatment.</p><p>Prevention includes: <strong>universal bilirubin screening</strong> before hospital discharge, use of hour-specific bilirubin nomograms to assess risk, appropriate follow-up within 1-2 days after discharge for at-risk infants, timely initiation of phototherapy, and awareness of neurotoxicity risk factors.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">What are neurotoxicity risk factors in the AAP bilirubin guideline?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The AAP 2022 guideline identifies specific <strong>neurotoxicity risk factors</strong> that lower the threshold for phototherapy and exchange transfusion. These factors increase the risk that bilirubin will cross the blood-brain barrier or cause damage at lower levels.</p><p>Risk factors include: <strong>Isoimmune hemolytic disease</strong> (Rh or ABO incompatibility with positive DAT), <strong>G6PD deficiency</strong>, <strong>perinatal asphyxia</strong>, <strong>sepsis</strong>, <strong>clinically significant acidosis</strong> (pH &lt; 7.1), and <strong>low serum albumin</strong> (&lt; 3.0 g/dL). When any of these factors are present, treatment is initiated at a lower bilirubin level.</p></div></div>
+    </div>
+  </section>
+
+  <div id="related-tools-placeholder"></div>
+
+  <footer class="tool-footer">
+    <div class="container tool-footer-inner">
+      <p>Based on <a href="https://publications.aap.org/pediatrics/article/150/3/e2022058859/188726/" target="_blank" rel="noopener">AAP 2022 Clinical Practice Guideline</a> for management of hyperbilirubinemia in newborns &ge; 35 weeks gestation.</p>
+      <p class="disclaimer">Built to support, not replace, clinical judgment. Always confirm with current AAP guidelines.</p>
+    </div>
+  </footer>
+
+  <!-- Structured Data: FAQ Schema -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is neonatal jaundice and what causes high bilirubin in newborns?","acceptedAnswer":{"@type":"Answer","text":"Neonatal jaundice is yellowing of skin and eyes caused by elevated bilirubin. Causes include physiologic jaundice, breastfeeding jaundice, ABO/Rh incompatibility, and G6PD deficiency."}},{"@type":"Question","name":"What are the AAP 2022 phototherapy thresholds for hyperbilirubinemia?","acceptedAnswer":{"@type":"Answer","text":"AAP 2022 thresholds are based on gestational age, postnatal age in hours, and neurotoxicity risk factors. For term infants with no risk factors, phototherapy is indicated around 18 mg/dL at 24 hours or 21 mg/dL at 48+ hours."}},{"@type":"Question","name":"When is exchange transfusion needed for neonatal jaundice?","acceptedAnswer":{"@type":"Answer","text":"Exchange transfusion is needed when TSB exceeds the exchange threshold (5-7 mg/dL above phototherapy threshold) despite intensive phototherapy, or when there are signs of acute bilirubin encephalopathy."}},{"@type":"Question","name":"How does phototherapy work for treating newborn jaundice?","acceptedAnswer":{"@type":"Answer","text":"Phototherapy uses blue-green light (460-490 nm) to convert unconjugated bilirubin into water-soluble isomers. Intensive phototherapy delivers ≥30 μW/cm²/nm and typically reduces TSB by 1-2 mg/dL within 4-6 hours."}},{"@type":"Question","name":"What is kernicterus and how is it prevented?","acceptedAnswer":{"@type":"Answer","text":"Kernicterus is permanent brain damage from very high unconjugated bilirubin. Prevention includes universal bilirubin screening before discharge, hour-specific nomograms, timely follow-up, and prompt phototherapy."}},{"@type":"Question","name":"What are neurotoxicity risk factors in the AAP bilirubin guideline?","acceptedAnswer":{"@type":"Answer","text":"Risk factors include isoimmune hemolytic disease, G6PD deficiency, perinatal asphyxia, sepsis, clinically significant acidosis (pH < 7.1), and low serum albumin (< 3.0 g/dL). These lower the treatment threshold."}}]}
+  </script>
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TinyHumanMD","item":"https://tinyhumanmd.com/"},{"@type":"ListItem","position":2,"name":"Bilirubin Calculator","item":"https://tinyhumanmd.com/bili/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Newborn Bilirubin Calculator — AAP 2022","description":"Free neonatal bilirubin risk assessment tool implementing AAP 2022 guidelines. Calculates phototherapy and exchange transfusion thresholds based on gestational age, postnatal hours, and neurotoxicity risk factors.","url":"https://tinyhumanmd.com/bili/","inLanguage":"en-US","isAccessibleForFree":true,"about":[{"@type":"MedicalCondition","name":"Neonatal Jaundice"},{"@type":"MedicalCondition","name":"Hyperbilirubinemia"},{"@type":"MedicalCondition","name":"Kernicterus"},{"@type":"MedicalCondition","name":"Hemolytic Disease of the Newborn"}],"specialty":{"@type":"MedicalSpecialty","name":"Neonatology"}}
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="../shared/chart-helpers.js"></script>
+  <script src="../shared/nav.js"></script>
+  <script src="../shared/analytics.js"></script>
+  <script src="../shared/seo.js"></script>
+  <script src="bili.js"></script>
+  <script>if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js').catch(function(){});</script>
+</body>
+</html>

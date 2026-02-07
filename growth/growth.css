@@ -1,0 +1,45 @@
+/* Growth Charts - Page-specific styles */
+
+.chart-standard-label {
+  font-size: var(--text-sm);
+  color: var(--c-text-muted);
+  margin-bottom: var(--s-3);
+  font-weight: 500;
+}
+
+.chart-tabs {
+  display: flex; gap: 2px;
+  background: var(--c-border-light);
+  padding: 3px; border-radius: var(--r-md);
+  margin-bottom: var(--s-4);
+}
+.chart-tab {
+  padding: 8px 20px; border: none; border-radius: var(--r-sm);
+  font-family: var(--font); font-size: var(--text-sm); font-weight: 600;
+  color: var(--c-text-secondary); background: transparent;
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+  flex: 1; text-align: center;
+}
+.chart-tab:hover { color: var(--c-text); }
+.chart-tab.is-active {
+  background: var(--c-surface); color: var(--c-text);
+  box-shadow: var(--shadow-xs);
+}
+
+.chart-wrap {
+  min-height: 400px;
+  margin-bottom: var(--s-6);
+}
+
+#isPreterm {
+  width: auto; height: auto;
+  margin-right: var(--s-2);
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .chart-tabs { flex-wrap: wrap; }
+  .chart-tab { padding: 6px 12px; font-size: var(--text-xs); }
+  .chart-wrap { min-height: 300px; }
+}

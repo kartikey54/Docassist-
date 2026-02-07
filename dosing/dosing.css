@@ -1,0 +1,85 @@
+/* Dosing Calculator - Page-specific styles */
+
+.weight-display {
+  margin-top: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  background: var(--c-primary-soft);
+  border-radius: var(--r-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--c-primary);
+}
+
+.med-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  margin-bottom: var(--s-4);
+  overflow: hidden;
+}
+.med-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: var(--s-4) var(--s-5);
+  border-bottom: 1px solid var(--c-border-light);
+  cursor: pointer;
+  transition: background var(--dur) var(--ease);
+}
+.med-header:hover { background: var(--c-border-light); }
+.med-name { font-weight: 700; font-size: var(--text-base); }
+.med-dose-summary {
+  font-size: var(--text-sm); font-weight: 600;
+  color: var(--c-primary);
+}
+
+.med-body { padding: var(--s-4) var(--s-5); }
+
+.dose-result-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: var(--s-2) 0;
+  border-bottom: 1px solid var(--c-border-light);
+  font-size: var(--text-sm);
+}
+.dose-result-row:last-child { border-bottom: none; }
+.dose-result-label { color: var(--c-text-secondary); }
+.dose-result-value { font-weight: 700; color: var(--c-text); }
+.dose-result-value.is-capped { color: var(--c-amber); }
+
+.volume-table {
+  margin-top: var(--s-3);
+  width: 100%;
+  border-collapse: collapse;
+}
+.volume-table th {
+  text-align: left; font-size: var(--text-xs); font-weight: 600;
+  color: var(--c-text-secondary); padding: var(--s-2) var(--s-3);
+  background: var(--c-bg); border-bottom: 1px solid var(--c-border);
+}
+.volume-table td {
+  font-size: var(--text-sm); padding: var(--s-2) var(--s-3);
+  border-bottom: 1px solid var(--c-border-light);
+}
+.volume-table td:last-child { font-weight: 700; color: var(--c-primary); }
+
+.med-notes {
+  margin-top: var(--s-3); padding-top: var(--s-3);
+  border-top: 1px solid var(--c-border-light);
+  font-size: var(--text-xs); color: var(--c-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+.med-freq {
+  display: inline-block; padding: 2px 8px;
+  border-radius: var(--r-full);
+  background: var(--c-green-soft); color: #15803d;
+  font-size: var(--text-xs); font-weight: 600;
+  margin-left: var(--s-2);
+}
+
+.disclaimer-card {
+  border-left: 4px solid var(--c-red);
+}
+
+@media (max-width: 768px) {
+  .med-header { flex-direction: column; align-items: flex-start; gap: var(--s-2); }
+  .med-body { padding: var(--s-3) var(--s-4); }
+}

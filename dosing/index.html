@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pediatric Dosing Calculator — Weight-Based Drug Doses for Children (mg/kg) | TinyHumanMD</title>
+  <link rel="canonical" href="https://tinyhumanmd.com/dosing/" />
+  <meta name="description" content="Free pediatric dosing calculator. Calculate weight-based medication doses for children. Tylenol, Motrin, Amoxicillin, Ceftriaxone, Prednisolone doses by weight (mg/kg). Safety limits and volumes." />
+  <meta name="keywords" content="pediatric dosing calculator, weight-based dosing, mg per kg calculator, tylenol dose by weight, children's tylenol dosage chart, ibuprofen dose by weight kg, motrin dosing chart, amoxicillin dose calculator, pediatric drug dose calculator, children's medication dosing, baby tylenol dosage, infant acetaminophen dose, ibuprofen pediatric dose, ceftriaxone pediatric dose, prednisolone dose children, ondansetron pediatric dose, antibiotic dose calculator, pediatric medication calculator, weight based medication dosing, how much tylenol for baby, how much motrin for toddler" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tinyhumanmd.com/dosing/" />
+  <meta property="og:title" content="Pediatric Dosing Calculator — Tylenol, Motrin, Amoxicillin (mg/kg) | TinyHumanMD" />
+  <meta property="og:description" content="Free weight-based pediatric dosing calculator. Tylenol, Motrin, Amoxicillin, Ceftriaxone, and more. Doses, volumes, safety limits by weight (mg/kg)." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Pediatric Dosing Calculator — Weight-Based (mg/kg) | TinyHumanMD" />
+  <meta name="twitter:description" content="Free pediatric dosing calculator. Tylenol, Motrin, Amoxicillin doses by weight. Safety limits and volumes. Works offline." />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/design.css" />
+  <link rel="stylesheet" href="dosing.css" />
+  <link rel="manifest" href="../manifest.json" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="tool-nav-placeholder"></div>
+
+  <main id="main-content">
+    <section class="tool-hero">
+      <div class="container tool-hero-inner">
+        <span class="badge badge-red">Verify Before Administering</span>
+        <h1 class="tool-title">Weight-Based Dosing</h1>
+        <p class="tool-subtitle">Enter the child's weight to calculate common pediatric medication doses with volumes and safety limits.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="tool-card">
+        <h3>Patient Weight</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="weight">Weight</label>
+            <input type="number" id="weight" step="0.1" placeholder="Enter weight" min="0" max="200" />
+          </div>
+          <div class="form-group">
+            <label for="weightUnit">Unit</label>
+            <select id="weightUnit">
+              <option value="kg">Kilograms (kg)</option>
+              <option value="lb">Pounds (lb)</option>
+            </select>
+          </div>
+          <div class="form-group" style="flex:none;align-self:flex-end">
+            <button class="btn btn-primary" id="calcBtn">Calculate Doses</button>
+          </div>
+        </div>
+        <div id="weightDisplay" class="weight-display" style="display:none"></div>
+      </div>
+
+      <!-- Medication Results -->
+      <div id="medsContainer" style="display:none"></div>
+
+      <div class="tool-card disclaimer-card" style="display:none" id="disclaimerCard">
+        <p style="font-size:var(--text-sm);color:var(--c-text-secondary);line-height:var(--leading-relaxed)">
+          <strong style="color:var(--c-red)">Important:</strong> These calculations are for clinical decision support only. Always verify doses with an up-to-date drug reference, check for allergies and contraindications, and confirm with pharmacy before administration. Doses shown are for otherwise healthy pediatric patients — adjust for renal/hepatic impairment.
+        </p>
+      </div>
+
+      <div class="privacy-banner">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Your data never leaves this device. No accounts. No servers. No tracking.
+      </div>
+    </div>
+  </main>
+
+  <!-- FAQ Section — dosing / medication keywords -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions About Pediatric Medication Dosing</h2>
+
+      <div class="faq-item"><button class="faq-question">How do you calculate pediatric medication doses by weight?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p><strong>Weight-based dosing</strong> (mg/kg dosing) is the standard method for calculating pediatric medication doses. The formula is: <strong>Dose (mg) = Weight (kg) &times; Dose per kg (mg/kg)</strong>. For example, acetaminophen at 15 mg/kg for a 10 kg child = 150 mg per dose.</p><p>To convert to a liquid volume: <strong>Volume (mL) = Dose (mg) &divide; Concentration (mg/mL)</strong>. If the acetaminophen suspension is 160 mg/5 mL (32 mg/mL), then 150 mg &divide; 32 mg/mL = 4.7 mL. Always verify the <strong>maximum single dose</strong> and <strong>maximum daily dose</strong> are not exceeded.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">How much Tylenol (acetaminophen) should I give my child?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The recommended dose of <strong>acetaminophen (Tylenol)</strong> for children is <strong>10-15 mg/kg per dose</strong>, given every <strong>4-6 hours</strong> as needed. The maximum single dose is 1000 mg and the maximum daily dose is 75 mg/kg/day (not to exceed 4000 mg/day).</p><p>Common formulations: <strong>Infant drops</strong> = 160 mg/5 mL; <strong>Children's suspension</strong> = 160 mg/5 mL; <strong>Children's chewable</strong> = 160 mg per tablet. Acetaminophen should not be given to infants under 2 months without pediatrician guidance. Do not exceed 5 doses in 24 hours.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">What is the correct ibuprofen (Motrin/Advil) dose for children?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The recommended dose of <strong>ibuprofen (Motrin/Advil)</strong> for children is <strong>10 mg/kg per dose</strong>, given every <strong>6-8 hours</strong> as needed. The maximum single dose is 400 mg and the maximum daily dose is 40 mg/kg/day (not to exceed 1200 mg/day).</p><p>Common formulations: <strong>Infant concentrated drops</strong> = 50 mg/1.25 mL; <strong>Children's suspension</strong> = 100 mg/5 mL; <strong>Children's chewable</strong> = 100 mg per tablet. Ibuprofen should <strong>not be given to infants under 6 months</strong>. It is an NSAID and should be avoided in children with kidney disease, bleeding disorders, or active GI bleeding.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">How is amoxicillin dosed for ear infections in children?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>For <strong>acute otitis media</strong> (ear infection), amoxicillin is the first-line antibiotic. Standard dose is <strong>40-45 mg/kg/day divided into 2 doses</strong> (every 12 hours). <strong>High-dose</strong> amoxicillin (80-90 mg/kg/day divided BID) is recommended for children under 2 years, those with severe symptoms, those who attend daycare, or those who have received amoxicillin in the past 30 days.</p><p>Available formulations: 125 mg/5 mL, 200 mg/5 mL, 250 mg/5 mL, and 400 mg/5 mL suspensions. Treatment duration: 10 days for children under 2 years or with severe symptoms; 5-7 days for children 2+ years with mild symptoms. Maximum dose is typically 3000 mg/day.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">Can I alternate Tylenol and Motrin for a child's fever?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>While many pediatricians endorse <strong>alternating acetaminophen and ibuprofen</strong> for persistent fever, the AAP notes there is limited evidence that this is more effective than using either drug alone. If alternating, a common approach is to give acetaminophen, then ibuprofen 3 hours later, alternating every 3-4 hours.</p><p><strong>Important safety considerations:</strong> Alternating increases the risk of dosing errors and accidental overdose. Never give both medications at the same time. Keep a written log of what was given and when. The goal of treating fever is to improve the child's comfort, not to normalize the temperature. Fever itself is a natural immune response and is generally not harmful unless extremely high (&gt; 105&deg;F / 40.6&deg;C).</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">What are the key safety checks when dosing pediatric medications?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>Essential safety checks for pediatric dosing: (1) <strong>Use weight in kilograms</strong> — never dose by age alone; (2) Verify the <strong>concentration/formulation</strong> matches what you're calculating; (3) Check the <strong>maximum single dose</strong> and <strong>maximum daily dose</strong>; (4) Screen for <strong>allergies and drug interactions</strong>; (5) Consider <strong>renal and hepatic function</strong> for dose adjustments.</p><p>Common errors to avoid: confusing mg with mL, using adult formulations for children, exceeding the adult maximum dose when a weight-based calculation suggests it, and not accounting for combination products that may contain the same active ingredient (e.g., acetaminophen in combination cold medicines).</p></div></div>
+    </div>
+  </section>
+
+  <div id="related-tools-placeholder"></div>
+
+  <footer class="tool-footer">
+    <div class="container tool-footer-inner">
+      <p>Dosing based on standard pediatric references including AAP, Red Book, and Harriet Lane Handbook guidelines. Always confirm with current pharmacological guidelines.</p>
+      <p class="disclaimer">Built to support, not replace, clinical judgment.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate pediatric medication doses by weight?","acceptedAnswer":{"@type":"Answer","text":"Dose (mg) = Weight (kg) × Dose per kg (mg/kg). Volume (mL) = Dose (mg) ÷ Concentration (mg/mL). Always verify maximum single dose and maximum daily dose are not exceeded."}},{"@type":"Question","name":"How much Tylenol (acetaminophen) should I give my child?","acceptedAnswer":{"@type":"Answer","text":"Acetaminophen: 10-15 mg/kg every 4-6 hours. Max single dose: 1000 mg. Max daily: 75 mg/kg or 4000 mg. Available as 160 mg/5 mL suspension. Not recommended under 2 months without pediatrician guidance."}},{"@type":"Question","name":"What is the correct ibuprofen (Motrin/Advil) dose for children?","acceptedAnswer":{"@type":"Answer","text":"Ibuprofen: 10 mg/kg every 6-8 hours. Max single dose: 400 mg. Max daily: 40 mg/kg or 1200 mg. Available as 100 mg/5 mL suspension. Not for infants under 6 months."}},{"@type":"Question","name":"How is amoxicillin dosed for ear infections in children?","acceptedAnswer":{"@type":"Answer","text":"Standard dose: 40-45 mg/kg/day divided BID. High-dose: 80-90 mg/kg/day for severe cases, children under 2, daycare attendance, or recent antibiotic use. Treatment: 10 days for <2 years, 5-7 days for older mild cases."}},{"@type":"Question","name":"Can I alternate Tylenol and Motrin for a child's fever?","acceptedAnswer":{"@type":"Answer","text":"Alternating is commonly practiced but has limited evidence of superiority. If alternating, give acetaminophen then ibuprofen 3 hours later. Keep a written log to prevent dosing errors. Goal is comfort, not normalizing temperature."}},{"@type":"Question","name":"What are the key safety checks when dosing pediatric medications?","acceptedAnswer":{"@type":"Answer","text":"Use weight in kg (never dose by age), verify concentration/formulation, check max single and daily doses, screen for allergies, and consider renal/hepatic function. Common errors: confusing mg with mL and using adult formulations."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TinyHumanMD","item":"https://tinyhumanmd.com/"},{"@type":"ListItem","position":2,"name":"Dosing Calculator","item":"https://tinyhumanmd.com/dosing/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Pediatric Dosing Calculator","description":"Free weight-based pediatric dosing calculator. Calculate doses for Tylenol, Motrin, Amoxicillin, and other common medications by weight (mg/kg). Includes safety limits and liquid volumes.","url":"https://tinyhumanmd.com/dosing/","inLanguage":"en-US","isAccessibleForFree":true,"about":[{"@type":"MedicalCondition","name":"Pediatric Fever"},{"@type":"MedicalCondition","name":"Acute Otitis Media"},{"@type":"MedicalCondition","name":"Pediatric Pain Management"}],"specialty":{"@type":"MedicalSpecialty","name":"Pediatrics"}}
+  </script>
+
+  <script src="../shared/nav.js"></script>
+  <script src="../shared/analytics.js"></script>
+  <script src="../shared/seo.js"></script>
+  <script src="dosing.js"></script>
+  <script>if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js').catch(function(){});</script>
+</body>
+</html>

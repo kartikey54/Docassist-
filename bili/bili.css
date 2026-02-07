@@ -1,0 +1,56 @@
+/* Bilirubin Calculator - Page-specific styles */
+
+.risk-checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-2);
+}
+.risk-check {
+  display: flex; align-items: center; gap: var(--s-2);
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-sm);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background var(--dur) var(--ease);
+}
+.risk-check:hover { background: var(--c-border-light); }
+.risk-check input {
+  width: auto; height: auto;
+  accent-color: var(--c-primary);
+}
+
+.risk-banner {
+  padding: var(--s-4) var(--s-5);
+  border-radius: var(--r-md);
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--s-4);
+  text-align: center;
+}
+.risk-banner.level-low {
+  background: var(--c-green-soft);
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+.risk-banner.level-approaching {
+  background: var(--c-amber-soft);
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+.risk-banner.level-above-photo {
+  background: var(--c-red-soft);
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+.risk-banner.level-above-exchange {
+  background: #7f1d1d;
+  color: #fff;
+  border: 1px solid #7f1d1d;
+}
+
+.chart-wrap { min-height: 400px; margin-bottom: var(--s-6); }
+
+@media (max-width: 768px) {
+  .risk-checklist { grid-template-columns: 1fr; }
+  .chart-wrap { min-height: 300px; }
+}

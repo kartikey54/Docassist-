@@ -3,14 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TinyHumanMD | Immunization Schedule, Birth to 18 Years</title>
-  <meta name="description" content="Interactive CDC immunization schedule for children, adolescents, adults, pregnancy, and travel. A clinical decision support tool." />
-  <meta name="keywords" content="immunization schedule, vaccine schedule, CDC vaccines, child vaccines, adult vaccines, travel vaccines, pregnancy vaccines" />
+  <title>CDC Immunization Schedule 2025 — Pediatric Vaccine Schedule & Clinical Tools | TinyHumanMD</title>
+  <meta name="description" content="Free interactive CDC immunization schedule 2025 for children birth to 18 years. Pediatric clinical tools: growth charts, bilirubin calculator, gestational age calculator, catch-up vaccines, and dosing calculator. Works offline." />
+  <meta name="keywords" content="CDC immunization schedule 2025, pediatric vaccine schedule, childhood immunization schedule, baby vaccine schedule, vaccine schedule by age, recommended vaccines for children, infant vaccination schedule, toddler vaccine chart, adolescent vaccine schedule, immunization schedule birth to 18, CDC vaccine chart, child immunization timeline, well child visit vaccines, DTaP vaccine schedule, MMR vaccine schedule, Hep B vaccine, polio vaccine schedule, rotavirus vaccine, varicella vaccine, HPV vaccine, meningococcal vaccine, pneumococcal vaccine, flu vaccine for kids, COVID vaccine schedule children, Tdap booster, pregnancy vaccines, travel vaccines for kids, pediatric clinical tools" />
   <link rel="canonical" href="https://tinyhumanmd.com/" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tinyhumanmd.com/" />
+  <meta property="og:title" content="TinyHumanMD — Pediatric Clinical Tools" />
+  <meta property="og:description" content="Free pediatric clinical toolkit: immunization schedules, growth charts, bilirubin calculator, gestational age calculator, catch-up vaccines, and weight-based dosing." />
+  <meta property="og:site_name" content="TinyHumanMD" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="TinyHumanMD — Pediatric Clinical Tools" />
+  <meta name="twitter:description" content="Free pediatric clinical toolkit: immunization schedules, growth charts, bilirubin calculator, and more. Works offline. No accounts needed." />
+
+  <!-- Additional SEO -->
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="TinyHumanMD" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- DNS Prefetch for analytics (loaded async, won't block) -->
+  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
@@ -32,6 +56,11 @@
           <li><a href="#pregnancy" class="nav-link" data-section="pregnancy">Pregnancy</a></li>
           <li><a href="#travel" class="nav-link" data-section="travel">Travel</a></li>
           <li><a href="#mpox" class="nav-link" data-section="mpox">Mpox</a></li>
+          <li class="nav-divider" style="width:1px;height:20px;background:var(--c-border);margin:0 4px"></li>
+          <li><a href="/growth/" class="nav-link">Growth</a></li>
+          <li><a href="/bili/" class="nav-link">Bilirubin</a></li>
+          <li><a href="/ga-calc/" class="nav-link">GA Calc</a></li>
+          <li><a href="/dosing/" class="nav-link">Dosing</a></li>
         </ul>
       </nav>
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
@@ -206,6 +235,42 @@
       </div>
     </section>
 
+    <!-- ======== FAQ SECTION (SEO) ======== -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions About Childhood Immunizations</h2>
+
+        <div class="faq-item"><button class="faq-question">What vaccines does my child need from birth to 18 years?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The <strong>CDC Recommended Immunization Schedule</strong> covers vaccines from birth through 18 years. Key vaccines include: <strong>Hepatitis B</strong> (birth, 1 month, 6 months), <strong>Rotavirus</strong> (2, 4, 6 months), <strong>DTaP</strong> (2, 4, 6, 15-18 months, 4-6 years), <strong>Hib</strong> (2, 4, 6, 12-15 months), <strong>PCV15/PCV20</strong> (2, 4, 6, 12-15 months), <strong>IPV (Polio)</strong> (2, 4, 6-18 months, 4-6 years), <strong>Influenza</strong> (annually from 6 months), <strong>MMR</strong> (12-15 months, 4-6 years), <strong>Varicella</strong> (12-15 months, 4-6 years), <strong>Hepatitis A</strong> (12-23 months), <strong>Meningococcal ACWY</strong> (11-12 years, 16 years), <strong>HPV</strong> (9-14 years, 2 doses), and <strong>Tdap</strong> (11-12 years).</p></div></div>
+
+        <div class="faq-item"><button class="faq-question">What is the CDC immunization schedule for 2025?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The <strong>2025 CDC immunization schedule</strong>, approved by the Advisory Committee on Immunization Practices (ACIP), includes updates from recent years. Key changes include updated <strong>pneumococcal vaccine</strong> recommendations (PCV15 + PPSV23 or PCV20), updated <strong>COVID-19 vaccine</strong> guidance, and continued emphasis on <strong>RSV prevention</strong> (nirsevimab or maternal vaccine).</p><p>The schedule is organized by age groups: birth, 1 month, 2 months, 4 months, 6 months, 9 months, 12 months, 15 months, 18 months, 19-23 months, 2-3 years, 4-6 years, 7-10 years, 11-12 years, 13-15 years, and 16-18 years. This tool shows every recommended vaccine at each age with dosing details.</p></div></div>
+
+        <div class="faq-item"><button class="faq-question">Are vaccines safe for children? What are common side effects?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>Vaccines undergo rigorous <strong>safety testing</strong> through the FDA approval process and are continuously monitored through systems like <strong>VAERS</strong> (Vaccine Adverse Event Reporting System), the <strong>Vaccine Safety Datalink</strong>, and <strong>CISA</strong> (Clinical Immunization Safety Assessment). The benefits of vaccination far outweigh the risks.</p><p>Common mild side effects include: <strong>injection site soreness/redness</strong>, low-grade <strong>fever</strong>, <strong>fussiness</strong>, and <strong>fatigue</strong>. These typically resolve within 1-2 days. Serious adverse events are extremely rare. <strong>Anaphylaxis</strong> occurs in approximately 1 in 1 million doses and is managed by the provider's observation period. Vaccines do not cause autism — this has been thoroughly studied and disproven.</p></div></div>
+
+        <div class="faq-item"><button class="faq-question">What vaccines are recommended during pregnancy?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The CDC recommends several vaccines during <strong>pregnancy</strong> to protect both mother and baby: <strong>Tdap</strong> (during each pregnancy, preferably at 27-36 weeks gestation) to provide passive pertussis antibodies to the newborn, <strong>Influenza</strong> (inactivated flu shot, any trimester), <strong>COVID-19 vaccine</strong> (recommended during pregnancy), and <strong>RSV vaccine</strong> (Abrysvo, given at 32-36 weeks gestation, September-January).</p><p><strong>Live vaccines</strong> (MMR, Varicella, LAIV/FluMist) are <strong>contraindicated during pregnancy</strong>. If a pregnant woman is not immune to rubella or varicella, these vaccines should be administered after delivery. The maternal Tdap vaccine provides up to <strong>78% protection</strong> against pertussis in infants during the first 2 months of life before the baby's own DTaP series begins.</p></div></div>
+
+        <div class="faq-item"><button class="faq-question">What is the HPV vaccine and when should children get it?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The <strong>HPV (Human Papillomavirus) vaccine</strong> protects against HPV types that cause cervical, throat, anal, and other cancers, as well as genital warts. The current vaccine (<strong>Gardasil 9</strong>) covers 9 HPV types responsible for approximately 90% of cervical cancers.</p><p>The CDC recommends <strong>routine HPV vaccination at age 11-12 years</strong>, though it can be started as early as age 9. If the series is started before age 15, only <strong>2 doses</strong> are needed (0 and 6-12 months apart). Starting at age 15 or older requires <strong>3 doses</strong> (0, 1-2, and 6 months). Catch-up vaccination is recommended through age 26, and shared clinical decision-making applies for ages 27-45. The vaccine is most effective when given <strong>before exposure to HPV</strong>.</p></div></div>
+
+        <div class="faq-item"><button class="faq-question">What is the meningococcal vaccine schedule for adolescents?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>There are two types of <strong>meningococcal vaccines</strong>: <strong>MenACWY</strong> (protects against serogroups A, C, W, and Y) and <strong>MenB</strong> (protects against serogroup B). The CDC recommends: <strong>MenACWY</strong> at age 11-12 years with a booster at age 16, and <strong>MenB</strong> based on shared clinical decision-making at age 16-23 years (preferred at 16-18).</p><p>College freshmen living in dormitories who have not received MenACWY after age 16 should receive a dose. MenACWY is also recommended for children with <strong>complement deficiency</strong>, <strong>functional or anatomic asplenia</strong>, <strong>HIV</strong>, and those traveling to areas with meningococcal disease.</p></div></div>
+
+        <div class="faq-item"><button class="faq-question">What travel vaccines do children need before international travel?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>Children traveling internationally may need additional vaccines depending on the destination. Common <strong>travel vaccines</strong> include: <strong>Hepatitis A</strong> (if not already vaccinated), <strong>Typhoid</strong> (for South Asia, parts of Africa and Latin America), <strong>Yellow Fever</strong> (required for certain African and South American countries; available from age 9 months), <strong>Japanese Encephalitis</strong> (for extended stays in rural Asia), and <strong>Rabies</strong> (pre-exposure prophylaxis for areas with high animal rabies).</p><p>Visit a travel health provider <strong>4-6 weeks before departure</strong>. Ensure all <strong>routine childhood vaccines are up to date</strong> before travel, as diseases like measles and polio are still endemic in some regions. The CDC's <strong>Travelers' Health</strong> website provides destination-specific recommendations.</p></div></div>
+
+        <div class="faq-item"><button class="faq-question">What should I do if my child missed a vaccine dose?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>If your child has <strong>missed one or more vaccine doses</strong>, they can catch up without restarting the series. The CDC publishes a <strong>catch-up immunization schedule</strong> with minimum intervals between doses. Key principle: <strong>vaccine series never need to be restarted</strong> regardless of how long ago the last dose was given.</p><p>Use our <a href="/catch-up/">Catch-Up Immunization Calculator</a> to generate a personalized catch-up plan. Multiple vaccines can be safely given at the same visit to help catch up quickly. Contact your pediatrician or local health department to schedule catch-up vaccinations.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ======== TOOLS CROSS-LINKS ======== -->
+    <section class="section" id="tools">
+      <div class="container">
+        <h2 style="text-align:center;font-size:var(--text-2xl);font-weight:800;margin-bottom:var(--s-6)">More Pediatric Clinical Tools</h2>
+        <div class="tools-grid">
+          <a href="/growth/" class="tool-link-card"><h3>Growth Chart Calculator</h3><p>WHO, CDC & Fenton percentile calculator for weight, length/height, head circumference, and BMI.</p></a>
+          <a href="/bili/" class="tool-link-card"><h3>Bilirubin Calculator</h3><p>AAP 2022 phototherapy and exchange transfusion thresholds for neonatal jaundice assessment.</p></a>
+          <a href="/ga-calc/" class="tool-link-card"><h3>Gestational Age Calculator</h3><p>Calculate GA from LMP/EDD, corrected age for preterm infants, due date calculator.</p></a>
+          <a href="/catch-up/" class="tool-link-card"><h3>Catch-Up Immunization</h3><p>Personalized catch-up vaccine plan based on CDC/ACIP 2025 recommendations.</p></a>
+          <a href="/dosing/" class="tool-link-card"><h3>Dosing Calculator</h3><p>Weight-based pediatric drug doses: Tylenol, Motrin, Amoxicillin, and more (mg/kg).</p></a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ======== FOOTER ======== -->
@@ -226,6 +291,26 @@
     </div>
   </div>
 
+  <!-- Structured Data: MedicalWebPage + WebApplication -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalWebPage","name":"CDC Immunization Schedule 2025 — Pediatric Clinical Tools","description":"Free interactive CDC immunization schedule 2025 for children birth to 18 years. Includes growth charts, bilirubin calculator, gestational age calculator, catch-up immunization planner, and weight-based dosing calculator.","url":"https://tinyhumanmd.com","inLanguage":"en-US","isAccessibleForFree":true,"dateModified":"2025-01-15","audience":{"@type":"MedicalAudience","audienceType":"Clinician"},"medicalAudience":{"@type":"MedicalAudience","audienceType":["Physician","Nurse","Pharmacist","MedicalStudent","Patient"]},"specialty":[{"@type":"MedicalSpecialty","name":"Pediatrics"},{"@type":"MedicalSpecialty","name":"Family Medicine"},{"@type":"MedicalSpecialty","name":"Neonatology"}],"about":[{"@type":"MedicalCondition","name":"Vaccine-Preventable Diseases"},{"@type":"MedicalCondition","name":"Childhood Immunization"},{"@type":"MedicalCondition","name":"Neonatal Jaundice"},{"@type":"MedicalCondition","name":"Growth Disorders"},{"@type":"MedicalCondition","name":"Prematurity"}],"mainEntity":{"@type":"WebApplication","name":"TinyHumanMD","applicationCategory":"HealthApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["CDC Immunization Schedule (2025)","Growth Chart Calculator (WHO, CDC, Fenton)","AAP 2022 Bilirubin Risk Assessment","Gestational Age & Corrected Age Calculator","Catch-Up Immunization Planner","Weight-Based Dosing Calculator","Offline Support (PWA)","Privacy-First (No Server, No Accounts)"]}}
+  </script>
+  <!-- Structured Data: FAQ Schema -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What vaccines does my child need from birth to 18 years?","acceptedAnswer":{"@type":"Answer","text":"The CDC schedule includes Hepatitis B (birth), Rotavirus, DTaP, Hib, PCV15/PCV20, IPV, Influenza (from 6 months), MMR, Varicella, Hepatitis A, Meningococcal ACWY, HPV, and Tdap. Each has specific timing from birth through 18 years."}},{"@type":"Question","name":"What is the CDC immunization schedule for 2025?","acceptedAnswer":{"@type":"Answer","text":"The 2025 CDC schedule approved by ACIP includes updated pneumococcal, COVID-19, and RSV prevention recommendations organized by age from birth through 18 years."}},{"@type":"Question","name":"Are vaccines safe for children?","acceptedAnswer":{"@type":"Answer","text":"Vaccines undergo rigorous FDA safety testing and continuous monitoring through VAERS and Vaccine Safety Datalink. Common mild side effects include injection site soreness and low-grade fever. Serious adverse events are extremely rare."}},{"@type":"Question","name":"What vaccines are recommended during pregnancy?","acceptedAnswer":{"@type":"Answer","text":"CDC recommends Tdap (27-36 weeks each pregnancy), inactivated Influenza (any trimester), COVID-19 vaccine, and RSV vaccine (Abrysvo at 32-36 weeks, Sept-Jan). Live vaccines (MMR, Varicella) are contraindicated."}},{"@type":"Question","name":"What is the HPV vaccine and when should children get it?","acceptedAnswer":{"@type":"Answer","text":"Gardasil 9 protects against 9 HPV types causing ~90% of cervical cancers. Routine vaccination at 11-12 years; if started before 15, only 2 doses needed. Catch-up through age 26."}},{"@type":"Question","name":"What is the meningococcal vaccine schedule for adolescents?","acceptedAnswer":{"@type":"Answer","text":"MenACWY at 11-12 years with booster at 16. MenB based on shared decision-making at 16-23 years. College freshmen in dorms need MenACWY if not received after age 16."}},{"@type":"Question","name":"What travel vaccines do children need?","acceptedAnswer":{"@type":"Answer","text":"Depends on destination. Common: Hepatitis A, Typhoid, Yellow Fever, Japanese Encephalitis, Rabies. See a travel health provider 4-6 weeks before departure. Ensure routine vaccines are current."}},{"@type":"Question","name":"What should I do if my child missed a vaccine dose?","acceptedAnswer":{"@type":"Answer","text":"Vaccine series never need to be restarted. Use the CDC catch-up schedule or the TinyHumanMD Catch-Up Calculator to generate a personalized plan. Multiple vaccines can be given at the same visit."}}]}
+  </script>
+  <!-- Structured Data: WebSite with SearchAction -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"TinyHumanMD","url":"https://tinyhumanmd.com","description":"Free pediatric clinical tools: CDC immunization schedule, growth charts, bilirubin calculator, and more.","potentialAction":{"@type":"SearchAction","target":"https://tinyhumanmd.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
+  </script>
+
   <script src="app.js"></script>
+  <script src="shared/analytics.js"></script>
+  <script src="shared/seo.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(function() {});
+    }
+  </script>
 </body>
 </html>

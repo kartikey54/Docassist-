@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pediatric Growth Chart Calculator — WHO, CDC & Fenton Percentiles | TinyHumanMD</title>
+  <link rel="canonical" href="https://tinyhumanmd.com/growth/" />
+  <meta name="description" content="Free pediatric growth chart calculator. Calculate percentiles and Z-scores using WHO (0-24 months), CDC (2-20 years), and Fenton 2025 preterm standards. Weight-for-age, length-for-age, head circumference, BMI-for-age." />
+  <meta name="keywords" content="pediatric growth chart calculator, baby weight percentile, infant growth percentile, child growth chart, WHO growth chart, CDC growth chart, Fenton preterm growth chart, Z-score calculator, weight for age percentile, height for age percentile, head circumference percentile, BMI for age calculator, baby growth tracker, growth percentile calculator, child weight percentile, infant length percentile, LMS method, weight for length, growth velocity, growth faltering, failure to thrive, child growth standards, growth chart boy, growth chart girl, preterm infant growth, NICU growth chart, newborn weight percentile" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tinyhumanmd.com/growth/" />
+  <meta property="og:title" content="Pediatric Growth Chart Calculator — WHO, CDC & Fenton | TinyHumanMD" />
+  <meta property="og:description" content="Free growth chart calculator. WHO (0-24m), CDC (2-20y), and Fenton 2025 (preterm) standards. Weight, length, head circumference, BMI percentiles and Z-scores." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Pediatric Growth Chart Calculator | TinyHumanMD" />
+  <meta name="twitter:description" content="Free pediatric growth chart calculator with WHO, CDC, and Fenton standards. Percentiles and Z-scores. Works offline." />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/design.css" />
+  <link rel="stylesheet" href="growth.css" />
+  <link rel="manifest" href="../manifest.json" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="tool-nav-placeholder"></div>
+
+  <main id="main-content">
+    <section class="tool-hero">
+      <div class="container tool-hero-inner">
+        <span class="badge badge-blue">WHO &middot; CDC &middot; Fenton 2025</span>
+        <h1 class="tool-title">Growth Charts</h1>
+        <p class="tool-subtitle">Calculate percentiles and Z-scores using WHO (0-24m), CDC (2-20y), or Fenton 2025 (preterm) standards.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Input Form -->
+      <div class="tool-card">
+        <h3>Patient Measurements</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="sex">Sex</label>
+            <select id="sex">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" />
+          </div>
+          <div class="form-group">
+            <label for="measureDate">Measurement Date</label>
+            <input type="date" id="measureDate" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="weight">Weight</label>
+            <input type="number" id="weight" step="0.01" placeholder="kg" min="0" max="200" />
+            <span class="helper">kilograms</span>
+          </div>
+          <div class="form-group">
+            <label for="length">Length / Height</label>
+            <input type="number" id="length" step="0.1" placeholder="cm" min="0" max="250" />
+            <span class="helper">centimeters</span>
+          </div>
+          <div class="form-group">
+            <label for="headCirc">Head Circumference</label>
+            <input type="number" id="headCirc" step="0.1" placeholder="cm" min="0" max="80" />
+            <span class="helper">centimeters (birth-24m)</span>
+          </div>
+        </div>
+        <div class="form-row" id="pretermRow" style="display:none">
+          <div class="form-group">
+            <label for="gaWeeks">Gestational Age at Birth</label>
+            <input type="number" id="gaWeeks" step="1" placeholder="weeks" min="22" max="42" />
+            <span class="helper">weeks (for preterm correction)</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group" style="flex:none">
+            <label>
+              <input type="checkbox" id="isPreterm" /> Preterm infant (correct for gestational age)
+            </label>
+          </div>
+        </div>
+        <div class="form-row">
+          <button class="btn btn-primary" id="calcBtn">Calculate</button>
+          <button class="btn btn-secondary" id="clearBtn">Clear</button>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="tool-card" id="resultsCard" style="display:none">
+        <h3>Results</h3>
+        <div id="chartStandard" class="chart-standard-label"></div>
+        <div class="result-grid" id="resultsGrid"></div>
+      </div>
+
+      <!-- Charts -->
+      <div id="chartsSection" style="display:none">
+        <div class="chart-tabs">
+          <button class="chart-tab is-active" data-metric="weight">Weight-for-Age</button>
+          <button class="chart-tab" data-metric="length">Length/Height-for-Age</button>
+          <button class="chart-tab" data-metric="hc">Head Circumference</button>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="growthChart"></canvas>
+        </div>
+      </div>
+
+      <div class="privacy-banner">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Your data never leaves this device. No accounts. No servers. No tracking.
+      </div>
+    </div>
+  </main>
+
+  <!-- FAQ Section — targets long-tail medical keywords -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions About Pediatric Growth Charts</h2>
+
+      <div class="faq-item"><button class="faq-question">What is a pediatric growth chart and why is it important?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>A <strong>pediatric growth chart</strong> is a clinical tool used to monitor a child's physical development over time. Growth charts plot a child's weight, length/height, head circumference, and BMI against age-specific reference populations. Healthcare providers use them to identify potential growth disorders, nutritional problems, and chronic diseases early.</p><p>The two most widely used standards are the <strong>WHO Child Growth Standards</strong> (recommended for children birth to 24 months) and the <strong>CDC Growth Charts</strong> (recommended for children 2 to 20 years). Preterm infants use the <strong>Fenton Growth Charts</strong> until they reach term-equivalent age.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">How do you calculate a growth percentile and Z-score?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>Growth percentiles and Z-scores are calculated using the <strong>LMS method</strong> (Lambda-Mu-Sigma), a statistical parameterization developed for growth reference data. The formula is: <strong>Z = ((value/M)^L - 1) / (L &times; S)</strong>, where L is the Box-Cox power, M is the median, and S is the coefficient of variation at a given age and sex.</p><p>The <strong>Z-score</strong> represents how many standard deviations a measurement is from the median. The <strong>percentile</strong> is derived from the Z-score using the standard normal distribution. For example, a Z-score of 0 equals the 50th percentile (median), and a Z-score of -2 is approximately the 2nd percentile.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">What is the difference between WHO and CDC growth charts?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The <strong>WHO growth charts</strong> (2006) describe how healthy breastfed children <em>should</em> grow under optimal conditions. They are based on a multinational study of children raised in ideal health environments. The CDC recommends using WHO charts for children <strong>birth to 24 months</strong>.</p><p>The <strong>CDC growth charts</strong> (2000) describe how U.S. children <em>did</em> grow, based on national survey data from the 1960s-1990s. They are recommended for children <strong>2 to 20 years</strong>. Key difference: WHO charts tend to show higher breastfed infant weights and may classify fewer infants as underweight compared to CDC charts.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">When should I use Fenton growth charts for preterm infants?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The <strong>Fenton preterm growth charts</strong> should be used for infants born before 37 weeks gestational age. These charts cover <strong>22 to 50 weeks</strong> gestational age and include weight, length, and head circumference percentiles specifically calibrated for premature infants.</p><p>After reaching 50 weeks post-menstrual age (approximately term + 10 weeks), providers typically transition to WHO growth charts using <strong>corrected (adjusted) age</strong>. Corrected age accounts for prematurity: Corrected age = Chronological age - (40 weeks - GA at birth). Most pediatricians correct for prematurity until 24 months for weight/height and 18 months for head circumference.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">What does it mean if my child is in the 5th percentile for weight?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>Being at the <strong>5th percentile for weight</strong> means the child weighs more than 5% of children the same age and sex, and less than 95%. While this is below average, a single percentile reading is less important than the <strong>growth trend</strong> over time. A child consistently tracking along the 5th percentile is likely healthy; a child dropping from the 50th to the 5th percentile may warrant evaluation.</p><p>Healthcare providers watch for <strong>growth faltering</strong> (crossing two major percentile lines downward), <strong>failure to thrive</strong> (weight-for-age below the 2nd percentile or weight-for-length below the 5th), and disproportionate growth patterns. Z-scores below -2 or above +2 generally warrant clinical evaluation.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">How is BMI-for-age calculated and interpreted in children?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p><strong>BMI (Body Mass Index)</strong> in children is calculated the same way as adults: weight (kg) / height (m)&sup2;. However, unlike adults, pediatric BMI must be interpreted using <strong>age-and-sex-specific percentiles</strong> because body composition changes dramatically during growth.</p><p>CDC BMI-for-age interpretation: <strong>Underweight</strong> = below 5th percentile; <strong>Normal weight</strong> = 5th to 84th percentile; <strong>Overweight</strong> = 85th to 94th percentile; <strong>Obesity</strong> = 95th percentile or above. BMI-for-age is most useful for children aged 2-20 years. For children under 2, weight-for-length is used instead.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">What is head circumference percentile and when is it concerning?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p><strong>Head circumference (HC)</strong> is a proxy measurement for brain growth and is routinely measured from birth through 24 months (and up to 36 months in some practices). HC is plotted on WHO or CDC growth charts to track brain development over time.</p><p>Concerning findings include: <strong>Microcephaly</strong> (HC below the 3rd percentile or more than 2 SD below mean), which may indicate genetic conditions or congenital infections; <strong>Macrocephaly</strong> (HC above the 97th percentile), which may indicate hydrocephalus or familial large head; and <strong>rapidly crossing percentile lines</strong>, which may suggest increased intracranial pressure. Serial measurements are more informative than single readings.</p></div></div>
+    </div>
+  </section>
+
+  <div id="related-tools-placeholder"></div>
+
+  <footer class="tool-footer">
+    <div class="container tool-footer-inner">
+      <p>Growth standards: <a href="https://www.who.int/tools/child-growth-standards" target="_blank" rel="noopener">WHO Child Growth Standards (2006)</a> for birth to 24 months and <a href="https://www.cdc.gov/growthcharts/" target="_blank" rel="noopener">CDC Growth Charts (2000)</a> for 2 to 20 years. Preterm charts based on Fenton 2025 reference data.</p>
+      <p class="disclaimer">Built to support, not replace, clinical judgment.</p>
+    </div>
+  </footer>
+
+  <!-- Structured Data: FAQ Schema -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a pediatric growth chart and why is it important?","acceptedAnswer":{"@type":"Answer","text":"A pediatric growth chart is a clinical tool used to monitor a child's physical development over time by plotting weight, length/height, head circumference, and BMI against age-specific reference populations. The WHO Child Growth Standards are used for birth to 24 months, CDC Growth Charts for 2 to 20 years, and Fenton Growth Charts for preterm infants."}},{"@type":"Question","name":"How do you calculate a growth percentile and Z-score?","acceptedAnswer":{"@type":"Answer","text":"Growth percentiles and Z-scores are calculated using the LMS method (Lambda-Mu-Sigma). The formula is Z = ((value/M)^L - 1) / (L × S). The Z-score represents standard deviations from the median, and the percentile is derived using the standard normal distribution."}},{"@type":"Question","name":"What is the difference between WHO and CDC growth charts?","acceptedAnswer":{"@type":"Answer","text":"WHO growth charts (2006) describe how healthy breastfed children should grow under optimal conditions and are used for birth to 24 months. CDC growth charts (2000) describe how U.S. children did grow based on national survey data and are used for 2 to 20 years."}},{"@type":"Question","name":"When should I use Fenton growth charts for preterm infants?","acceptedAnswer":{"@type":"Answer","text":"Fenton preterm growth charts should be used for infants born before 37 weeks gestational age, covering 22 to 50 weeks gestational age. After reaching 50 weeks post-menstrual age, providers transition to WHO growth charts using corrected age."}},{"@type":"Question","name":"What does it mean if my child is in the 5th percentile for weight?","acceptedAnswer":{"@type":"Answer","text":"Being at the 5th percentile means the child weighs more than 5% of children the same age and sex. A single percentile is less important than the growth trend over time. Providers watch for growth faltering (crossing two major percentile lines downward) and Z-scores below -2."}},{"@type":"Question","name":"How is BMI-for-age calculated and interpreted in children?","acceptedAnswer":{"@type":"Answer","text":"Pediatric BMI is weight(kg)/height(m)² interpreted using age-and-sex-specific percentiles. Underweight is below 5th percentile, normal weight 5th-84th, overweight 85th-94th, and obesity 95th or above. Used for ages 2-20 years."}},{"@type":"Question","name":"What is head circumference percentile and when is it concerning?","acceptedAnswer":{"@type":"Answer","text":"Head circumference is a proxy for brain growth measured birth through 24 months. Microcephaly (below 3rd percentile) may indicate genetic conditions. Macrocephaly (above 97th percentile) may indicate hydrocephalus. Rapidly crossing percentile lines warrants evaluation."}}]}
+  </script>
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TinyHumanMD","item":"https://tinyhumanmd.com/"},{"@type":"ListItem","position":2,"name":"Growth Chart Calculator","item":"https://tinyhumanmd.com/growth/"}]}
+  </script>
+  <!-- Structured Data: MedicalWebPage -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Pediatric Growth Chart Calculator","description":"Calculate growth percentiles and Z-scores for infants and children using WHO (0-24 months), CDC (2-20 years), and Fenton 2025 (preterm) growth standards. Free, offline-capable, no account required.","url":"https://tinyhumanmd.com/growth/","inLanguage":"en-US","isAccessibleForFree":true,"about":[{"@type":"MedicalCondition","name":"Growth Disorders"},{"@type":"MedicalCondition","name":"Failure to Thrive"},{"@type":"MedicalCondition","name":"Childhood Obesity"},{"@type":"MedicalCondition","name":"Microcephaly"},{"@type":"MedicalCondition","name":"Short Stature"}],"specialty":{"@type":"MedicalSpecialty","name":"Pediatrics"},"audience":{"@type":"MedicalAudience","audienceType":"Clinician"}}
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="../shared/lms.js"></script>
+  <script src="../shared/chart-helpers.js"></script>
+  <script src="../shared/storage.js"></script>
+  <script src="../shared/nav.js"></script>
+  <script src="../shared/analytics.js"></script>
+  <script src="../shared/seo.js"></script>
+  <script src="growth.js"></script>
+  <script>if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js').catch(function(){});</script>
+</body>
+</html>

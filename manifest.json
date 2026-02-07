@@ -1,0 +1,16 @@
+{
+  "name": "TinyHumanMD",
+  "short_name": "TinyHumanMD",
+  "description": "Pediatric clinical tools: immunization schedules, growth charts, bilirubin calculator, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2L4 6.5V12c0 5 3.4 9.3 8 10.5 4.6-1.2 8-5.5 8-10.5V6.5L12 2z' fill='%232563eb' opacity='.15' stroke='%232563eb' stroke-width='1.5' stroke-linejoin='round'/><path d='M12 8.5v7M8.5 12h7' stroke='%232563eb' stroke-width='2' stroke-linecap='round'/></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

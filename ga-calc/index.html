@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestational Age Calculator — Corrected Age, EDD & LMP for Preterm Infants | TinyHumanMD</title>
+  <link rel="canonical" href="https://tinyhumanmd.com/ga-calc/" />
+  <meta name="description" content="Free gestational age calculator. Calculate GA from LMP, EDD, or birth date. Corrected (adjusted) age for preterm infants. NICU and nursery essential. Works offline." />
+  <meta name="keywords" content="gestational age calculator, corrected age calculator, adjusted age preterm, EDD calculator, LMP to due date, due date calculator, Naegele's rule, weeks of pregnancy, preterm corrected age, NICU gestational age, estimated due date, chronological age vs corrected age, prematurity age adjustment, postmenstrual age, conceptional age, trimester calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tinyhumanmd.com/ga-calc/" />
+  <meta property="og:title" content="Gestational Age Calculator — Corrected Age & EDD | TinyHumanMD" />
+  <meta property="og:description" content="Free gestational age calculator. GA from LMP or EDD, corrected (adjusted) age for preterm infants, due date calculator. NICU essential." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Gestational Age & Corrected Age Calculator | TinyHumanMD" />
+  <meta name="twitter:description" content="Calculate gestational age, corrected age, and EDD. Free NICU and nursery tool. Works offline." />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../shared/design.css" />
+  <link rel="stylesheet" href="ga-calc.css" />
+  <link rel="manifest" href="../manifest.json" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="tool-nav-placeholder"></div>
+
+  <main id="main-content">
+    <section class="tool-hero">
+      <div class="container tool-hero-inner">
+        <span class="badge badge-green">NICU &middot; Nursery</span>
+        <h1 class="tool-title">Gestational Age Calculator</h1>
+        <p class="tool-subtitle">Enter any available dates and the rest will be calculated. Includes corrected age for preterm infants.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="tool-card">
+        <h3>Enter Any Known Values</h3>
+        <p style="font-size:var(--text-sm);color:var(--c-text-secondary);margin-bottom:var(--s-4)">Fill in what you know — the calculator will derive the rest.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="lmp">Last Menstrual Period (LMP)</label>
+            <input type="date" id="lmp" />
+          </div>
+          <div class="form-group">
+            <label for="edd">Estimated Due Date (EDD)</label>
+            <input type="date" id="edd" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="birthDate">Date of Birth</label>
+            <input type="date" id="birthDate" />
+          </div>
+          <div class="form-group">
+            <label for="gaAtBirth">GA at Birth (weeks + days)</label>
+            <div class="ga-input-group">
+              <input type="number" id="gaWeeks" min="22" max="42" step="1" placeholder="wk" class="ga-input" />
+              <span class="ga-separator">+</span>
+              <input type="number" id="gaDays" min="0" max="6" step="1" placeholder="d" class="ga-input" />
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="currentDate">Current Date</label>
+            <input type="date" id="currentDate" />
+          </div>
+        </div>
+        <div class="form-row">
+          <button class="btn btn-primary" id="calcBtn">Calculate</button>
+          <button class="btn btn-secondary" id="clearBtn">Clear All</button>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="tool-card" id="resultsCard" style="display:none">
+        <h3>Calculated Results</h3>
+        <div class="result-grid result-grid-wide" id="resultsGrid"></div>
+        <div id="extraInfo" style="margin-top:var(--s-4)"></div>
+      </div>
+
+      <div class="privacy-banner">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Your data never leaves this device. No accounts. No servers. No tracking.
+      </div>
+    </div>
+  </main>
+
+  <!-- FAQ Section — gestational age / preterm keywords -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions About Gestational Age &amp; Corrected Age</h2>
+
+      <div class="faq-item"><button class="faq-question">How is gestational age calculated from the last menstrual period (LMP)?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p><strong>Gestational age (GA)</strong> is calculated from the first day of the mother's last menstrual period (LMP) using <strong>Naegele's rule</strong>. The estimated due date (EDD) is LMP + 280 days (40 weeks). GA at any given date equals the number of days from LMP to that date, expressed in weeks and days.</p><p>For example, if the LMP was January 1 and today is March 15, that is 73 days, or <strong>10 weeks and 3 days gestational age</strong>. First-trimester ultrasound dating may be used to adjust GA if it differs from LMP-based dating by more than 5-7 days.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">What is the difference between corrected age and chronological age?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p><strong>Chronological age</strong> (also called postnatal age) is the time since birth. <strong>Corrected age</strong> (also called adjusted age) accounts for prematurity by subtracting the number of weeks born early from the chronological age.</p><p>Formula: <strong>Corrected age = Chronological age − (40 weeks − GA at birth)</strong>. For example, a baby born at 28 weeks who is now 6 months chronological age has a corrected age of 6 months − 3 months = <strong>3 months corrected</strong>. Most AAP guidelines recommend using corrected age for developmental milestones until <strong>24 months for weight/height</strong> and <strong>18 months for head circumference</strong>.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">How do you calculate the estimated due date (EDD)?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>The <strong>estimated due date (EDD)</strong> is calculated as LMP + 280 days using <strong>Naegele's rule</strong>, which assumes a 28-day menstrual cycle with ovulation on day 14. This calculator also supports deriving EDD from other known data: if you enter a birth date and GA at birth, the EDD is back-calculated.</p><p>Modern obstetric practice often adjusts the EDD based on <strong>first-trimester ultrasound</strong>, which is the most accurate method (±5 days accuracy at 8-13 weeks). ACOG recommends that the EDD should be adjusted if the ultrasound date differs by more than 5 days in the first trimester.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">When should I stop correcting for prematurity?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p>AAP guidelines recommend correcting for prematurity until <strong>24 months of age</strong> for weight and height assessments, and <strong>18 months</strong> for head circumference. For developmental milestones, correction is generally applied until <strong>2-3 years of age</strong>, depending on the degree of prematurity.</p><p>In practice: late preterm infants (34-36 weeks) may "catch up" by 12-18 months, while extremely preterm infants (&lt; 28 weeks) may benefit from correction through 30-36 months. Beyond these ages, most children have caught up to their peers, and corrected age is no longer necessary.</p></div></div>
+
+      <div class="faq-item"><button class="faq-question">What is postmenstrual age (PMA) and how is it used in the NICU?<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-answer"><p><strong>Postmenstrual age (PMA)</strong> = gestational age at birth + postnatal age. For example, a baby born at 26 weeks who is now 4 weeks old has a PMA of <strong>30 weeks</strong>. PMA is the standard age metric used in the NICU for clinical decision-making.</p><p>PMA is used to guide: <strong>caffeine therapy</strong> for apnea of prematurity (typically until 34-36 weeks PMA), <strong>retinopathy of prematurity screening</strong> (starting at 31 weeks PMA or 4 weeks postnatal age), <strong>Fenton growth chart</strong> plotting, and discharge readiness assessments.</p></div></div>
+    </div>
+  </section>
+
+  <div id="related-tools-placeholder"></div>
+
+  <footer class="tool-footer">
+    <div class="container tool-footer-inner">
+      <p>Gestational age based on Naegele's rule (EDD = LMP + 280 days). Corrected age applicable for preterm infants up to 24 months.</p>
+      <p class="disclaimer">Built to support, not replace, clinical judgment.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is gestational age calculated from the last menstrual period (LMP)?","acceptedAnswer":{"@type":"Answer","text":"Gestational age is calculated from the first day of the LMP using Naegele's rule: EDD = LMP + 280 days (40 weeks). GA equals days from LMP to a given date, expressed in weeks and days."}},{"@type":"Question","name":"What is the difference between corrected age and chronological age?","acceptedAnswer":{"@type":"Answer","text":"Chronological age is time since birth. Corrected age = Chronological age − (40 weeks − GA at birth). Corrected age is used for preterm infants until 24 months for weight/height and 18 months for head circumference."}},{"@type":"Question","name":"How do you calculate the estimated due date (EDD)?","acceptedAnswer":{"@type":"Answer","text":"EDD = LMP + 280 days (Naegele's rule). First-trimester ultrasound may adjust the EDD if it differs by more than 5 days."}},{"@type":"Question","name":"When should I stop correcting for prematurity?","acceptedAnswer":{"@type":"Answer","text":"AAP recommends correcting until 24 months for weight/height, 18 months for head circumference, and 2-3 years for developmental milestones depending on degree of prematurity."}},{"@type":"Question","name":"What is postmenstrual age (PMA) and how is it used in the NICU?","acceptedAnswer":{"@type":"Answer","text":"PMA = gestational age at birth + postnatal age. It's the standard NICU age metric used for caffeine therapy decisions, ROP screening timing, and Fenton growth chart plotting."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TinyHumanMD","item":"https://tinyhumanmd.com/"},{"@type":"ListItem","position":2,"name":"Gestational Age Calculator","item":"https://tinyhumanmd.com/ga-calc/"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalWebPage","name":"Gestational Age & Corrected Age Calculator","description":"Calculate gestational age from LMP, EDD, or birth date. Corrected (adjusted) age for preterm infants. Free NICU and nursery tool.","url":"https://tinyhumanmd.com/ga-calc/","inLanguage":"en-US","isAccessibleForFree":true,"about":[{"@type":"MedicalCondition","name":"Prematurity"},{"@type":"MedicalCondition","name":"Preterm Birth"},{"@type":"MedicalCondition","name":"Small for Gestational Age"}],"specialty":{"@type":"MedicalSpecialty","name":"Neonatology"}}
+  </script>
+
+  <script src="../shared/nav.js"></script>
+  <script src="../shared/analytics.js"></script>
+  <script src="../shared/seo.js"></script>
+  <script src="ga-calc.js"></script>
+  <script>if('serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js').catch(function(){});</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "_source": "Simplified from CDC CDSi (Clinical Decision Support for Immunization) Supporting Data",
+  "_note": "This file contains minimum ages and intervals for CDSi evaluation. The catch-up calculator uses inline data; this file is for future full CDSi implementation.",
+  "_version": "Simplified from CDSi Logic Spec v4.6",
+  "antigens": [
+    {"id":"hepb","name":"Hepatitis B","seriesType":"standard","totalDoses":3,"minAges":[0,28,168],"minIntervals":[28,56]},
+    {"id":"rv","name":"Rotavirus","seriesType":"standard","totalDoses":3,"minAges":[42,70,98],"minIntervals":[28,28],"maxAge":244,"maxFirstDose":104},
+    {"id":"dtap","name":"DTaP","seriesType":"standard","totalDoses":5,"minAges":[42,70,98,365,1461],"minIntervals":[28,28,180,180]},
+    {"id":"hib","name":"Hib","seriesType":"standard","totalDoses":4,"minAges":[42,70,98,365],"minIntervals":[28,28,56]},
+    {"id":"pcv","name":"PCV","seriesType":"standard","totalDoses":4,"minAges":[42,70,98,365],"minIntervals":[28,28,56]},
+    {"id":"ipv","name":"IPV","seriesType":"standard","totalDoses":4,"minAges":[42,70,98,1461],"minIntervals":[28,28,180]},
+    {"id":"mmr","name":"MMR","seriesType":"standard","totalDoses":2,"minAges":[365,1461],"minIntervals":[28],"liveVaccine":true},
+    {"id":"var","name":"Varicella","seriesType":"standard","totalDoses":2,"minAges":[365,1461],"minIntervals":[90],"liveVaccine":true},
+    {"id":"hepa","name":"HepA","seriesType":"standard","totalDoses":2,"minAges":[365,547],"minIntervals":[180]},
+    {"id":"menacwy","name":"MenACWY","seriesType":"standard","totalDoses":2,"minAges":[3653,5844],"minIntervals":[56]},
+    {"id":"tdap","name":"Tdap","seriesType":"standard","totalDoses":1,"minAges":[2557],"minIntervals":[]},
+    {"id":"hpv","name":"HPV","seriesType":"standard","totalDoses":2,"minAges":[3287,3653],"minIntervals":[150]}
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "_source": "AAP 2022 Clinical Practice Guideline: Management of Hyperbilirubinemia in the Newborn Infant >= 35 Weeks Gestation",
+  "_note": "Thresholds in mg/dL. Postnatal age in hours. Interpolate between points.",
+  "phototherapy": {
+    "noRiskFactors": {
+      "35wk": [
+        {"age":0,"threshold":5.0},{"age":12,"threshold":7.0},{"age":24,"threshold":9.0},
+        {"age":36,"threshold":11.0},{"age":48,"threshold":12.6},{"age":60,"threshold":13.8},
+        {"age":72,"threshold":14.8},{"age":84,"threshold":15.5},{"age":96,"threshold":16.1}
+      ],
+      "36wk": [
+        {"age":0,"threshold":5.5},{"age":12,"threshold":7.5},{"age":24,"threshold":9.8},
+        {"age":36,"threshold":11.8},{"age":48,"threshold":13.4},{"age":60,"threshold":14.7},
+        {"age":72,"threshold":15.7},{"age":84,"threshold":16.5},{"age":96,"threshold":17.1}
+      ],
+      "37wk": [
+        {"age":0,"threshold":6.0},{"age":12,"threshold":8.2},{"age":24,"threshold":10.6},
+        {"age":36,"threshold":12.7},{"age":48,"threshold":14.4},{"age":60,"threshold":15.7},
+        {"age":72,"threshold":16.8},{"age":84,"threshold":17.5},{"age":96,"threshold":18.1}
+      ],
+      "38wk": [
+        {"age":0,"threshold":6.5},{"age":12,"threshold":9.0},{"age":24,"threshold":11.5},
+        {"age":36,"threshold":13.6},{"age":48,"threshold":15.4},{"age":60,"threshold":16.8},
+        {"age":72,"threshold":17.8},{"age":84,"threshold":18.6},{"age":96,"threshold":19.2}
+      ],
+      "39wk": [
+        {"age":0,"threshold":7.0},{"age":12,"threshold":9.7},{"age":24,"threshold":12.3},
+        {"age":36,"threshold":14.5},{"age":48,"threshold":16.3},{"age":60,"threshold":17.8},
+        {"age":72,"threshold":18.8},{"age":84,"threshold":19.5},{"age":96,"threshold":20.1}
+      ],
+      "40wk": [
+        {"age":0,"threshold":7.5},{"age":12,"threshold":10.3},{"age":24,"threshold":13.1},
+        {"age":36,"threshold":15.4},{"age":48,"threshold":17.2},{"age":60,"threshold":18.7},
+        {"age":72,"threshold":19.7},{"age":84,"threshold":20.4},{"age":96,"threshold":21.0}
+      ]
+    },
+    "withRiskFactors": {
+      "35wk": [
+        {"age":0,"threshold":3.5},{"age":12,"threshold":5.5},{"age":24,"threshold":7.5},
+        {"age":36,"threshold":9.1},{"age":48,"threshold":10.3},{"age":60,"threshold":11.3},
+        {"age":72,"threshold":12.0},{"age":84,"threshold":12.6},{"age":96,"threshold":13.0}
+      ],
+      "36wk": [
+        {"age":0,"threshold":4.0},{"age":12,"threshold":6.0},{"age":24,"threshold":8.2},
+        {"age":36,"threshold":9.9},{"age":48,"threshold":11.2},{"age":60,"threshold":12.2},
+        {"age":72,"threshold":13.0},{"age":84,"threshold":13.6},{"age":96,"threshold":14.0}
+      ],
+      "37wk": [
+        {"age":0,"threshold":4.5},{"age":12,"threshold":6.5},{"age":24,"threshold":8.9},
+        {"age":36,"threshold":10.7},{"age":48,"threshold":12.1},{"age":60,"threshold":13.2},
+        {"age":72,"threshold":14.0},{"age":84,"threshold":14.6},{"age":96,"threshold":15.1}
+      ],
+      "38wk": [
+        {"age":0,"threshold":5.0},{"age":12,"threshold":7.2},{"age":24,"threshold":9.7},
+        {"age":36,"threshold":11.6},{"age":48,"threshold":13.1},{"age":60,"threshold":14.2},
+        {"age":72,"threshold":15.0},{"age":84,"threshold":15.6},{"age":96,"threshold":16.1}
+      ],
+      "39wk": [
+        {"age":0,"threshold":5.5},{"age":12,"threshold":7.8},{"age":24,"threshold":10.4},
+        {"age":36,"threshold":12.4},{"age":48,"threshold":14.0},{"age":60,"threshold":15.2},
+        {"age":72,"threshold":16.0},{"age":84,"threshold":16.6},{"age":96,"threshold":17.1}
+      ],
+      "40wk": [
+        {"age":0,"threshold":6.0},{"age":12,"threshold":8.5},{"age":24,"threshold":11.2},
+        {"age":36,"threshold":13.3},{"age":48,"threshold":14.9},{"age":60,"threshold":16.1},
+        {"age":72,"threshold":17.0},{"age":84,"threshold":17.6},{"age":96,"threshold":18.1}
+      ]
+    }
+  },
+  "exchangeTransfusion": {
+    "noRiskFactors": {
+      "35wk": [{"age":0,"threshold":15.0},{"age":24,"threshold":17.5},{"age":48,"threshold":19.5},{"age":72,"threshold":20.8},{"age":96,"threshold":21.5}],
+      "36wk": [{"age":0,"threshold":15.5},{"age":24,"threshold":18.3},{"age":48,"threshold":20.4},{"age":72,"threshold":21.7},{"age":96,"threshold":22.5}],
+      "37wk": [{"age":0,"threshold":16.5},{"age":24,"threshold":19.1},{"age":48,"threshold":21.3},{"age":72,"threshold":22.6},{"age":96,"threshold":23.5}],
+      "38wk": [{"age":0,"threshold":17.0},{"age":24,"threshold":19.9},{"age":48,"threshold":22.2},{"age":72,"threshold":23.6},{"age":96,"threshold":24.5}],
+      "39wk": [{"age":0,"threshold":17.5},{"age":24,"threshold":20.8},{"age":48,"threshold":23.1},{"age":72,"threshold":24.5},{"age":96,"threshold":25.0}],
+      "40wk": [{"age":0,"threshold":18.0},{"age":24,"threshold":21.6},{"age":48,"threshold":24.0},{"age":72,"threshold":25.0},{"age":96,"threshold":25.0}]
+    },
+    "withRiskFactors": {
+      "35wk": [{"age":0,"threshold":12.0},{"age":24,"threshold":14.5},{"age":48,"threshold":16.5},{"age":72,"threshold":17.5},{"age":96,"threshold":18.0}],
+      "36wk": [{"age":0,"threshold":12.5},{"age":24,"threshold":15.3},{"age":48,"threshold":17.4},{"age":72,"threshold":18.5},{"age":96,"threshold":19.0}],
+      "37wk": [{"age":0,"threshold":13.5},{"age":24,"threshold":16.1},{"age":48,"threshold":18.3},{"age":72,"threshold":19.5},{"age":96,"threshold":20.0}],
+      "38wk": [{"age":0,"threshold":14.0},{"age":24,"threshold":16.9},{"age":48,"threshold":19.2},{"age":72,"threshold":20.4},{"age":96,"threshold":21.0}],
+      "39wk": [{"age":0,"threshold":14.5},{"age":24,"threshold":17.8},{"age":48,"threshold":20.1},{"age":72,"threshold":21.4},{"age":96,"threshold":22.0}],
+      "40wk": [{"age":0,"threshold":15.0},{"age":24,"threshold":18.6},{"age":48,"threshold":21.0},{"age":72,"threshold":22.0},{"age":96,"threshold":22.5}]
+    }
+  },
+  "riskFactors": [
+    {"id":"albumin","label":"Serum albumin < 3.0 g/dL"},
+    {"id":"isoimmune","label":"Isoimmune hemolytic disease (positive DAT)"},
+    {"id":"g6pd","label":"G6PD deficiency"},
+    {"id":"sepsis","label":"Sepsis"},
+    {"id":"instability","label":"Significant clinical instability in the previous 24 hours"},
+    {"id":"asphyxia","label":"Perinatal asphyxia"}
+  ]
+}
