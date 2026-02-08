@@ -21,12 +21,15 @@
   'use strict';
 
   /* ══════════════════════════════════════════════════════════════
-     CONFIGURATION — Analytics tokens configured
+     CONFIGURATION — Tokens loaded from analytics-config.js
      ══════════════════════════════════════════════════════════════ */
-  var GA_MEASUREMENT_ID = 'G-FMNPFLW6LD';  /* Google Analytics 4 Measurement ID */
-  var CF_BEACON_TOKEN = '';  /* Cloudflare Web Analytics beacon token - get from dashboard */
-  var CLARITY_PROJECT = '';                 /* Microsoft Clarity project ID */
-  var IP_API_KEY = '';                      /* Optional: ip-api.com API key for higher limits */
+  var analyticsCfg = window.__ANALYTICS__ || {};
+  var GA_MEASUREMENT_ID = analyticsCfg.gaId || 'G-FMNPFLW6LD';  /* Google Analytics 4 Measurement ID */
+  var CF_BEACON_TOKEN = analyticsCfg.cfBeaconToken || '';      /* Cloudflare Web Analytics beacon token */
+  var CLARITY_PROJECT = analyticsCfg.clarityProject || '';     /* Microsoft Clarity project ID */
+  var IP_API_KEY = analyticsCfg.ipApiKey || '';                /* Optional: ip-api.com API key for higher limits */
+  var POSTHOG_API_KEY = analyticsCfg.posthogKey || '';         /* PostHog project API key */
+  var POSTHOG_HOST = analyticsCfg.posthogHost || 'https://app.posthog.com';
 
   /* ── 0. Device Fingerprinting & IP Geolocation ─────────────
      Collects comprehensive device and location data for analytics.
@@ -62,6 +65,12 @@
         webglVendor: getWebGLInfo().vendor,
         webglRenderer: getWebGLInfo().renderer,
         plugins: getPluginsList(),
+        viewport: window.innerWidth + 'x' + window.innerHeight,
+        referrer: document.referrer,
+        url: location.href,
+        pathname: location.pathname,
+        online: navigator.onLine,
+        pdfViewerEnabled: navigator.pdfViewerEnabled || false,
         timestamp: Date.now()
       };
     } catch (e) {
@@ -97,7 +106,7 @@
     // Use ip-api.com for detailed geolocation (free tier: 45 req/min)
     var apiUrl = IP_API_KEY ?
       'https://pro.ip-api.com/json/?key=' + IP_API_KEY :
-      'http://ip-api.com/json/';
+      'https://ip-api.com/json/';
 
     fetch(apiUrl)
       .then(function(response) { return response.json(); })
@@ -130,6 +139,25 @@
               city: geoInfo.city,
               timezone: geoInfo.timezone,
               isp: geoInfo.isp,
+              mobile: geoInfo.mobile,
+              proxy: geoInfo.proxy,
+              hosting: geoInfo.hosting
+            });
+          }
+
+          // Send to PostHog once we have geo data
+          if (window.posthog) {
+            window.posthog.capture('geo_info_collected', {
+              country: geoInfo.country,
+              region: geoInfo.regionName,
+              city: geoInfo.city,
+              zip: geoInfo.zip,
+              lat: geoInfo.lat,
+              lon: geoInfo.lon,
+              timezone: geoInfo.timezone,
+              isp: geoInfo.isp,
+              org: geoInfo.org,
+              asn: geoInfo.as,
               mobile: geoInfo.mobile,
               proxy: geoInfo.proxy,
               hosting: geoInfo.hosting
@@ -197,6 +225,53 @@
         });
       }
     }, 2000);
+  }
+
+  /* ── 1b. PostHog Analytics ───────────────────────────────────
+     Product analytics with feature flags, event tracking, and sessions.
+     ──────────────────────────────────────────────────────────── */
+  function initPostHog() {
+    if (!POSTHOG_API_KEY) return;
+
+    (function (t, e) {
+      var o, n, p, r;
+      e.__SV = 1;
+      window.posthog = window.posthog || [];
+      window.posthog._i = [];
+      window.posthog.init = function (i, s, a) {
+        function g(t, e) {
+          var o = e.split('.');
+          o.length == 2 && (t = t[o[0]], e = o[1]);
+          t[e] = function () {
+            t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+          };
+        }
+        var u = t;
+        if (a !== undefined) u = t[a] = [];
+        u.people = u.people || [];
+        u.toString = function (t) {
+          var e = 'posthog';
+          return a !== undefined && (e += '.' + a), t || (e += ' (stub)'), e;
+        };
+        u.people.toString = function () { return u.toString(1) + '.people (stub)'; };
+        p = 'capture identify alias people.set people.set_once people.unset people.increment people.append people.remove people.group group identify_group reset opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing get_distinct_id get_property set_property unregister get_features is_feature_enabled onFeatureFlags'.split(' ');
+        for (r = 0; r < p.length; r++) g(u, p[r]);
+        window.posthog._i.push([i, s, a]);
+      };
+      window.posthog.__SV = 1;
+      o = t.createElement('script');
+      o.type = 'text/javascript';
+      o.async = true;
+      o.src = e.api_host + '/static/array.js';
+      n = t.getElementsByTagName('script')[0];
+      n.parentNode.insertBefore(o, n);
+    })(document, { api_host: POSTHOG_HOST });
+
+    window.posthog.init(POSTHOG_API_KEY, {
+      api_host: POSTHOG_HOST,
+      capture_pageview: true,
+      autocapture: true
+    });
   }
 
   function getConnectionType() {
@@ -346,6 +421,11 @@
       /* Send to GA4 */
       if (window.gtag) {
         window.gtag('event', name, props || {});
+      }
+
+      /* Send to PostHog */
+      if (window.posthog) {
+        window.posthog.capture(name, props || {});
       }
 
       /* Tag in Clarity */
@@ -512,6 +592,7 @@
 
     // Initialize all analytics services
     initGoogleAnalytics();
+    initPostHog();
     initCloudflare();
     initClarity();
     initWebVitals();
@@ -526,6 +607,40 @@
 
     // Enhanced page visibility tracking
     initPageVisibilityTracking();
+
+    // Capture a session_start event with full device context
+    if (window.posthog) {
+      window.posthog.capture('session_start', {
+        page_path: location.pathname,
+        page_url: location.href,
+        referrer: document.referrer,
+        user_agent: navigator.userAgent,
+        language: navigator.language,
+        timezone: deviceInfo.timezone,
+        screen_resolution: deviceInfo.screenResolution,
+        device_memory: deviceInfo.deviceMemory,
+        hardware_concurrency: deviceInfo.hardwareConcurrency,
+        webgl_renderer: deviceInfo.webglRenderer,
+        connection_type: getConnectionType()
+      });
+
+      // Persist device properties to the user profile
+      window.posthog.people && window.posthog.people.set({
+        os_platform: deviceInfo.platform,
+        language: deviceInfo.language,
+        languages: deviceInfo.languages,
+        timezone: deviceInfo.timezone,
+        screen_resolution: deviceInfo.screenResolution,
+        color_depth: deviceInfo.screenColorDepth,
+        pixel_ratio: deviceInfo.screenPixelRatio,
+        touch_support: deviceInfo.touchSupport,
+        device_memory: deviceInfo.deviceMemory,
+        hardware_concurrency: deviceInfo.hardwareConcurrency,
+        webgl_vendor: deviceInfo.webglVendor,
+        webgl_renderer: deviceInfo.webglRenderer,
+        plugins: deviceInfo.plugins
+      });
+    }
   }
 
   /* Enhanced page visibility and engagement tracking */
@@ -577,6 +692,17 @@
         }
       }
     });
+
+    // Heartbeat ping every 30s while visible
+    setInterval(function () {
+      if (document.visibilityState === 'visible') {
+        window.TinyTrack.event('session_heartbeat', {
+          session_duration: Math.round((Date.now() - window.sessionStart) / 1000),
+          page_path: location.pathname,
+          geo_region: geoInfo.regionName || 'unknown'
+        });
+      }
+    }, 30000);
   }
 
   /* Run after DOM is ready but don't block rendering */
