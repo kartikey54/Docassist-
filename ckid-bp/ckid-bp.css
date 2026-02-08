@@ -1,0 +1,67 @@
+/* CKiD U25 GFR & Blood Pressure Calculator Styles */
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-3);
+}
+
+@media (max-width: 480px) {
+  .result-grid { grid-template-columns: 1fr; }
+}
+
+/* Blood Pressure Table */
+.bp-table {
+  width: 100%;
+  margin-top: var(--s-4);
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.bp-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--c-text-secondary);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.bp-table td {
+  padding: 8px 12px;
+  font-size: var(--text-sm);
+  color: var(--c-text);
+}
+
+.bp-table tbody tr {
+  border-radius: var(--r-sm);
+}
+
+.bp-table tbody tr:nth-child(1),
+.bp-table tbody tr:nth-child(2)   /* < 50th */ {
+  background: var(--c-primary-soft);
+}
+.bp-table tbody tr:nth-child(3)  /* 50th */ { background: var(--c-neutral-soft); }
+.bp-table tbody tr:nth-child(4)  /* 75th */ { background: var(--c-warning-soft); }
+.bp-table tbody tr:nth-child(5)  /* 90th */ { background: var(--c-error-soft); }
+.bp-table tbody tr:nth-child(6)  /* 95th */ { background: rgba(208, 0, 0, 0.12); }
+.bp-table tbody tr:nth-child(7)  /* 99th */ { background: rgba(160, 0, 0, 0.15); }
+
+.hidden { display: none !important; }
+.table-note {
+  margin-top: var(--s-3);
+  font-size: var(--text-xs);
+  color: var(--c-text-secondary);
+}
+.card-subtitle {
+  margin-top: var(--s-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.table-wrap { margin-top: var(--s-5); }
+.help-card {
+  margin-top: var(--s-5);
+  padding: var(--s-4);
+  background: var(--c-surface-elevated);
+  border-left: 4px solid var(--c-primary);
+  border-radius: var(--r-sm);
+}

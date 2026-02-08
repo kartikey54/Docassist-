@@ -535,6 +535,10 @@ img { display: block; max-width: 100%; }
 .footer p { font-size: var(--text-sm); color: var(--c-text-secondary); line-height: var(--leading-relaxed); }
 .footer-credit { margin-top: var(--s-3); font-weight: 600; color: var(--c-text); opacity: .6; }
 
+.footer-disclaimer-short {
+  margin-top: var(--s-3); font-size: 11px; color: var(--c-text-muted); font-style: italic;
+}
+
 /* ── FAQ Section ─────────────────────────────────────────────── */
 .faq-section {
   padding: var(--s-12) 0; border-top: 1px solid var(--c-border);

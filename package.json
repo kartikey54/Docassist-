@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Pediatric clinical toolkit and vaccine calculator",
   "scripts": {
-    "deploy": "wrangler pages deploy .",
-    "dev": "wrangler pages dev ."
+    "build": "echo 'Building TinyHumanMD static site'",
+    "deploy:staging": "./scripts/deploy.sh",
+    "deploy:prod": "./scripts/deploy.sh && echo 'Choose option 2 for production'",
+    "dev": "wrangler pages dev .",
+    "staging": "wrangler pages dev . --config staging-wrangler.toml"
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^4.63.0"
   }
 }

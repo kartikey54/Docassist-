@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CKiD U25 Equation & Blood Pressure Norms | TinyHumanMD</title>
+  <meta name="description" content="Pediatric CKiD U25 glomerular filtration rate equation and age/height-specific blood pressure normative tables for children.">
+  
+  <link rel="stylesheet" href="../shared/design.css">
+  <link rel="stylesheet" href="ckid-bp.css">
+  
+  <meta property="og:title" content="CKiD U25 & BP Norms - TinyHumanMD">
+  <meta property="og:description" content="Calculate GFR using CKiD U25 equation and view pediatric blood pressure norms by age and height.">
+  
+  <!-- Favicons & PWA -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../manifest.json">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "CKiD U25 Glomerular Filtration Rate & Pediatric Blood Pressure Norms",
+    "description": "Pediatric renal GFR calculator and blood pressure reference tables for clinical practice.",
+    "url": "https://tinyhumanmd.com/ckid-bp/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TinyHumanMD",
+      "url": "https://tinyhumanmd.com"
+    },
+    "dateModified": "2026-02-08",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Medical professionals"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "isAccessibleForFree": true
+  }
+  </script>
+
+  <!-- Analytics -->
+  <script src="../shared/analytics-config.js"></script>
+  <script src="../shared/analytics.js"></script>
+</head>
+
+<body>
+
+<header id="tool-nav-placeholder" aria-label="Header placeholder"></header>
+
+<main class="tool-main container">
+  <section class="tool-hero">
+    <h1 class="tool-title">CKiD U25 GFR + Blood Pressure Norms</h1>
+    <p class="tool-subtitle">Calculate pediatric GFR using CKiD U25 equation and view blood pressure percentile charts.</p>
+  </section>
+
+  <div class="tool-grid">
+    <!-- GFR Calculator -->
+    <div class="tool-card" id="gfr-card">
+      <h2 class="card-title">CKiD U25 GFR Calculator</h2>
+      <p class="card-desc">Calculate glomerular filtration rate for children using the updated CKiD U25 equation.</p>
+      
+      <form id="gfr-form" class="form-grid">
+        <div class="form-row">
+
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input id="age" name="age" type="number" step="0.1" min="1" max="18" required>
+            <small>years</small>
+          </div>
+
+          <div class="form-group">
+            <label for="height">Height</label>
+            <input id="height" name="height" type="number" step="0.1" min="50" max="220" required>
+            <small>cm</small>
+          </div>
+
+          <div class="form-group">
+            <label for="cr">Serum Creatinine</label>
+            <input id="cr" name="cr" type="number" step="0.01" min="0" max="50" required>
+            <small>mg/dL</small>
+          </div>
+
+          <div class="form-group">
+            <label for="race">Race</label>
+            <select id="race" name="race" required>
+              <option value="white">White</option>
+              <option value="black">Black</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+        </div>
+
+        <button id="calcBtn" type="button" class="btn btn-primary">Calculate GFR</button>
+        <button id="clearBtn" type="button" class="btn btn-subtle">Clear</button>
+      </form>
+
+      <div id="gfrResults" class="result-wrap hidden">
+        <h3 class="card-subtitle">Results</h3>
+        <div id="gfrValues" class="result-grid"></div>
+      </div>
+    </div>
+
+    <!-- Blood Pressure Norms -->
+    <div class="tool-card">
+      <h2 class="card-title">Pediatric Blood Pressure Norms</h2>
+      <p class="card-desc">Blood pressure percentile tables by age and height.</p>
+
+      <form id="bp-search-form">
+        <div class="form-group">
+          <label for="bp-age">Age (years)</label>
+          <input id="bp-age" name="bp-age" type="number" min="1" max="17" step="1" required>
+          <small>Years</small>
+        </div>
+
+        <div class="form-group">
+          <label for="bp-height">Height (cm)</label>
+          <input id="bp-height" name="bp-height" type="number" min="60" max="200" required>
+          <small>cm</small>
+        </div>
+
+        <button id="showBpnorms" type="button" class="btn btn-primary">Show BP Norms</button>
+      </form>
+
+      <div id="bpTableContainer" class="table-wrap hidden">
+        <h3 class="card-subtitle" id="bpChartTitle"></h3>
+        <table id="bpTable" class="bp-table compact">
+          <thead>
+            <tr>
+              <th>Percentile</th>
+              <th>Systolic mmHg</th>
+              <th>Diastolic mmHg</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p class="table-note">AHA/CDC percentiles, adjusted for age and height.</p>
+      </div>
+
+      <!-- GFR explanation for CKiD -->
+      <div class="help-card" id="helpGfr">
+        <h4>About CKiD U25 Equation</h4>
+        <p>The CKiD U25 equation (2025) estimates GFR in children (1-18 years) using serum creatinine, height, age, and race. It is the preferred formula for pediatric renal evaluation.</p>
+        <p>Normal GFR by age: 1-3 mo ≈ 35–45; 3-12 mo ≈ 45–60; 1–18 y ≈ 90–120 mL/min/1.73 m².</p>
+      </div>
+
+      <!-- BP reference for height-age -->
+      <div class="help-card" id="helpBp">
+        <h4>Pediatric Blood Pressure Guidelines</h4>
+        <p>Blood pressure values shown are AHA 2025 norms for age- and height-matched percentiles (50th–99th). Hypertensive cutpoints: ≥ 95th percentile on ≥ 3 separate occasions.</p>
+        <p>Consider follow-up if consistently ≥ 90th percentile.</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Placeholder for PostHog survey (optional) -->
+<section id="suggest-addition-placeholder" class="survey-placeholder"></section>
+
+<script src="../shared/nav.js"></script>
+<script src="ckid-bp.js"></script>
+
+</body>
+</html>
