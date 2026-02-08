@@ -24,7 +24,7 @@
      CONFIGURATION — Analytics tokens configured
      ══════════════════════════════════════════════════════════════ */
   var GA_MEASUREMENT_ID = 'G-FMNPFLW6LD';  /* Google Analytics 4 Measurement ID */
-  var CF_BEACON_TOKEN = 'ORoKf_LNQXvvbwAbBeUKkfuweRRmGYblp-qmAjgI';  /* Cloudflare Web Analytics token */
+  var CF_BEACON_TOKEN = '';  /* Cloudflare Web Analytics beacon token - get from dashboard */
   var CLARITY_PROJECT = '';                 /* Microsoft Clarity project ID */
   var IP_API_KEY = '';                      /* Optional: ip-api.com API key for higher limits */
 
