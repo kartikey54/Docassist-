@@ -184,8 +184,34 @@
       return;
     }
 
-    /* Track calculator usage */
-    if (window.TinyTrack) window.TinyTrack.calcUsed('growth', { standard: standard, sex: sex, metrics: results.length });
+    /* Comprehensive analytics tracking */
+    if (window.TinyTrack) {
+      var analyticsData = {
+        standard: standard,
+        sex: sex,
+        age_months: age,
+        raw_age_months: rawAge,
+        metrics_calculated: results.length,
+        metrics_types: results.map(function(r) { return r.metric; }).join(','),
+        is_preterm: isPreterm,
+        gestational_age_weeks: gaWeeks,
+        corrected_age_used: isPreterm,
+        fenton_used: useFenton,
+        fenton_ga_weeks: fentonGaWeeks,
+        input_weight: !isNaN(weight) && weight > 0,
+        input_length: !isNaN(length) && length > 0,
+        input_head_circ: !isNaN(hc) && hc > 0,
+        z_scores: results.map(function(r) { return r.metric + ':' + r.z.toFixed(2); }).join(';'),
+        percentiles: results.map(function(r) { return r.metric + ':' + r.pct.toFixed(1); }).join(';'),
+        measurement_date: measureDate,
+        dob: dob,
+        age_category: age < 1 ? 'neonate' : age < 12 ? 'infant' : age < 24 ? 'toddler' : 'child',
+        calculation_success: results.length > 0,
+        timestamp: Date.now()
+      };
+
+      window.TinyTrack.calcUsed('growth', analyticsData);
+    }
 
     /* Persist measurement locally */
     saveMeasurementToLocal(sex, dob, measureDate, weight, length, hc, results);
@@ -298,6 +324,11 @@
   function init() {
     $('#calcBtn').addEventListener('click', calculate);
     $('#clearBtn').addEventListener('click', function () {
+      /* Track clear action */
+      if (window.TinyTrack) {
+        window.TinyTrack.buttonClick('clear-btn', 'Clear Form', 'growth-calculator');
+      }
+
       $('#sex').value = 'male';
       $('#dob').value = '';
       $('#measureDate').value = '';
@@ -313,6 +344,15 @@
     });
 
     $('#isPreterm').addEventListener('change', function () {
+      /* Track preterm toggle */
+      if (window.TinyTrack) {
+        window.TinyTrack.event('preterm_toggle', {
+          enabled: this.checked,
+          context: 'growth-calculator',
+          timestamp: Date.now()
+        });
+      }
+
       $('#pretermRow').style.display = this.checked ? '' : 'none';
     });
 
