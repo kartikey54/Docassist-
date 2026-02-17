@@ -10,7 +10,10 @@
     "staging": "wrangler pages dev . --config staging-wrangler.toml",
     "qa:god": "node scripts/qa-god-orchestrator.mjs",
     "qa:mobile": "node scripts/mobile-ux-orchestrator.mjs",
-    "qa:mobile:apply": "node scripts/mobile-ux-orchestrator.mjs --apply"
+    "qa:mobile:apply": "node scripts/mobile-ux-orchestrator.mjs --apply",
+    "qa:peds:intel": "node scripts/peds-strategy-orchestrator.mjs",
+    "qa:peds:intel:refresh": "PEDS_INTEL_FORCE_REFRESH=1 node scripts/peds-strategy-orchestrator.mjs",
+    "qa:peds:intel:offline": "PEDS_INTEL_SKIP_NETWORK=1 node scripts/peds-strategy-orchestrator.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.63.0"

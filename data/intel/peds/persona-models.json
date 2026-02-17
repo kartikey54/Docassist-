@@ -1,0 +1,227 @@
+{
+  "version": "2026-02-17",
+  "specialty": "pediatrics",
+  "personas": [
+    {
+      "id": "general_pediatrician",
+      "name": "General Pediatrician",
+      "setting": "outpatient_primary_care",
+      "share_estimate": 0.34,
+      "frequency_weight": 1.3,
+      "pain_points": [
+        "High visit volume with context switching between preventive and acute care",
+        "Dosing safety anxiety for uncommon medications",
+        "Vaccine catch-up complexity and parent communication burden"
+      ],
+      "jobs_to_be_done": [
+        "Answer high-frequency questions in under 30 seconds",
+        "Generate reliable dose and interval outputs with confidence",
+        "Provide parent-friendly education at discharge"
+      ],
+      "adoption_drivers": [
+        "Speed in clinic",
+        "Trustworthy references",
+        "Mobile usability at point of care"
+      ],
+      "retention_levers": [
+        "Daily quick tools",
+        "Persistent recent tools",
+        "Smart reminders"
+      ],
+      "willingness_to_pay": 6.2
+    },
+    {
+      "id": "hospitalist_pem",
+      "name": "Peds Hospitalist / PEM",
+      "setting": "inpatient_emergency",
+      "share_estimate": 0.18,
+      "frequency_weight": 1.25,
+      "pain_points": [
+        "Need rapid triage support with low tolerance for ambiguity",
+        "Frequent calculations under stress",
+        "Need immediate guideline anchors for escalation decisions"
+      ],
+      "jobs_to_be_done": [
+        "Fast risk stratification",
+        "Protocol-backed recommendations",
+        "Reliable dose and threshold checks"
+      ],
+      "adoption_drivers": [
+        "Point-of-care reliability",
+        "Low-latency mobile UX",
+        "Institution-level trust"
+      ],
+      "retention_levers": [
+        "Shift-based workflows",
+        "Critical pathways",
+        "Recent patient context stubs"
+      ],
+      "willingness_to_pay": 7.0
+    },
+    {
+      "id": "nicu_neonatal",
+      "name": "NICU / Neonatal Clinician",
+      "setting": "nicu",
+      "share_estimate": 0.1,
+      "frequency_weight": 1.15,
+      "pain_points": [
+        "Gestational age and corrected age calculations are error-prone",
+        "Bilirubin and feeding decisions require precise thresholds",
+        "Need high confidence in update cadence for references"
+      ],
+      "jobs_to_be_done": [
+        "Precision newborn calculations",
+        "Guideline-aligned threshold support",
+        "Safe handoff references"
+      ],
+      "adoption_drivers": [
+        "Accuracy",
+        "Auditability",
+        "Version transparency"
+      ],
+      "retention_levers": [
+        "Neonatal bundles",
+        "Shift handoff templates",
+        "Reference diff alerts"
+      ],
+      "willingness_to_pay": 7.6
+    },
+    {
+      "id": "subspecialist",
+      "name": "Pediatric Subspecialist",
+      "setting": "specialty_clinic",
+      "share_estimate": 0.16,
+      "frequency_weight": 0.95,
+      "pain_points": [
+        "Fragmented references across journals and society sites",
+        "Referral criteria variability by institution",
+        "Need sharable pathways for PCP partners"
+      ],
+      "jobs_to_be_done": [
+        "Consolidate evidence into quick references",
+        "Define referral and co-management criteria",
+        "Publish care pathways"
+      ],
+      "adoption_drivers": [
+        "Depth",
+        "Evidence links",
+        "Collaboration loops"
+      ],
+      "retention_levers": [
+        "Pathway authoring",
+        "Referral loop analytics",
+        "Team collections"
+      ],
+      "willingness_to_pay": 6.8
+    },
+    {
+      "id": "resident_fellow",
+      "name": "Resident / Fellow",
+      "setting": "training",
+      "share_estimate": 0.14,
+      "frequency_weight": 1.2,
+      "pain_points": [
+        "Knowledge gaps at bedside and overnight",
+        "Need concise, trustworthy just-in-time references",
+        "High cognitive load and low time"
+      ],
+      "jobs_to_be_done": [
+        "Rapid learning while delivering care",
+        "Check calculations and thresholds",
+        "Build confidence quickly"
+      ],
+      "adoption_drivers": [
+        "Clarity",
+        "Speed",
+        "Mobile-first design"
+      ],
+      "retention_levers": [
+        "Microlearning",
+        "Case-of-day",
+        "Board-style question loops"
+      ],
+      "willingness_to_pay": 5.4
+    },
+    {
+      "id": "clinic_leader",
+      "name": "Clinic Medical Director",
+      "setting": "operations_governance",
+      "share_estimate": 0.08,
+      "frequency_weight": 0.75,
+      "pain_points": [
+        "Hard to standardize guideline usage across teams",
+        "Limited visibility into quality and adherence",
+        "Need scalable onboarding resources"
+      ],
+      "jobs_to_be_done": [
+        "Standardize care pathways",
+        "Reduce variation and medication errors",
+        "Track adoption and outcomes"
+      ],
+      "adoption_drivers": [
+        "Governance",
+        "Risk reduction",
+        "Institutional controls"
+      ],
+      "retention_levers": [
+        "Admin dashboards",
+        "Audit logs",
+        "Org-level pathway packs"
+      ],
+      "willingness_to_pay": 8.3
+    }
+  ],
+  "role_lenses": [
+    {
+      "role": "PM",
+      "focus": ["workflow frequency", "retention loops", "adoption friction", "north-star metrics"]
+    },
+    {
+      "role": "Staff Engineering",
+      "focus": ["architecture boundaries", "data update pipeline", "governance controls", "testability"]
+    },
+    {
+      "role": "Clinical Governance",
+      "focus": ["reference provenance", "auditability", "medical safety", "change management"]
+    },
+    {
+      "role": "CMO",
+      "focus": ["SEO clusters", "distribution channels", "category ownership", "brand authority"]
+    },
+    {
+      "role": "CFO",
+      "focus": ["unit economics", "margin", "pricing power", "sales efficiency"]
+    },
+    {
+      "role": "CEO",
+      "focus": ["strategic moat", "market expansion", "execution velocity", "risk profile"]
+    }
+  ],
+  "north_star_metrics": [
+    {
+      "id": "daily_clinician_active",
+      "name": "Daily Clinician Active Users",
+      "target_year1": 45000
+    },
+    {
+      "id": "weekly_return_rate",
+      "name": "7-Day Return Rate",
+      "target_year1": 0.58
+    },
+    {
+      "id": "tool_to_reference_depth",
+      "name": "Tool-to-Reference Depth",
+      "target_year1": 2.4
+    },
+    {
+      "id": "median_time_to_answer_seconds",
+      "name": "Median Time-to-Answer (seconds)",
+      "target_year1": 18
+    },
+    {
+      "id": "institutional_logo_count",
+      "name": "Institutional Accounts",
+      "target_year1": 220
+    }
+  ]
+}

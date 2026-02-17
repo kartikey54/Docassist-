@@ -1,0 +1,133 @@
+# Pediatric Evidence Register
+
+Date: 2026-02-17
+
+## Domain Summary
+
+| Domain | Group | Tier | Source | Pages | Top Workflow | Top Archetype | Sample Error |
+|---|---|---|---|---:|---|---|---|
+| aafp.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://aafp.org/calculators/ => fetch failed |
+| aap.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://aap.org/calculators/ => fetch failed |
+| acponline.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://acponline.org/calculators/ => fetch failed |
+| bmj.com | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://bmj.com/calculators/ => fetch failed |
+| cdc.gov | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://cdc.gov/calculators/ => fetch failed |
+| clinicaltrials.gov | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://clinicaltrials.gov/calculators/ => fetch failed |
+| cochrane.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://cochrane.org/calculators/ => fetch failed |
+| fda.gov | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://fda.gov/calculators/ => fetch failed |
+| guidelinecentral.com | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://guidelinecentral.com/calculators/ => fetch failed |
+| healthychildren.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://healthychildren.org/calculators/ => fetch failed |
+| hhs.gov | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://hhs.gov/calculators/ => fetch failed |
+| hrsa.gov | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://hrsa.gov/calculators/ => fetch failed |
+| idsociety.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://idsociety.org/calculators/ => fetch failed |
+| ismp.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://ismp.org/calculators/ => fetch failed |
+| jamanetwork.com | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://jamanetwork.com/calculators/ => fetch failed |
+| jointcommission.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://jointcommission.org/calculators/ => fetch failed |
+| medlineplus.gov | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://medlineplus.gov/calculators/ => fetch failed |
+| nature.com | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://nature.com/calculators/ => fetch failed |
+| ncbi.nlm.nih.gov | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://ncbi.nlm.nih.gov/calculators/ => fetch failed |
+| nccn.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://nccn.org/calculators/ => fetch failed |
+| nejm.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://nejm.org/calculators/ => fetch failed |
+| nice.org.uk | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://nice.org.uk/calculators/ => fetch failed |
+| nih.gov | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://nih.gov/calculators/ => fetch failed |
+| nlm.nih.gov | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://nlm.nih.gov/calculators/ => fetch failed |
+| publications.aap.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://publications.aap.org/calculators/ => fetch failed |
+| sign.ac.uk | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://sign.ac.uk/calculators/ => fetch failed |
+| thelancet.com | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://thelancet.com/calculators/ => fetch failed |
+| tripdatabase.com | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://tripdatabase.com/calculators/ => fetch failed |
+| uspstf.org | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://uspstf.org/calculators/ => fetch failed |
+| who.int | guidelines_and_authority | authority | cache | 0 | (none) | (none) | https://who.int/calculators/ => fetch failed |
+| aace.com | specialty_societies | high | cache | 0 | (none) | (none) | https://aace.com/calculators/ => fetch failed |
+| aahivm.org | specialty_societies | high | cache | 0 | (none) | (none) | https://aahivm.org/calculators/ => fetch failed |
+| aans.org | specialty_societies | high | cache | 0 | (none) | (none) | https://aans.org/calculators/ => fetch failed |
+| aao.org | specialty_societies | high | cache | 0 | (none) | (none) | https://aao.org/calculators/ => fetch failed |
+| aapd.org | specialty_societies | high | cache | 0 | (none) | (none) | https://aapd.org/calculators/ => fetch failed |
+| aapm.org | specialty_societies | high | cache | 0 | (none) | (none) | https://aapm.org/calculators/ => fetch failed |
+| aasm.org | specialty_societies | high | cache | 0 | (none) | (none) | https://aasm.org/calculators/ => fetch failed |
+| aasmnet.org | specialty_societies | high | cache | 0 | (none) | (none) | https://aasmnet.org/calculators/ => fetch failed |
+| abp.org | specialty_societies | high | cache | 0 | (none) | (none) | https://abp.org/calculators/ => fetch failed |
+| academyofconsultantsinpediatrics.com | specialty_societies | high | cache | 0 | (none) | (none) | https://academyofconsultantsinpediatrics.com/calculators/ => fetch failed |
+| acep.org | specialty_societies | high | cache | 0 | (none) | (none) | https://acep.org/calculators/ => fetch failed |
+| acmg.net | specialty_societies | high | cache | 0 | (none) | (none) | https://acmg.net/calculators/ => fetch failed |
+| acog.org | specialty_societies | high | cache | 0 | (none) | (none) | https://acog.org/calculators/ => fetch failed |
+| americanboardortho.com | specialty_societies | high | cache | 0 | (none) | (none) | https://americanboardortho.com/calculators/ => fetch failed |
+| apsa.org | specialty_societies | high | cache | 0 | (none) | (none) | https://apsa.org/calculators/ => fetch failed |
+| asbm.org | specialty_societies | high | cache | 0 | (none) | (none) | https://asbm.org/calculators/ => fetch failed |
+| asnc.org | specialty_societies | high | cache | 0 | (none) | (none) | https://asnc.org/calculators/ => fetch failed |
+| aspho.org | specialty_societies | high | cache | 0 | (none) | (none) | https://aspho.org/calculators/ => fetch failed |
+| childneurologysociety.org | specialty_societies | high | cache | 0 | (none) | (none) | https://childneurologysociety.org/calculators/ => fetch failed |
+| endocrine.org | specialty_societies | high | cache | 0 | (none) | (none) | https://endocrine.org/calculators/ => fetch failed |
+| espghan.org | specialty_societies | high | cache | 0 | (none) | (none) | https://espghan.org/calculators/ => fetch failed |
+| idssociety.org | specialty_societies | high | cache | 0 | (none) | (none) | https://idssociety.org/calculators/ => fetch failed |
+| naspghan.org | specialty_societies | high | cache | 0 | (none) | (none) | https://naspghan.org/calculators/ => fetch failed |
+| pediatricapta.org | specialty_societies | high | cache | 0 | (none) | (none) | https://pediatricapta.org/calculators/ => fetch failed |
+| pids.org | specialty_societies | high | cache | 0 | (none) | (none) | https://pids.org/calculators/ => fetch failed |
+| saem.org | specialty_societies | high | cache | 0 | (none) | (none) | https://saem.org/calculators/ => fetch failed |
+| sccm.org | specialty_societies | high | cache | 0 | (none) | (none) | https://sccm.org/calculators/ => fetch failed |
+| shea-online.org | specialty_societies | high | cache | 0 | (none) | (none) | https://shea-online.org/calculators/ => fetch failed |
+| akronchildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://akronchildrens.org/calculators/ => fetch failed |
+| bcm.edu | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://bcm.edu/calculators/ => fetch failed |
+| childrens.com | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://childrens.com/calculators/ => fetch failed |
+| childrensal.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://childrensal.org/calculators/ => fetch failed |
+| childrenscolorado.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://childrenscolorado.org/calculators/ => fetch failed |
+| childrensdayton.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://childrensdayton.org/calculators/ => fetch failed |
+| childrenshospital.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://childrenshospital.org/calculators/ => fetch failed |
+| childrensmercy.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://childrensmercy.org/calculators/ => fetch failed |
+| childrensmn.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://childrensmn.org/calculators/ => fetch failed |
+| childrensnational.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://childrensnational.org/calculators/ => fetch failed |
+| chla.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://chla.org/calculators/ => fetch failed |
+| chop.edu | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://chop.edu/calculators/ => fetch failed |
+| chp.edu | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://chp.edu/calculators/ => fetch failed |
+| cincinnatichildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://cincinnatichildrens.org/calculators/ => fetch failed |
+| cmich.edu | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://cmich.edu/calculators/ => fetch failed |
+| connecticutchildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://connecticutchildrens.org/calculators/ => fetch failed |
+| cookchildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://cookchildrens.org/calculators/ => fetch failed |
+| dukehealth.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://dukehealth.org/calculators/ => fetch failed |
+| hopkinsmedicine.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://hopkinsmedicine.org/calculators/ => fetch failed |
+| hsc.unm.edu | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://hsc.unm.edu/calculators/ => fetch failed |
+| luriechildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://luriechildrens.org/calculators/ => fetch failed |
+| massgeneral.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://massgeneral.org/calculators/ => fetch failed |
+| montefiore.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://montefiore.org/calculators/ => fetch failed |
+| mottchildren.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://mottchildren.org/calculators/ => fetch failed |
+| nationwidechildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://nationwidechildrens.org/calculators/ => fetch failed |
+| nemours.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://nemours.org/calculators/ => fetch failed |
+| newyorkpresbyterian.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://newyorkpresbyterian.org/calculators/ => fetch failed |
+| nicklauschildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://nicklauschildrens.org/calculators/ => fetch failed |
+| phoenixchildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://phoenixchildrens.org/calculators/ => fetch failed |
+| rch.org.au | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://rch.org.au/calculators/ => fetch failed |
+| rchsd.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://rchsd.org/calculators/ => fetch failed |
+| seattlechildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://seattlechildrens.org/calculators/ => fetch failed |
+| stanfordchildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://stanfordchildrens.org/calculators/ => fetch failed |
+| starship.org.nz | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://starship.org.nz/calculators/ => fetch failed |
+| stjude.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://stjude.org/calculators/ => fetch failed |
+| texaschildrens.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://texaschildrens.org/calculators/ => fetch failed |
+| ucsfhealth.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://ucsfhealth.org/calculators/ => fetch failed |
+| uofmhealth.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://uofmhealth.org/calculators/ => fetch failed |
+| urmc.rochester.edu | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://urmc.rochester.edu/calculators/ => fetch failed |
+| yalemedicine.org | children_hospitals_and_centers | high | cache | 0 | (none) | (none) | https://yalemedicine.org/calculators/ => fetch failed |
+| aliem.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://aliem.com/calculators/ => fetch failed |
+| amboss.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://amboss.com/calculators/ => fetch failed |
+| bmjbestpractice.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://bmjbestpractice.com/calculators/ => fetch failed |
+| clinicalkey.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://clinicalkey.com/calculators/ => fetch failed |
+| dontforgetthebubbles.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://dontforgetthebubbles.com/calculators/ => fetch failed |
+| drugs.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://drugs.com/calculators/ => fetch failed |
+| dynamed.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://dynamed.com/calculators/ => fetch failed |
+| emdocs.net | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://emdocs.net/calculators/ => fetch failed |
+| epocrates.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://epocrates.com/calculators/ => fetch failed |
+| fpnotebook.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://fpnotebook.com/calculators/ => fetch failed |
+| goodrx.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://goodrx.com/calculators/ => fetch failed |
+| healthline.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://healthline.com/calculators/ => fetch failed |
+| lecturio.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://lecturio.com/calculators/ => fetch failed |
+| litfl.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://litfl.com/calculators/ => fetch failed |
+| mdcalc.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://mdcalc.com/calculators/ => fetch failed |
+| medbullets.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://medbullets.com/calculators/ => fetch failed |
+| medicinenet.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://medicinenet.com/calculators/ => fetch failed |
+| medscape.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://medscape.com/calculators/ => fetch failed |
+| medstudy.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://medstudy.com/calculators/ => fetch failed |
+| merckmanuals.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://merckmanuals.com/calculators/ => fetch failed |
+| msdmanuals.com | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://msdmanuals.com/calculators/ => fetch failed |
+| openpediatrics.org | calculator_reference_competitors | high | cache | 0 | (none) | (none) | https://openpediatrics.org/calculators/ => fetch failed |
+
+## Page-Level Evidence Samples
+
+- No analyzable page-level evidence was extracted in this run.
+- Most targets likely returned blocked/non-HTML/timeout responses; review Sample Error column and adjust crawl policy.

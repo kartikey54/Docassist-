@@ -4,3 +4,4 @@ node_modules/
 Dify/volumes/
 Dify/.env
 uptimeKuma/data/*.db*
+data/intel/peds/cache/

@@ -1,0 +1,75 @@
+{
+  "version": "2026-02-17",
+  "specialty": "pediatrics",
+  "opportunity_dimensions": {
+    "workflow_demand": 0.19,
+    "clinical_impact": 0.16,
+    "differentiation_gap": 0.14,
+    "seo_capture": 0.13,
+    "retention_loop_strength": 0.11,
+    "monetization_potential": 0.09,
+    "implementation_feasibility": 0.09,
+    "governance_readiness": 0.09
+  },
+  "tier_multipliers": {
+    "authority": 1.28,
+    "high": 1.12,
+    "medium": 1.0,
+    "low": 0.9
+  },
+  "group_signal_multipliers": {
+    "guidelines_and_authority": 1.22,
+    "specialty_societies": 1.14,
+    "children_hospitals_and_centers": 1.08,
+    "calculator_reference_competitors": 1.16,
+    "education_training_and_traffic_sources": 0.98
+  },
+  "archetype_signal_multipliers": {
+    "calculator": 1.18,
+    "dosing_engine": 1.2,
+    "pathway": 1.14,
+    "reference_hub": 1.05,
+    "documentation_assistant": 1.02,
+    "family_handout": 0.92,
+    "followup_scheduler": 0.9,
+    "visit_bundle": 1.03,
+    "quality_dashboard": 0.88,
+    "training_microlearning": 0.95
+  },
+  "horizon_thresholds": {
+    "h1_score_min": 69,
+    "h2_score_min": 60,
+    "h3_score_min": 48
+  },
+  "execution_constraints": {
+    "max_h1_items": 14,
+    "max_h2_items": 18,
+    "min_rounds": 20,
+    "no_unresolved_blockers": true
+  },
+  "scoring_constants": {
+    "max_competitor_intensity": 10,
+    "gap_floor": 1,
+    "gap_ceiling": 10,
+    "default_seo_baseline": 4.2,
+    "default_retention_baseline": 4.0,
+    "default_monetization_baseline": 3.8
+  },
+  "financial_assumptions": {
+    "base_monthly_active_users_start": 22000,
+    "base_monthly_growth_rate": 0.08,
+    "peds_clinician_addressable_market": 1200000,
+    "premium_adoption_rate_year1": 0.02,
+    "premium_price_per_month_usd": 29,
+    "institutional_license_price_per_year_usd": 2400,
+    "institutional_account_target_year1": 220,
+    "content_cac_usd": 5.5,
+    "organic_share_target": 0.62,
+    "gross_margin_target": 0.85
+  },
+  "risk_thresholds": {
+    "governance_high_risk_below": 4.0,
+    "maintenance_high_risk_above": 7.0,
+    "complexity_high_risk_above": 7.0
+  }
+}
