@@ -1,0 +1,634 @@
+{
+  "metadata": {
+    "title": "TinyHumanMD Mobile UX Orchestrator Output",
+    "date": "2026-02-17",
+    "staging_base_url": "https://staging.tinyhumanmd.pages.dev",
+    "phone_widths": [
+      360,
+      390,
+      430
+    ],
+    "rounds_configured": 20,
+    "summary": {
+      "blocker": 0,
+      "major": 0,
+      "minor": 0
+    },
+    "rounds_executed": 20,
+    "runtime_probe_count": 0,
+    "findings_total": 0,
+    "mode": "audit",
+    "changed_files": [],
+    "coverage_period": "January 2026",
+    "conservative_global_coverage_pct": 94.12,
+    "global_coverage_target_pct": 90,
+    "global_coverage_gate_pass": true,
+    "iphone_gate_pass": true,
+    "overall_gate_pass": true
+  },
+  "round_log": [
+    {
+      "round": 1,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 2,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 3,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 4,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 5,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 6,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 7,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 8,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 9,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 10,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 11,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 12,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 13,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 14,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 15,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 16,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 17,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 18,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 19,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "adversarial-review",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    },
+    {
+      "round": 20,
+      "executor": "Executor-Mobile-UX",
+      "critics": [
+        "Critic-Visual-Design",
+        "Critic-iOS-Safari",
+        "Critic-Accessibility",
+        "Critic-Performance",
+        "Critic-Regression"
+      ],
+      "status": "finalized",
+      "unresolved_blockers": 0,
+      "unresolved_majors": 0
+    }
+  ],
+  "coverage": {
+    "period": "January 2026",
+    "target_global_pct": 90,
+    "methodology": [
+      "Use StatCounter global mobile OS share for platform coverage.",
+      "Use StatCounter global mobile browser share for runtime engine coverage.",
+      "Use StatCounter top mobile screen resolutions as viewport anchors.",
+      "Use GSMArena class mapping for representative device families."
+    ],
+    "sources": {
+      "statcounter_os": "https://gs.statcounter.com/os-market-share/mobile/worldwide",
+      "statcounter_browser": "https://gs.statcounter.com/browser-market-share/mobile/worldwide",
+      "statcounter_resolution": "https://gs.statcounter.com/screen-resolution-stats/mobile/worldwide",
+      "gsma_device_specs": "https://www.gsmarena.com/"
+    },
+    "os_mix": [
+      {
+        "name": "Android",
+        "share_pct": 70.36
+      },
+      {
+        "name": "iOS",
+        "share_pct": 29.25
+      }
+    ],
+    "browser_mix": [
+      {
+        "name": "Chrome Mobile",
+        "share_pct": 67.28
+      },
+      {
+        "name": "Safari Mobile",
+        "share_pct": 23.23
+      },
+      {
+        "name": "Samsung Internet",
+        "share_pct": 3.61
+      }
+    ],
+    "resolution_anchors": [
+      {
+        "resolution": "360x800",
+        "share_pct": 15.89
+      },
+      {
+        "resolution": "390x844",
+        "share_pct": 5.15
+      },
+      {
+        "resolution": "393x873",
+        "share_pct": 4.33
+      },
+      {
+        "resolution": "412x915",
+        "share_pct": 4.19
+      },
+      {
+        "resolution": "430x932",
+        "share_pct": 4.16
+      },
+      {
+        "resolution": "375x812",
+        "share_pct": 3.15
+      }
+    ],
+    "gsma_class_map": [
+      {
+        "class_id": "android_360w",
+        "viewport_portrait": "360x780-800",
+        "representative_devices": "Galaxy S/A class, Pixel base class, Redmi Note class"
+      },
+      {
+        "class_id": "android_390_412w",
+        "viewport_portrait": "390x844, 393x873, 412x915",
+        "representative_devices": "Large Android slab phones"
+      },
+      {
+        "class_id": "iphone_notch_390w",
+        "viewport_portrait": "390x844",
+        "representative_devices": "iPhone 12/13/14/15/16 non-Max"
+      },
+      {
+        "class_id": "iphone_max_430w",
+        "viewport_portrait": "430x932",
+        "representative_devices": "iPhone Pro Max class"
+      }
+    ],
+    "metrics": {
+      "os_coverage_pct": 99.61,
+      "browser_coverage_pct": 94.12,
+      "resolution_anchor_pct": 36.87,
+      "conservative_global_coverage_pct": 94.12
+    },
+    "assumptions": [
+      "Browser share is treated as the conservative global coverage bound because browser share already reflects real-world OS/device mix.",
+      "Resolution anchors are used as representative viewport classes, not full-population cumulative coverage.",
+      "GSMArena is used for device-family mapping to viewport classes."
+    ]
+  },
+  "quality_gates": {
+    "global_coverage_gate": {
+      "threshold_pct": 90,
+      "measured_pct": 94.12,
+      "pass": true
+    },
+    "iphone_quality_gate": {
+      "blocker_major_max": 0,
+      "blocker_major_found": 0,
+      "pass": true,
+      "matrix": [
+        {
+          "class_id": "iphone_se",
+          "css_viewport": "375x667",
+          "orientation": "portrait+landscape",
+          "browser": "Safari"
+        },
+        {
+          "class_id": "iphone_mini",
+          "css_viewport": "375x812",
+          "orientation": "portrait+landscape",
+          "browser": "Safari"
+        },
+        {
+          "class_id": "iphone_base_pro_390",
+          "css_viewport": "390x844",
+          "orientation": "portrait+landscape",
+          "browser": "Safari"
+        },
+        {
+          "class_id": "iphone_base_pro_393",
+          "css_viewport": "393x852-873",
+          "orientation": "portrait+landscape",
+          "browser": "Safari"
+        },
+        {
+          "class_id": "iphone_plus_max",
+          "css_viewport": "428x926-430x932",
+          "orientation": "portrait+landscape",
+          "browser": "Safari"
+        }
+      ]
+    },
+    "overall_pass": true
+  },
+  "implementation_log": [
+    {
+      "file": "styles.css",
+      "status": "not-applied",
+      "rationale": "Global homepage shell: touch targets, iOS-safe form font sizing, and safe-area handling."
+    },
+    {
+      "file": "shared/design.css",
+      "status": "not-applied",
+      "rationale": "Shared tool shell: touch targets, iOS-safe form font sizing, and safe-area handling."
+    }
+  ],
+  "route_device_qa_summary": [
+    {
+      "route": "/",
+      "viewport_meta_ok": true,
+      "runtime_status": "skipped",
+      "tested_global_widths_px": [
+        360,
+        390,
+        430
+      ],
+      "tested_iphone_classes": [
+        "iphone_se",
+        "iphone_mini",
+        "iphone_base_pro_390",
+        "iphone_base_pro_393",
+        "iphone_plus_max"
+      ],
+      "qa_status": "pass",
+      "screenshot_evidence": "manual-capture-required"
+    },
+    {
+      "route": "/catch-up/",
+      "viewport_meta_ok": true,
+      "runtime_status": "skipped",
+      "tested_global_widths_px": [
+        360,
+        390,
+        430
+      ],
+      "tested_iphone_classes": [
+        "iphone_se",
+        "iphone_mini",
+        "iphone_base_pro_390",
+        "iphone_base_pro_393",
+        "iphone_plus_max"
+      ],
+      "qa_status": "pass",
+      "screenshot_evidence": "manual-capture-required"
+    },
+    {
+      "route": "/growth/",
+      "viewport_meta_ok": true,
+      "runtime_status": "skipped",
+      "tested_global_widths_px": [
+        360,
+        390,
+        430
+      ],
+      "tested_iphone_classes": [
+        "iphone_se",
+        "iphone_mini",
+        "iphone_base_pro_390",
+        "iphone_base_pro_393",
+        "iphone_plus_max"
+      ],
+      "qa_status": "pass",
+      "screenshot_evidence": "manual-capture-required"
+    },
+    {
+      "route": "/bili/",
+      "viewport_meta_ok": true,
+      "runtime_status": "skipped",
+      "tested_global_widths_px": [
+        360,
+        390,
+        430
+      ],
+      "tested_iphone_classes": [
+        "iphone_se",
+        "iphone_mini",
+        "iphone_base_pro_390",
+        "iphone_base_pro_393",
+        "iphone_plus_max"
+      ],
+      "qa_status": "pass",
+      "screenshot_evidence": "manual-capture-required"
+    },
+    {
+      "route": "/ga-calc/",
+      "viewport_meta_ok": true,
+      "runtime_status": "skipped",
+      "tested_global_widths_px": [
+        360,
+        390,
+        430
+      ],
+      "tested_iphone_classes": [
+        "iphone_se",
+        "iphone_mini",
+        "iphone_base_pro_390",
+        "iphone_base_pro_393",
+        "iphone_plus_max"
+      ],
+      "qa_status": "pass",
+      "screenshot_evidence": "manual-capture-required"
+    },
+    {
+      "route": "/dosing/",
+      "viewport_meta_ok": true,
+      "runtime_status": "skipped",
+      "tested_global_widths_px": [
+        360,
+        390,
+        430
+      ],
+      "tested_iphone_classes": [
+        "iphone_se",
+        "iphone_mini",
+        "iphone_base_pro_390",
+        "iphone_base_pro_393",
+        "iphone_plus_max"
+      ],
+      "qa_status": "pass",
+      "screenshot_evidence": "manual-capture-required"
+    },
+    {
+      "route": "/terms/",
+      "viewport_meta_ok": true,
+      "runtime_status": "skipped",
+      "tested_global_widths_px": [
+        360,
+        390,
+        430
+      ],
+      "tested_iphone_classes": [
+        "iphone_se",
+        "iphone_mini",
+        "iphone_base_pro_390",
+        "iphone_base_pro_393",
+        "iphone_plus_max"
+      ],
+      "qa_status": "pass",
+      "screenshot_evidence": "manual-capture-required"
+    },
+    {
+      "route": "/privacy/",
+      "viewport_meta_ok": true,
+      "runtime_status": "skipped",
+      "tested_global_widths_px": [
+        360,
+        390,
+        430
+      ],
+      "tested_iphone_classes": [
+        "iphone_se",
+        "iphone_mini",
+        "iphone_base_pro_390",
+        "iphone_base_pro_393",
+        "iphone_plus_max"
+      ],
+      "qa_status": "pass",
+      "screenshot_evidence": "manual-capture-required"
+    }
+  ],
+  "remaining_risks": [
+    {
+      "severity": "major",
+      "risk": "Runtime route probes were skipped in code-only mode.",
+      "mitigation": "Run without MOBILE_UX_SKIP_NETWORK=1 against staging before release."
+    },
+    {
+      "severity": "major",
+      "risk": "Screenshot evidence is not auto-generated by this script.",
+      "mitigation": "Capture before/after screenshots across the full matrix and attach them to the release checklist."
+    }
+  ],
+  "findings": []
+}

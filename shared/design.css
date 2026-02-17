@@ -411,3 +411,53 @@ img { display: block; max-width: 100%; }
   .tool-title { font-size: 1.375rem; }
   .result-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* MOBILE_UX_ORCHESTRATOR_PHONE_POLISH_START */
+@media (max-width: 768px) {
+  .tool-mobile-btn,
+  .tool-mobile-close,
+  .tool-mobile-list a,
+  .tool-mobile-suggest,
+  .thmd-lang-select,
+  .btn,
+  .form-group input,
+  .form-group select {
+    min-height: 44px;
+  }
+
+  .tool-mobile-btn,
+  .tool-mobile-close {
+    min-width: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tool-mobile-list a,
+  .tool-mobile-suggest,
+  .btn {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .tool-mobile-list a,
+  .tool-mobile-suggest {
+    width: 100%;
+  }
+
+  .form-group input,
+  .form-group select,
+  .thmd-lang-select {
+    font-size: 16px;
+  }
+
+  .tool-header {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .tool-mobile-panel {
+    padding-top: calc(var(--s-6) + env(safe-area-inset-top));
+    padding-bottom: calc(var(--s-6) + env(safe-area-inset-bottom));
+  }
+}
+/* MOBILE_UX_ORCHESTRATOR_PHONE_POLISH_END */
+
