@@ -24,7 +24,7 @@
       recAge: [60, 120, 180], /* 2m, 4m, 6m */
       maxAge: 244, /* 8m 0d — cannot give after this age */
       maxFirstDose: 104, /* 14w6d */
-      notes: 'Max age for dose 1: 14 weeks 6 days. Max age for final dose: 8 months 0 days. Do NOT start series if > 15 weeks.'
+      notes: 'Max age for dose 1: 14 weeks 6 days. Do not initiate the first dose of rotavirus vaccine at ≥15 weeks of age due to increased risk of intussusception. Max age for final dose: 8 months 0 days.'
     },
     {
       id: 'dtap', name: 'DTaP', abbr: 'DTaP', totalDoses: 5,
@@ -96,7 +96,7 @@
       minAge: [3287, 3653],
       minInterval: [150],
       recAge: [4018, 4200], /* 11yr, ~11.5yr */
-      notes: '2 doses if started before 15. 3 doses if started at 15+. Min interval: 5 months (2-dose) or 0/1-2/6m (3-dose).'
+      notes: 'Minimum age is 9 years (not months). 2 doses if started before 15. 3 doses if started at 15+. Min interval: 5 months (2-dose) or 0/1-2/6m (3-dose).'
     }
   ];
 
@@ -173,16 +173,24 @@
 
       /* Check if too old to start (e.g., Rotavirus) */
       if (dosesGiven === 0 && s.maxFirstDose && ageDays > s.maxFirstDose) {
+        var startLimitMsg = 'Too old to start this series (max first dose age exceeded).';
+        if (s.id === 'rv') {
+          startLimitMsg = 'Do not initiate the first dose of rotavirus vaccine at ≥15 weeks of age due to increased risk of intussusception (max first dose age is 14 weeks 6 days).';
+        }
         plan.push({
           vaccine: s, status: 'aged-out', dosesGiven: 0, dosesNeeded: 0,
-          message: 'Too old to start this series (max first dose age exceeded).'
+          message: startLimitMsg
         });
         return;
       }
       if (s.maxAge && ageDays > s.maxAge && dosesGiven < s.totalDoses) {
+        var maxAgeMsg = 'Past maximum age for this vaccine.';
+        if (s.id === 'rv') {
+          maxAgeMsg = 'Past maximum age for rotavirus dosing (8 months 0 days).';
+        }
         plan.push({
           vaccine: s, status: 'aged-out', dosesGiven: dosesGiven, dosesNeeded: 0,
-          message: 'Past maximum age for this vaccine.'
+          message: maxAgeMsg
         });
         return;
       }

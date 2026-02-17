@@ -386,6 +386,20 @@ img { display: block; max-width: 100%; }
   background: var(--c-primary-soft); color: var(--c-primary);
   font-weight: 600; font-size: var(--text-xs);
 }
+.cu-legend { margin-top: 6px; }
+.cu-legend summary {
+  color: var(--c-primary); font-size: var(--text-xs); font-weight: 600;
+  cursor: pointer; user-select: none;
+}
+.cu-legend summary:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; border-radius: 4px; }
+.cu-legend[open] summary { margin-bottom: 4px; }
+.cu-legend-body {
+  color: var(--c-text-secondary); font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+}
+.cu-legend-inline { margin-top: 4px; }
+.cu-legend-card { margin-top: 8px; }
+.cu-legend-modal { margin-top: 8px; margin-bottom: 2px; }
 
 /* ── Timeline ────────────────────────────────────────────────── */
 .timeline-wrap {
