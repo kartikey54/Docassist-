@@ -11,8 +11,7 @@
     { href: '/growth/',       label: 'Growth',     id: 'growth' },
     { href: '/bili/',         label: 'Bilirubin',  id: 'bili' },
     { href: '/ga-calc/',      label: 'GA Calc',    id: 'ga-calc' },
-    { href: '/dosing/',       label: 'Dosing',     id: 'dosing' },
-    { href: '/ckid-bp/',      label: 'CKiD U25/BP', id: 'ckid-bp' }
+    { href: '/dosing/',       label: 'Dosing',     id: 'dosing' }
   ];
 
   var LOGO_SVG = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 6.5V12c0 5 3.4 9.3 8 10.5 4.6-1.2 8-5.5 8-10.5V6.5L12 2z" fill="var(--c-primary)" opacity=".15" stroke="var(--c-primary)" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 8.5v7M8.5 12h7" stroke="var(--c-primary)" stroke-width="2" stroke-linecap="round"/></svg>';

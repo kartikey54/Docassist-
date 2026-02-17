@@ -397,7 +397,6 @@ img { display: block; max-width: 100%; }
   color: var(--c-text-secondary); font-size: var(--text-xs);
   line-height: var(--leading-normal);
 }
-.cu-legend-inline { margin-top: 4px; }
 .cu-legend-card { margin-top: 8px; }
 .cu-legend-modal { margin-top: 8px; margin-bottom: 2px; }
 
@@ -471,6 +470,24 @@ img { display: block; max-width: 100%; }
 .card-detail strong { font-weight: 600; color: var(--c-text); }
 .card-detail ul { margin: var(--s-2) 0 0 var(--s-4); }
 .card-detail li { margin-bottom: 3px; }
+.age-dose-caveat {
+  margin-top: var(--s-3);
+  padding-top: var(--s-2);
+  border-top: 1px dashed var(--c-border);
+}
+.age-dose-caveat summary {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--c-primary);
+  cursor: pointer;
+}
+.age-dose-caveat ul {
+  margin: var(--s-2) 0 0 var(--s-4);
+  color: var(--c-text-secondary);
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+}
+.age-dose-caveat li { margin-bottom: 4px; }
 
 /* ── Pregnancy ───────────────────────────────────────────────── */
 .preg-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-6); }
