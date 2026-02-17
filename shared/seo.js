@@ -15,11 +15,11 @@
 
   /* Render related tools block */
   var TOOLS = [
-    { href: '/', title: 'Immunization Schedule', desc: 'CDC 2025 vaccine schedule, birth to 18 years' },
+    { href: '/', title: 'Immunization Schedule', desc: 'AAP-first child and adolescent schedule, birth to 18 years' },
     { href: '/growth/', title: 'Growth Charts', desc: 'WHO, CDC & Fenton percentile calculator' },
     { href: '/bili/', title: 'Bilirubin Calculator', desc: 'AAP 2022 phototherapy thresholds' },
     { href: '/ga-calc/', title: 'Gestational Age', desc: 'GA, corrected age & due date calculator' },
-    { href: '/catch-up/', title: 'Catch-Up Vaccines', desc: 'Personalized catch-up immunization plan' },
+    { href: '/catch-up/', title: 'Catch-Up Vaccines', desc: 'AAP-endorsed catch-up framework and dose guidance' },
     { href: '/dosing/', title: 'Dosing Calculator', desc: 'Weight-based pediatric drug doses' }
   ];
 

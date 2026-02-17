@@ -1,6 +1,6 @@
 /* ================================================================
    TinyHumanMD | Application
-   Premium clinical-grade immunization schedule
+   AAP-first pediatric immunization schedule
    ================================================================ */
 (function () {
   'use strict';
@@ -31,7 +31,7 @@
     {id:'hpv',name:'Human Papillomavirus',abbr:'HPV',desc:'Prevents HPV infections causing cervical, anal, oropharyngeal cancers and genital warts.',notes:'Routine at 11-12 years (minimum age to start is 9 years, not months). Before 15: 2-dose series. At 15+: 3-dose series.',contra:'Severe allergic reaction after a previous dose or to a vaccine component.',schedule:{'7yr':{t:'shared',l:'Can begin'},'11yr':{t:'rec',l:'1st'},'13yr':{t:'rec',l:'2nd'},'16yr':{t:'catch',l:'1st-2nd'},'17yr':{t:'catch',l:'1st-3rd'}},cuO:{g:'older',min:'9 years',int:[{i:'Routine dosing intervals recommended.'}]}},
     {id:'menb',name:'Meningococcal B',abbr:'MenB',desc:'Protects against serogroup B meningococcal disease. Based on shared clinical decision-making.',notes:'Shared decision-making for 16-23 yr olds (preferred 16-18). 2-dose MenB-4C or 2-3 dose MenB-FHbp.',contra:'Severe allergic reaction after a previous dose or to a vaccine component.',schedule:{'16yr':{t:'shared',l:'2-3 doses'},'17yr':{t:'shared',l:'2-3 doses'}}},
     {id:'rsv',name:'RSV (Nirsevimab)',abbr:'RSV-mAb',desc:'Monoclonal antibody for passive immunization against respiratory syncytial virus in infants.',notes:'1 dose for infants in/entering first RSV season. 2nd season dose for 8-19 mo at increased risk.',contra:'Severe allergic reaction after a previous dose or to a vaccine component.',schedule:{birth:{t:'rec',l:'1 dose'},'1mo':{t:'rec',l:'1 dose'},'2mo':{t:'rec',l:'1 dose'},'4mo':{t:'rec',l:'1 dose'},'6mo':{t:'rec',l:'1 dose'},'9mo':{t:'risk',l:'2nd season'},'12mo':{t:'risk',l:'2nd season'},'15mo':{t:'risk',l:'2nd season'},'18mo':{t:'risk',l:'2nd season'}}},
-    {id:'covid',name:'COVID-19',abbr:'COVID',desc:'Protects against SARS-CoV-2 infection. Updated vaccines recommended seasonally.',notes:'See current CDC guidance. Available for ages 6 months and older.',contra:'Severe allergic reaction after a previous dose or to a vaccine component.',schedule:{'6mo':{t:'note',l:'See notes'},'9mo':{t:'note',l:'See notes'},'12mo':{t:'note',l:'See notes'},'15mo':{t:'note',l:'See notes'},'18mo':{t:'note',l:'See notes'},'2yr':{t:'note',l:'See notes'},'4yr':{t:'note',l:'See notes'},'7yr':{t:'note',l:'See notes'},'11yr':{t:'note',l:'See notes'},'13yr':{t:'note',l:'See notes'},'16yr':{t:'note',l:'See notes'},'17yr':{t:'note',l:'See notes'}}},
+    {id:'covid',name:'COVID-19',abbr:'COVID',desc:'Protects against SARS-CoV-2 infection. Updated vaccines recommended seasonally.',notes:'See current AAP and CDC guidance. Available for ages 6 months and older.',contra:'Severe allergic reaction after a previous dose or to a vaccine component.',schedule:{'6mo':{t:'note',l:'See notes'},'9mo':{t:'note',l:'See notes'},'12mo':{t:'note',l:'See notes'},'15mo':{t:'note',l:'See notes'},'18mo':{t:'note',l:'See notes'},'2yr':{t:'note',l:'See notes'},'4yr':{t:'note',l:'See notes'},'7yr':{t:'note',l:'See notes'},'11yr':{t:'note',l:'See notes'},'13yr':{t:'note',l:'See notes'},'16yr':{t:'note',l:'See notes'},'17yr':{t:'note',l:'See notes'}}},
     {id:'dengue',name:'Dengue',abbr:'DEN4CYD',desc:'Prevents dengue in seropositive individuals in endemic areas, ages 9-16.',notes:'Only for 9-16 yr olds with lab-confirmed previous dengue in endemic areas.',contra:'Severe allergic reaction. Seronegative individuals.',schedule:{'11yr':{t:'risk',l:'Endemic'},'13yr':{t:'risk',l:'Endemic'},'16yr':{t:'risk',l:'Endemic'}},cuO:{g:'older',min:'9 years',int:[{i:'6 months'},{i:'6 months'}]}}
   ];
 
@@ -294,7 +294,7 @@
     var grid=$('#adultGrid');if(!grid)return;
     var items=[
       {b:'Annual',bc:'badge-blue',n:'Influenza (Flu)',d:'One dose every flu season for all adults. High-dose or adjuvanted for 65+.'},
-      {b:'Seasonal',bc:'badge-blue',n:'COVID-19',d:'Updated vaccine recommended for all adults per current CDC guidance.'},
+      {b:'Seasonal',bc:'badge-blue',n:'COVID-19',d:'Updated vaccine recommended for all adults per current ACIP/CDC guidance.'},
       {b:'Every 10 yrs',bc:'badge-neutral',n:'Td / Tdap',d:'Td booster every 10 years. One dose should be Tdap. Especially important around newborns.'},
       {b:'50+',bc:'badge-purple',n:'Shingles (Zoster)',d:'Shingrix: 2-dose series for adults 50+, or 19+ if immunocompromised. Doses 2-6 months apart.'},
       {b:'65+',bc:'badge-purple',n:'Pneumococcal',d:'PCV20 (single dose) or PCV15+PPSV23 for 65+, or younger with risk factors.'},
