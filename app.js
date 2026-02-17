@@ -39,6 +39,18 @@
   var $ = function(s,p){return (p||document).querySelector(s);};
   var $$ = function(s,p){return Array.from((p||document).querySelectorAll(s));};
   var PCLS = {rec:'pill-rec',catch:'pill-catch',risk:'pill-risk',shared:'pill-shared',note:'pill-note'};
+  var AGE_DOSE_CAVEATS = {
+    rv: ['Do NOT start first dose at <strong>&ge;15 weeks</strong>.', 'Final dose max age: <strong>8 months 0 days</strong>.'],
+    hib: ['Any dose at <strong>&ge;15 months</strong> (healthy child) completes series.', 'Routine Hib generally ends by <strong>5 years</strong> unless high-risk.'],
+    pcv: ['Dose at <strong>&ge;24 months</strong> in healthy child may complete series.', 'Routine PCV catch-up generally ends before <strong>5 years</strong>.'],
+    ipv: ['Dose 3 at <strong>&ge;4 years</strong> and <strong>&ge;6 months</strong> after Dose 2 may complete series.', 'Catch-up through <strong>18 years</strong>; final dose needs <strong>&ge;6 months</strong> interval.'],
+    dtap: ['Dose 4 at <strong>&ge;4 years</strong> and <strong>&ge;6 months</strong> after Dose 3 means Dose 5 not needed.', 'First tetanus dose at <strong>&ge;7 years</strong> uses Tdap/Td catch-up.'],
+    tdap: ['Use DTaP for <strong>&lt;7 years</strong>; Tdap/Td for <strong>&ge;7 years</strong>.'],
+    hpv: ['Start before <strong>15 years</strong>: 2-dose series.', 'Start at/after <strong>15 years</strong>: 3-dose series; routine through <strong>26 years</strong>.', 'If unvaccinated and <strong>older than 26 years</strong>, routine catch-up start is not recommended.'],
+    hepb: ['Standard series is 3 doses; final dose at <strong>&ge;24 weeks</strong>.', 'Adolescents <strong>&ge;11 years</strong> may use 2-dose adult formulation (0, 6 months).'],
+    mmr: ['Unvaccinated at <strong>&ge;12 months</strong>: initiate now; total 2-dose series.'],
+    var: ['Unvaccinated at <strong>&ge;13 years</strong>: 2 doses, minimum 4 weeks apart.', 'Younger children: standard 2-dose schedule.']
+  };
 
   function pill(c,vid){
     if(!c) return '';
@@ -46,6 +58,11 @@
   }
 
   function debounce(fn,ms){var t;return function(){clearTimeout(t);var a=arguments,c=this;t=setTimeout(function(){fn.apply(c,a);},ms);};}
+  function renderAgeDoseCaveat(v){
+    var items=AGE_DOSE_CAVEATS[v&&v.id];
+    if(!items||!items.length) return '';
+    return '<details class="age-dose-caveat"><summary>Age/Dose Caveat</summary><ul>'+items.map(function(it){return '<li>'+it+'</li>';}).join('')+'</ul></details>';
+  }
   function renderCatchupLegend(cu,extraClass){
     if(!cu||!cu.legendHtml) return '';
     var cls='cu-legend'+(extraClass?' '+extraClass:'');
@@ -188,7 +205,7 @@
     VACCINES.forEach(function(v){
       var cu=group==='young'?v.cu:v.cuO;if(!cu)return;
       r+='<tr><td>'+v.name+' <span style="opacity:.4;font-weight:400">('+v.abbr+')</span></td>';
-      r+='<td><span class="cu-badge">'+cu.min+'</span>'+(cu.minD?'<span class="cu-muted">'+cu.minD+'</span>':'')+renderCatchupLegend(cu,'cu-legend-inline')+'</td>';
+      r+='<td><span class="cu-badge">'+cu.min+'</span>'+(cu.minD?'<span class="cu-muted">'+cu.minD+'</span>':'')+'</td>';
       for(var i=0;i<mx;i++){var iv=cu.int[i];
         r+=iv?'<td><span class="cu-bold">'+iv.i+'</span>'+(iv.d?'<span class="cu-muted">'+iv.d+'</span>':'')+'</td>':'<td></td>';
       }
@@ -256,7 +273,7 @@
       html+='<div class="card-chips">'+chips+'</div>';
       if(cu) html+='<div class="card-chips"><span class="card-chip card-chip-green">Catch-up: min age '+cu.min+'</span></div>';
       html+='<button class="card-toggle" data-vid="'+v.id+'" aria-expanded="false">More details <svg width="14" height="14" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
-      html+='<div class="card-detail" id="det-'+v.id+'"><p><strong>Notes:</strong> '+v.notes+'</p><p style="margin-top:8px"><strong>Contraindications:</strong> '+v.contra+'</p>';
+      html+='<div class="card-detail" id="det-'+v.id+'"><p><strong>Notes:</strong> '+v.notes+'</p><p style="margin-top:8px"><strong>Contraindications:</strong> '+v.contra+'</p>'+renderAgeDoseCaveat(v);
       if(cu&&cu.int.length){html+='<p style="margin-top:8px"><strong>Catch-up intervals:</strong></p><ul>';cu.int.forEach(function(iv,i){html+='<li>Dose '+(i+1)+' to '+(i+2)+': <strong>'+iv.i+'</strong>'+(iv.d?' <span style="color:var(--c-text-secondary)">'+iv.d+'</span>':'')+'</li>';});html+='</ul>';}
       if(cu) html+=renderCatchupLegend(cu,'cu-legend-card');
       html+='</div></div>';
@@ -347,7 +364,7 @@
       cu.int.forEach(function(iv,i){cuH+='<li>Dose '+(i+1)+' to '+(i+2)+': <strong>'+iv.i+'</strong>'+(iv.d?' <span style="color:var(--c-text-secondary)">'+iv.d+'</span>':'')+'</li>';});
       cuH+='</ul>';
     }
-    ct.innerHTML='<h3>'+v.name+' <span style="font-weight:400;opacity:.5">('+v.abbr+')</span></h3><p class="modal-sub">'+v.desc+'</p><div class="modal-body"><p><strong>Dose schedule</strong></p><div style="display:flex;flex-wrap:wrap;gap:4px;margin:8px 0 16px">'+doses+'</div><p><strong>Clinical notes</strong><br>'+v.notes+'</p><p style="margin-top:12px"><strong>Contraindications</strong><br>'+v.contra+'</p>'+cuH+'</div>';
+    ct.innerHTML='<h3>'+v.name+' <span style="font-weight:400;opacity:.5">('+v.abbr+')</span></h3><p class="modal-sub">'+v.desc+'</p><div class="modal-body"><p><strong>Dose schedule</strong></p><div style="display:flex;flex-wrap:wrap;gap:4px;margin:8px 0 16px">'+doses+'</div><p><strong>Clinical notes</strong><br>'+v.notes+'</p><p style="margin-top:12px"><strong>Contraindications</strong><br>'+v.contra+'</p>'+renderAgeDoseCaveat(v)+cuH+'</div>';
     ov.classList.add('is-open');ov.setAttribute('aria-hidden','false');
     document.body.style.overflow='hidden';
     $('#modalClose').focus();
