@@ -570,6 +570,20 @@ img { display: block; max-width: 100%; }
   margin-top: var(--s-3); font-size: 11px; color: var(--c-text-muted); font-style: italic;
 }
 
+.footer-legal-links {
+  margin-top: var(--s-2);
+  font-size: var(--text-xs);
+}
+
+.footer-legal-links a {
+  font-weight: 600;
+}
+
+.footer-legal-links span {
+  margin: 0 8px;
+  color: var(--c-text-muted);
+}
+
 /* ── FAQ Section ─────────────────────────────────────────────── */
 .faq-section {
   padding: var(--s-12) 0; border-top: 1px solid var(--c-border);
