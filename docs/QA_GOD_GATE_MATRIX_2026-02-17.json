@@ -1,0 +1,827 @@
+{
+  "metadata": {
+    "title": "TinyHumanMD QA God Orchestrator Output",
+    "date": "2026-02-17",
+    "staging_base_url": "https://staging.tinyhumanmd.pages.dev",
+    "medical_authority": {
+      "primary": "AAP",
+      "secondary": [
+        "CDC"
+      ]
+    },
+    "rounds_executed": 30,
+    "runtime_probes_enabled": true,
+    "counts": {
+      "blocker": 3,
+      "major": 15,
+      "minor": 2,
+      "total": 20
+    }
+  },
+  "round_log": [
+    {
+      "round": 1,
+      "executor_submitted": 20,
+      "critics_new_findings": 20,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 2,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 3,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 4,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 5,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 6,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 7,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 8,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 9,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 10,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 11,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 12,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 13,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 14,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 15,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 16,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 17,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 18,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 19,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 20,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 21,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 22,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 23,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 24,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 25,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 26,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 27,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 28,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 29,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    },
+    {
+      "round": 30,
+      "executor_submitted": 20,
+      "critics_new_findings": 0,
+      "open_blockers": 3,
+      "open_majors": 15,
+      "open_minors": 2,
+      "judge_status": "accepted"
+    }
+  ],
+  "findings": [
+    {
+      "gate_id": "G-LEGAL-001",
+      "domain": "technical",
+      "severity": "blocker",
+      "title": "Growth analytics payload includes DOB and measurement date fields",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "growth/growth.js:206",
+          "growth/growth.js:79",
+          "shared/analytics.js:415"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Open /growth/.",
+        "Enter DOB and measurement date, then calculate.",
+        "Inspect analytics payload fields in growth.js and TinyTrack ingestion path."
+      ],
+      "observed": "DOB and measurement_date are serialized into analytics event payloads.",
+      "expected": "Potentially identifying/date-sensitive clinical inputs should be excluded or strongly minimized from analytics payloads.",
+      "risk": "Privacy and compliance exposure for health-adjacent user data.",
+      "fix_hint": "Strip DOB/date fields from analytics events and retain only coarse, non-identifying derived categories.",
+      "owner": "analytics"
+    },
+    {
+      "gate_id": "G-MED-001",
+      "domain": "medical",
+      "severity": "blocker",
+      "title": "Catch-up engine cannot validate dose chronology (checkbox counts only)",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "catch-up/catch-up.js:162",
+          "catch-up/index.html:36"
+        ],
+        "runtime_refs": [],
+        "citations": [
+          "AAP Immunizations (primary): https://www.aap.org/en/patient-care/immunizations/",
+          "CDC Catch-up Schedule (secondary): https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-catch-up.html"
+        ]
+      },
+      "repro_steps": [
+        "Open /catch-up/.",
+        "Note only dose checkboxes are collected per vaccine; no per-dose dates are entered.",
+        "Generate plan for a child with delayed and irregular prior timing."
+      ],
+      "observed": "Tool represents prior history as dose counts, not dated administrations, while advertising next-dose planning.",
+      "expected": "Catch-up planning should capture date-aware prior dose validity when claiming interval-sensitive planning.",
+      "risk": "Incorrect next-step recommendations when historical doses violate minimum intervals or age validity.",
+      "fix_hint": "Add per-dose date capture and validation pipeline before forecasting.",
+      "owner": "logic"
+    },
+    {
+      "gate_id": "G-MED-002",
+      "domain": "medical",
+      "severity": "blocker",
+      "title": "Dosing calculator displays minimum-age notes but has no age-gating enforcement",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "data/dosing-reference.json:34",
+          "data/dosing-reference.json:174",
+          "dosing/dosing.js:92",
+          "dosing/index.html:42"
+        ],
+        "runtime_refs": [],
+        "citations": [
+          "AAP Immunizations (primary): https://www.aap.org/en/patient-care/immunizations/"
+        ]
+      },
+      "repro_steps": [
+        "Open /dosing/.",
+        "Enter weight only (no age input exists).",
+        "Observe ibuprofen/diphenhydramine dose outputs are still generated regardless of child age."
+      ],
+      "observed": "Minimum-age constraints exist in data (Ibuprofen (Advil/Motrin), Diphenhydramine (Benadryl)) but are not algorithmically enforced.",
+      "expected": "Medication outputs with age restrictions should require age input and enforce hard-stop/guardrails.",
+      "risk": "Unsafe dose display for age-ineligible patients.",
+      "fix_hint": "Add patient age input, evaluate med.minAge rules before output, and block/flag ineligible results.",
+      "owner": "logic"
+    },
+    {
+      "gate_id": "G-CROSS-001",
+      "domain": "cross",
+      "severity": "major",
+      "title": "Legal positioning and clinician-targeted structured data are materially inconsistent",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "terms/index.html:53",
+          "terms/index.html:103",
+          "index.html:325"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Review terms page language on medical-tool restrictions.",
+        "Review homepage JSON-LD positioning and audience targeting.",
+        "Compare normative legal statement against marketed schema role."
+      ],
+      "observed": "Terms disclaim medical-tool use while schema explicitly positions clinician-facing medical web application context.",
+      "expected": "Legal, product, and structured-data positioning should be coherent and non-contradictory.",
+      "risk": "Legal ambiguity and compliance exposure for intended-use representation.",
+      "fix_hint": "Harmonize legal language with actual product intent and schema declarations.",
+      "owner": "legal"
+    },
+    {
+      "gate_id": "G-LEGAL-002",
+      "domain": "cross",
+      "severity": "major",
+      "title": "\"No tracking\" copy conflicts with active analytics/fingerprinting stack",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "catch-up/index.html:77",
+          "growth/index.html:119",
+          "bili/index.html:90",
+          "ga-calc/index.html:89",
+          "dosing/index.html:73",
+          "shared/analytics.js:41",
+          "shared/analytics.js:182",
+          "shared/analytics.js:233",
+          "shared/analytics.js:279"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Open any calculator route showing the privacy banner.",
+        "Review shared/analytics.js initialization and tracking methods.",
+        "Compare live behavior with on-page no-tracking statement."
+      ],
+      "observed": "Privacy banner states no tracking while analytics script initializes multi-provider tracking and fingerprint collection.",
+      "expected": "Public privacy claims should accurately reflect active telemetry behavior.",
+      "risk": "Regulatory, legal, and trust risk due to contradictory representations.",
+      "fix_hint": "Align copy and policy with actual behavior or disable tracking paths that contradict current statements.",
+      "owner": "legal"
+    },
+    {
+      "gate_id": "G-LEGAL-003",
+      "domain": "technical",
+      "severity": "major",
+      "title": "Analytics initializes automatically with hardcoded GA fallback and no consent gate",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "shared/analytics.js:27",
+          "shared/analytics.js:563",
+          "shared/analytics.js:564",
+          "shared/analytics.js:566"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Open shared/analytics.js init flow.",
+        "Confirm no consent/opt-in check before provider initialization.",
+        "Confirm GA fallback ID is hardcoded."
+      ],
+      "observed": "Tracking providers initialize on load with fallback GA ID and no explicit consent branch.",
+      "expected": "Consent-sensitive tracking should be gated and fallback IDs should not silently activate in production paths.",
+      "risk": "Privacy/legal exposure and uncontrolled telemetry in environments expecting opt-in behavior.",
+      "fix_hint": "Introduce explicit consent state gate and remove implicit hardcoded production measurement defaults.",
+      "owner": "legal"
+    },
+    {
+      "gate_id": "G-LEGAL-004",
+      "domain": "technical",
+      "severity": "major",
+      "title": "Do-Not-Track value is collected but not used for tracking suppression",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "shared/analytics.js:56",
+          "shared/analytics.js:41",
+          "shared/analytics.js:563"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Inspect deviceInfo collection in shared/analytics.js.",
+        "Search for control flow that disables tracking based on doNotTrack.",
+        "Observe that value is captured but not enforced."
+      ],
+      "observed": "DNT is tracked as metadata rather than used as a policy gate.",
+      "expected": "If DNT is represented as respected behavior, analytics init should branch accordingly.",
+      "risk": "Potential deceptive privacy posture and compliance risk.",
+      "fix_hint": "Add explicit pre-init DNT gate or remove claims implying DNT-based suppression.",
+      "owner": "legal"
+    },
+    {
+      "gate_id": "G-LEGAL-005",
+      "domain": "technical",
+      "severity": "major",
+      "title": "Geolocation path uses ip-api free endpoint over HTTP URL pattern in code",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "shared/analytics.js:109",
+          "shared/analytics.js:107"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Inspect getIPGeolocation() in shared/analytics.js.",
+        "Observe fallback endpoint and provider assumptions.",
+        "Assess usage constraints/security posture for production telemetry."
+      ],
+      "observed": "Code defaults to free ip-api endpoint path when key is absent.",
+      "expected": "Production telemetry should use secure, policy-approved geolocation providers and explicit contractual limits.",
+      "risk": "Reliability/compliance risk and weaker transport/provider posture.",
+      "fix_hint": "Move geolocation behind first-party endpoint or approved provider with explicit HTTPS and governance controls.",
+      "owner": "ops"
+    },
+    {
+      "gate_id": "G-MED-003",
+      "domain": "medical",
+      "severity": "major",
+      "title": "GA term-status thresholds are shifted from standard obstetric category boundaries",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "ga-calc/ga-calc.js:124"
+        ],
+        "runtime_refs": [],
+        "citations": [
+          "ACOG Term Definitions (secondary): https://www.acog.org/womens-health/faqs/when-pregnancy-goes-past-your-due-date"
+        ]
+      },
+      "repro_steps": [
+        "Open /ga-calc/.",
+        "Inspect termStatus conditional thresholds in ga-calc.js.",
+        "Compare threshold boundaries to standard term-category definitions."
+      ],
+      "observed": "Current day cutoffs classify term categories with late boundaries that do not align with standard bins.",
+      "expected": "Term classifications should map accurately to accepted gestational age bins.",
+      "risk": "Incorrect term-status labeling in clinical communication.",
+      "fix_hint": "Replace hardcoded thresholds with validated constants and add unit tests for boundary days.",
+      "owner": "logic"
+    },
+    {
+      "gate_id": "G-MED-004",
+      "domain": "medical",
+      "severity": "major",
+      "title": "Growth chart metric-tab click path drops Fenton context and redraws via WHO/CDC path",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "growth/growth.js:394",
+          "growth/growth.js:259",
+          "growth/growth.js:378"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Open /growth/ and run a preterm case using Fenton.",
+        "Switch chart tabs after initial calculation.",
+        "Review tab click handler: drawChart is called without useFenton argument."
+      ],
+      "observed": "Tab redraw path does not preserve/use Fenton mode state.",
+      "expected": "Preterm/Fenton mode should persist across tab interactions.",
+      "risk": "Visualization can misrepresent percentile context for preterm patients.",
+      "fix_hint": "Persist calculation context (including useFenton/fentonGaWeeks) and pass through tab redraw calls.",
+      "owner": "logic"
+    },
+    {
+      "gate_id": "G-MED-005",
+      "domain": "medical",
+      "severity": "major",
+      "title": "Bilirubin UI accepts postnatal ages beyond available threshold curve data",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "bili/index.html:57",
+          "data/bili-thresholds.json",
+          "bili/bili.js:30"
+        ],
+        "runtime_refs": [],
+        "citations": [
+          "AAP 2022 Hyperbilirubinemia Guideline (primary): https://publications.aap.org/pediatrics/article/150/3/e2022058859/188726/"
+        ]
+      },
+      "repro_steps": [
+        "Open /bili/ and enter postnatal age > 96h.",
+        "Compare input range to threshold data max age.",
+        "Inspect interpolation behavior at curve tail."
+      ],
+      "observed": "Input allows through 168h while threshold arrays top out at 96h; interpolation clamps to terminal value.",
+      "expected": "Input range and modeled threshold domain should remain aligned or explicitly flagged as extrapolation.",
+      "risk": "False confidence in late-hour threshold interpretation.",
+      "fix_hint": "Either constrain accepted age to supported data range or add explicitly validated extended curves.",
+      "owner": "logic"
+    },
+    {
+      "gate_id": "G-MED-006",
+      "domain": "medical",
+      "severity": "major",
+      "title": "Growth page markets BMI-for-age support but calculator does not implement BMI path",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "growth/index.html:8",
+          "growth/growth.js"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Read growth page metadata/FAQ claims for BMI-for-age.",
+        "Inspect growth.js metric branches and chart tabs.",
+        "Confirm no BMI input/calculation/visualization branch exists."
+      ],
+      "observed": "Public copy includes BMI-for-age language while runtime only computes weight/length/HC.",
+      "expected": "Public capability statements should match implemented calculator behavior.",
+      "risk": "Clinical expectation mismatch and misleading feature claims.",
+      "fix_hint": "Either implement BMI-for-age calculations and UI or remove BMI claims from metadata/content.",
+      "owner": "content"
+    },
+    {
+      "gate_id": "G-OPS-001",
+      "domain": "technical",
+      "severity": "major",
+      "title": "wrangler.toml and staging-wrangler.toml resolve to same project name",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "wrangler.toml:1",
+          "staging-wrangler.toml:1",
+          "scripts/deploy.sh:23",
+          "scripts/deploy.sh:29"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Open wrangler.toml and staging-wrangler.toml.",
+        "Compare name values.",
+        "Review deploy script workflow that swaps wrangler config files in-place."
+      ],
+      "observed": "Both config files currently target \"tinyhumanmd-staging\" with in-place config mutation in deploy flow.",
+      "expected": "Environment configs should clearly separate targets and avoid mutable swap-side effects.",
+      "risk": "Accidental environment cross-deploy and operator error.",
+      "fix_hint": "Use explicit project separation and deploy commands without mutable config swaps.",
+      "owner": "ops"
+    },
+    {
+      "gate_id": "G-RUNTIME-003",
+      "domain": "technical",
+      "severity": "major",
+      "title": "Staging headers confirm one-year immutable cache policy on unversioned JS asset",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [],
+        "runtime_refs": [
+          "https://staging.tinyhumanmd.pages.dev/shared/analytics.js cache-control: public, max-age=31536000, immutable"
+        ],
+        "citations": []
+      },
+      "repro_steps": [
+        "Request https://staging.tinyhumanmd.pages.dev/shared/analytics.js and inspect cache-control headers.",
+        "Compare header policy with non-hashed asset naming strategy."
+      ],
+      "observed": "Runtime response applies long immutable cache policy to stable filename asset.",
+      "expected": "Immutable caching should accompany content-hashed/versioned asset paths.",
+      "risk": "Delayed clinical logic propagation due to cache stickiness.",
+      "fix_hint": "Introduce versioned asset strategy before retaining immutable 1y cache semantics.",
+      "owner": "ops"
+    },
+    {
+      "gate_id": "G-TECH-001",
+      "domain": "technical",
+      "severity": "major",
+      "title": "Bilirubin chart x-axis cap (100h) conflicts with UI input range (0-168h)",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "bili/index.html:57",
+          "bili/bili.js:171"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Open /bili/ and enter age >100h.",
+        "Generate chart and inspect patient point visibility/scaling.",
+        "Review chart x-axis hard cap in bili.js."
+      ],
+      "observed": "Chart axis truncates at 100h despite accepted inputs through 168h.",
+      "expected": "Visualization domain should cover accepted input domain or enforce stricter input limits.",
+      "risk": "User-facing graph may clip or misrepresent entered values.",
+      "fix_hint": "Synchronize axis bounds with validated input limits and threshold data range.",
+      "owner": "frontend"
+    },
+    {
+      "gate_id": "G-TECH-002",
+      "domain": "technical",
+      "severity": "major",
+      "title": "shared/analytics-config.js is referenced but absent from repository",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "shared/analytics-config.js",
+          "index.html:338",
+          "growth/index.html:175",
+          "bili/index.html:141",
+          "catch-up/index.html:124",
+          "dosing/index.html:120",
+          "ga-calc/index.html:134"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Search for shared/analytics-config.js in repo.",
+        "Verify script tag references across route HTML files.",
+        "Load pages in an environment without deploy-time injection and observe missing asset requests."
+      ],
+      "observed": "Multiple pages reference a file that is not present in tracked source.",
+      "expected": "Required runtime assets should be present in source or safely gated when missing.",
+      "risk": "404 errors, config drift, and unpredictable analytics runtime behavior.",
+      "fix_hint": "Commit a safe default config module or harden loader path to handle optional config deterministically.",
+      "owner": "frontend"
+    },
+    {
+      "gate_id": "G-TECH-003",
+      "domain": "technical",
+      "severity": "major",
+      "title": "Security header baseline missing CSP and HSTS directives in _headers",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "_headers:3",
+          "_headers:4",
+          "_headers:5"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Open _headers policy file.",
+        "Check for Content-Security-Policy and Strict-Transport-Security directives.",
+        "Compare to expected hardened baseline for health-adjacent tooling."
+      ],
+      "observed": "Current header policy includes basic headers but omits CSP and HSTS directives.",
+      "expected": "Production header baseline should include CSP and HSTS (where deployment supports HTTPS-only).",
+      "risk": "Increased attack surface and weaker browser-enforced hardening.",
+      "fix_hint": "Add CSP and HSTS directives with staged rollout/testing to avoid breaking required assets.",
+      "owner": "ops"
+    },
+    {
+      "gate_id": "G-TECH-004",
+      "domain": "technical",
+      "severity": "major",
+      "title": "Long immutable caching is applied to unversioned JS/CSS asset names",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "_headers:10",
+          "index.html:336",
+          "index.html:339"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Review _headers static asset cache rules.",
+        "Review HTML script/link tags for versioned filenames or content hashes.",
+        "Assess cache invalidation behavior for clinical logic updates."
+      ],
+      "observed": "Assets are cache-immutable for one year while filenames remain stable/non-hashed.",
+      "expected": "Immutable caching should be paired with hashed or versioned asset paths.",
+      "risk": "Stale clinical logic persisted in clients after important updates.",
+      "fix_hint": "Adopt build-time content hashing or explicit version query strategy and update cache policy accordingly.",
+      "owner": "ops"
+    },
+    {
+      "gate_id": "G-CONTENT-001",
+      "domain": "technical",
+      "severity": "minor",
+      "title": "Metadata governance appears inconsistent across sitemap/page metadata timestamps",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "sitemap.xml:8",
+          "index.html:325"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Inspect sitemap.xml lastmod values.",
+        "Compare page-level dateModified and legal effective dates.",
+        "Assess consistency of update metadata governance."
+      ],
+      "observed": "Cross-file metadata dates are not clearly synchronized by a single publishing workflow.",
+      "expected": "Sitemap/page metadata should reflect a consistent release-date governance process.",
+      "risk": "Indexing drift and audit-trail ambiguity.",
+      "fix_hint": "Generate sitemap and metadata timestamps from a single release pipeline source.",
+      "owner": "seo"
+    },
+    {
+      "gate_id": "G-TECH-005",
+      "domain": "technical",
+      "severity": "minor",
+      "title": "Service worker precache list is hand-maintained and drift-prone",
+      "status": "confirmed",
+      "evidence": {
+        "code_refs": [
+          "sw.js:3",
+          "sw.js:37",
+          "sw.js:38"
+        ],
+        "runtime_refs": [],
+        "citations": []
+      },
+      "repro_steps": [
+        "Open sw.js asset list.",
+        "Compare with project file inventory and route dependencies.",
+        "Assess risk of missing/new assets not reflected in cache list."
+      ],
+      "observed": "Precache inventory is static/manual.",
+      "expected": "Critical cache manifests should be generated or validated automatically.",
+      "risk": "Offline/runtime drift and incomplete cache updates.",
+      "fix_hint": "Generate precache manifest during build or add automated cache-manifest consistency checks.",
+      "owner": "ops"
+    }
+  ]
+}

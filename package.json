@@ -7,7 +7,8 @@
     "deploy:staging": "./scripts/deploy.sh",
     "deploy:prod": "./scripts/deploy.sh && echo 'Choose option 2 for production'",
     "dev": "wrangler pages dev .",
-    "staging": "wrangler pages dev . --config staging-wrangler.toml"
+    "staging": "wrangler pages dev . --config staging-wrangler.toml",
+    "qa:god": "node scripts/qa-god-orchestrator.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.63.0"
