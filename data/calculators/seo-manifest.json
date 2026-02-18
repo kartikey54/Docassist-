@@ -1,0 +1,267 @@
+{
+  "generated_at": "2026-02-18T05:56:23.238Z",
+  "out_date": "2026-02-18",
+  "route_count": 21,
+  "routes": [
+    {
+      "route": "/",
+      "type": "core",
+      "category_slug": "growth-preventive-care",
+      "title": "Immunization Schedule | TinyHumanMD",
+      "description": "AAP-first child and adolescent immunization schedule by age.",
+      "canonical": "https://tinyhumanmd.com/",
+      "keywords": [
+        "aap immunization schedule",
+        "pediatric vaccines"
+      ]
+    },
+    {
+      "route": "/bili/",
+      "type": "core",
+      "category_slug": "emergency-acute-care",
+      "title": "Newborn Bilirubin Calculator | TinyHumanMD",
+      "description": "AAP 2022 phototherapy and exchange transfusion thresholds.",
+      "canonical": "https://tinyhumanmd.com/bili/",
+      "keywords": [
+        "bilirubin calculator",
+        "newborn jaundice"
+      ]
+    },
+    {
+      "route": "/calculators/medication-safety-dosing-engine-v2/",
+      "type": "calculator",
+      "category_slug": "medication-safety-dosing",
+      "title": "Medication Safety Dosing Engine v2 | TinyHumanMD",
+      "description": "Age-gated, weight-based pediatric medication dose engine with safety guardrails.",
+      "canonical": "https://tinyhumanmd.com/calculators/medication-safety-dosing-engine-v2/",
+      "keywords": [
+        "medication safety dosing engine",
+        "pediatric medication calculator",
+        "age gated dosing"
+      ]
+    },
+    {
+      "route": "/calculators/otitis-media-treatment-pediatric/",
+      "type": "calculator",
+      "category_slug": "pediatric-infectious-disease",
+      "title": "Otitis Media Treatment Calculator | TinyHumanMD",
+      "description": "AAP-aligned otitis media treatment decision support with age and severity branching.",
+      "canonical": "https://tinyhumanmd.com/calculators/otitis-media-treatment-pediatric/",
+      "keywords": [
+        "otitis media treatment pediatric",
+        "ear infection child treatment",
+        "aom dosing"
+      ]
+    },
+    {
+      "route": "/calculators/pediatric-antibiotic-dosing/",
+      "type": "calculator",
+      "category_slug": "pediatric-infectious-disease",
+      "title": "Pediatric Antibiotic Dosing Calculator | TinyHumanMD",
+      "description": "Weight-based antibiotic dosing for common outpatient and urgent-care pediatric infections.",
+      "canonical": "https://tinyhumanmd.com/calculators/pediatric-antibiotic-dosing/",
+      "keywords": [
+        "pediatric antibiotic dosing",
+        "amoxicillin dose calculator",
+        "cefdinir dose child"
+      ]
+    },
+    {
+      "route": "/calculators/pediatric-asthma-action-tool/",
+      "type": "calculator",
+      "category_slug": "respiratory-asthma",
+      "title": "Pediatric Asthma Action Tool | TinyHumanMD",
+      "description": "Symptom-based asthma control staging and treatment-step recommendations for children.",
+      "canonical": "https://tinyhumanmd.com/calculators/pediatric-asthma-action-tool/",
+      "keywords": [
+        "pediatric asthma action tool",
+        "asthma control child",
+        "asthma step therapy pediatrics"
+      ]
+    },
+    {
+      "route": "/calculators/pediatric-dehydration-management/",
+      "type": "calculator",
+      "category_slug": "emergency-acute-care",
+      "title": "Pediatric Dehydration Management Calculator | TinyHumanMD",
+      "description": "Maintenance fluids, dehydration deficit estimates, and acute rehydration planning support.",
+      "canonical": "https://tinyhumanmd.com/calculators/pediatric-dehydration-management/",
+      "keywords": [
+        "pediatric dehydration management",
+        "rehydration calculator",
+        "fluid deficit child"
+      ]
+    },
+    {
+      "route": "/calculators/pediatric-fever-calculator/",
+      "type": "calculator",
+      "category_slug": "emergency-acute-care",
+      "title": "Pediatric Fever Calculator | TinyHumanMD",
+      "description": "Fever severity, weight-based antipyretic dosing, and red-flag triage support.",
+      "canonical": "https://tinyhumanmd.com/calculators/pediatric-fever-calculator/",
+      "keywords": [
+        "pediatric fever calculator",
+        "fever in child",
+        "tylenol motrin dose child"
+      ]
+    },
+    {
+      "route": "/calculators/pediatric-sepsis-risk-score/",
+      "type": "calculator",
+      "category_slug": "emergency-acute-care",
+      "title": "Pediatric Sepsis Risk Score | TinyHumanMD",
+      "description": "Rapid bedside sepsis risk stratification using vital-sign and perfusion danger signs.",
+      "canonical": "https://tinyhumanmd.com/calculators/pediatric-sepsis-risk-score/",
+      "keywords": [
+        "pediatric sepsis risk score",
+        "sepsis pediatric calculator",
+        "pediatric triage sepsis"
+      ]
+    },
+    {
+      "route": "/calculators/well-child-visit-checklist/",
+      "type": "calculator",
+      "category_slug": "growth-preventive-care",
+      "title": "Well-Child Visit Checklist | TinyHumanMD",
+      "description": "Age-based pediatric preventive visit checklist with screening and vaccine prompts.",
+      "canonical": "https://tinyhumanmd.com/calculators/well-child-visit-checklist/",
+      "keywords": [
+        "well child visit checklist",
+        "pediatric preventive care checklist",
+        "well visit schedule"
+      ]
+    },
+    {
+      "route": "/catch-up/",
+      "type": "core",
+      "category_slug": "growth-preventive-care",
+      "title": "Catch-Up Vaccine Calculator | TinyHumanMD",
+      "description": "Catch-up immunization planning framework with age and dose guidance.",
+      "canonical": "https://tinyhumanmd.com/catch-up/",
+      "keywords": [
+        "catch up immunization schedule",
+        "vaccine catch up calculator"
+      ]
+    },
+    {
+      "route": "/categories/emergency-acute-care/",
+      "type": "category",
+      "category_slug": "emergency-acute-care",
+      "title": "Emergency and Acute Care",
+      "description": "Rapid pediatric triage calculators for fever, sepsis risk, hydration, and urgent-care decisions.",
+      "canonical": "https://tinyhumanmd.com/categories/emergency-acute-care/",
+      "keywords": [
+        "pediatric sepsis risk",
+        "dehydration management",
+        "pediatric fever calculator"
+      ]
+    },
+    {
+      "route": "/categories/growth-preventive-care/",
+      "type": "category",
+      "category_slug": "growth-preventive-care",
+      "title": "Growth and Preventive Care",
+      "description": "Growth, preventive visit, and developmental workflow calculators for outpatient pediatrics.",
+      "canonical": "https://tinyhumanmd.com/categories/growth-preventive-care/",
+      "keywords": [
+        "well child checklist",
+        "growth pediatric calculator",
+        "preventive care pediatrics"
+      ]
+    },
+    {
+      "route": "/categories/medication-safety-dosing/",
+      "type": "category",
+      "category_slug": "medication-safety-dosing",
+      "title": "Medication Safety and Dosing",
+      "description": "Weight-based medication dosing, safety rails, and age-guarded pediatric prescribing support.",
+      "canonical": "https://tinyhumanmd.com/categories/medication-safety-dosing/",
+      "keywords": [
+        "pediatric dosing calculator",
+        "medication safety",
+        "weight based dosing",
+        "mg/kg calculator"
+      ]
+    },
+    {
+      "route": "/categories/pediatric-infectious-disease/",
+      "type": "category",
+      "category_slug": "pediatric-infectious-disease",
+      "title": "Pediatric Infectious Disease",
+      "description": "Common pediatric infectious disease calculators and treatment planning support for point-of-care use.",
+      "canonical": "https://tinyhumanmd.com/categories/pediatric-infectious-disease/",
+      "keywords": [
+        "pediatric infection calculator",
+        "pediatric antibiotic dosing",
+        "otitis media treatment"
+      ]
+    },
+    {
+      "route": "/categories/respiratory-asthma/",
+      "type": "category",
+      "category_slug": "respiratory-asthma",
+      "title": "Respiratory and Asthma",
+      "description": "Asthma and respiratory pediatric tools for triage and action-plan guidance.",
+      "canonical": "https://tinyhumanmd.com/categories/respiratory-asthma/",
+      "keywords": [
+        "pediatric asthma action plan",
+        "respiratory pediatric calculator",
+        "wheeze pathway"
+      ]
+    },
+    {
+      "route": "/dosing/",
+      "type": "core",
+      "category_slug": "medication-safety-dosing",
+      "title": "Pediatric Dosing Calculator | TinyHumanMD",
+      "description": "Weight-based pediatric dosing with common medications and safety limits.",
+      "canonical": "https://tinyhumanmd.com/dosing/",
+      "keywords": [
+        "pediatric dosing calculator",
+        "mg per kg"
+      ]
+    },
+    {
+      "route": "/ga-calc/",
+      "type": "core",
+      "category_slug": "growth-preventive-care",
+      "title": "Gestational Age Calculator | TinyHumanMD",
+      "description": "GA, corrected age, and EDD support for neonatal and outpatient workflows.",
+      "canonical": "https://tinyhumanmd.com/ga-calc/",
+      "keywords": [
+        "gestational age calculator",
+        "corrected age"
+      ]
+    },
+    {
+      "route": "/growth/",
+      "type": "core",
+      "category_slug": "growth-preventive-care",
+      "title": "Growth Chart Calculator | TinyHumanMD",
+      "description": "WHO, CDC, and Fenton pediatric growth percentiles and z-scores.",
+      "canonical": "https://tinyhumanmd.com/growth/",
+      "keywords": [
+        "pediatric growth chart calculator",
+        "growth percentile"
+      ]
+    },
+    {
+      "route": "/privacy/",
+      "type": "static",
+      "category_slug": "",
+      "title": "",
+      "description": "",
+      "canonical": "https://tinyhumanmd.com/privacy/",
+      "keywords": []
+    },
+    {
+      "route": "/terms/",
+      "type": "static",
+      "category_slug": "",
+      "title": "",
+      "description": "",
+      "canonical": "https://tinyhumanmd.com/terms/",
+      "keywords": []
+    }
+  ]
+}

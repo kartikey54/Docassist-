@@ -1,0 +1,171 @@
+{
+  "generated_at": "2026-02-18T05:55:59.309Z",
+  "by_tool_id": {
+    "core-schedule": [
+      "core-catch-up",
+      "core-growth",
+      "core-ga",
+      "well-child-visit-checklist"
+    ],
+    "core-catch-up": [
+      "core-schedule",
+      "core-growth",
+      "core-ga",
+      "well-child-visit-checklist"
+    ],
+    "core-growth": [
+      "core-schedule",
+      "core-catch-up",
+      "core-ga",
+      "well-child-visit-checklist"
+    ],
+    "core-bilirubin": [
+      "pediatric-sepsis-risk-score",
+      "pediatric-fever-calculator",
+      "pediatric-dehydration-management",
+      "core-schedule",
+      "core-catch-up"
+    ],
+    "core-ga": [
+      "core-schedule",
+      "core-catch-up",
+      "core-growth",
+      "well-child-visit-checklist"
+    ],
+    "core-dosing": [
+      "medication-safety-dosing-engine-v2",
+      "core-schedule",
+      "core-catch-up"
+    ],
+    "pediatric-asthma-action-tool": [
+      "core-schedule",
+      "core-catch-up"
+    ],
+    "medication-safety-dosing-engine-v2": [
+      "core-dosing",
+      "core-schedule",
+      "core-catch-up"
+    ],
+    "pediatric-antibiotic-dosing": [
+      "otitis-media-treatment-pediatric",
+      "core-schedule",
+      "core-catch-up"
+    ],
+    "pediatric-sepsis-risk-score": [
+      "core-bilirubin",
+      "pediatric-fever-calculator",
+      "pediatric-dehydration-management",
+      "core-schedule",
+      "core-catch-up"
+    ],
+    "well-child-visit-checklist": [
+      "core-schedule",
+      "core-catch-up",
+      "core-growth",
+      "core-ga"
+    ],
+    "pediatric-fever-calculator": [
+      "core-bilirubin",
+      "pediatric-sepsis-risk-score",
+      "pediatric-dehydration-management",
+      "core-schedule",
+      "core-catch-up"
+    ],
+    "pediatric-dehydration-management": [
+      "core-bilirubin",
+      "pediatric-sepsis-risk-score",
+      "pediatric-fever-calculator",
+      "core-schedule",
+      "core-catch-up"
+    ],
+    "otitis-media-treatment-pediatric": [
+      "pediatric-antibiotic-dosing",
+      "core-schedule",
+      "core-catch-up"
+    ]
+  },
+  "by_route": {
+    "/": [
+      "/catch-up/",
+      "/growth/",
+      "/ga-calc/",
+      "/calculators/well-child-visit-checklist/"
+    ],
+    "/catch-up/": [
+      "/",
+      "/growth/",
+      "/ga-calc/",
+      "/calculators/well-child-visit-checklist/"
+    ],
+    "/growth/": [
+      "/",
+      "/catch-up/",
+      "/ga-calc/",
+      "/calculators/well-child-visit-checklist/"
+    ],
+    "/bili/": [
+      "/calculators/pediatric-sepsis-risk-score/",
+      "/calculators/pediatric-fever-calculator/",
+      "/calculators/pediatric-dehydration-management/",
+      "/",
+      "/catch-up/"
+    ],
+    "/ga-calc/": [
+      "/",
+      "/catch-up/",
+      "/growth/",
+      "/calculators/well-child-visit-checklist/"
+    ],
+    "/dosing/": [
+      "/calculators/medication-safety-dosing-engine-v2/",
+      "/",
+      "/catch-up/"
+    ],
+    "/calculators/pediatric-asthma-action-tool/": [
+      "/",
+      "/catch-up/"
+    ],
+    "/calculators/medication-safety-dosing-engine-v2/": [
+      "/dosing/",
+      "/",
+      "/catch-up/"
+    ],
+    "/calculators/pediatric-antibiotic-dosing/": [
+      "/calculators/otitis-media-treatment-pediatric/",
+      "/",
+      "/catch-up/"
+    ],
+    "/calculators/pediatric-sepsis-risk-score/": [
+      "/bili/",
+      "/calculators/pediatric-fever-calculator/",
+      "/calculators/pediatric-dehydration-management/",
+      "/",
+      "/catch-up/"
+    ],
+    "/calculators/well-child-visit-checklist/": [
+      "/",
+      "/catch-up/",
+      "/growth/",
+      "/ga-calc/"
+    ],
+    "/calculators/pediatric-fever-calculator/": [
+      "/bili/",
+      "/calculators/pediatric-sepsis-risk-score/",
+      "/calculators/pediatric-dehydration-management/",
+      "/",
+      "/catch-up/"
+    ],
+    "/calculators/pediatric-dehydration-management/": [
+      "/bili/",
+      "/calculators/pediatric-sepsis-risk-score/",
+      "/calculators/pediatric-fever-calculator/",
+      "/",
+      "/catch-up/"
+    ],
+    "/calculators/otitis-media-treatment-pediatric/": [
+      "/calculators/pediatric-antibiotic-dosing/",
+      "/",
+      "/catch-up/"
+    ]
+  }
+}

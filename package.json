@@ -5,6 +5,7 @@
   "scripts": {
     "build": "echo 'Building TinyHumanMD static site'",
     "test:catchup:age": "node --test scripts/tests/catchup-age-ranges.test.mjs",
+    "test:calc:orchestrator": "node --test scripts/tests/calculator-rollout-orchestrator.test.mjs",
     "deploy:staging": "./scripts/deploy.sh",
     "deploy:prod": "./scripts/deploy.sh && echo 'Choose option 2 for production'",
     "deploy:catchup:prod": "./scripts/catchup-age-prod-orchestrator.sh",
@@ -17,7 +18,10 @@
     "qa:peds:orchestrate1000": "node scripts/peds-1000-quality-orchestrator.mjs",
     "qa:peds:intel": "node scripts/peds-strategy-orchestrator.mjs",
     "qa:peds:intel:refresh": "PEDS_INTEL_FORCE_REFRESH=1 node scripts/peds-strategy-orchestrator.mjs",
-    "qa:peds:intel:offline": "PEDS_INTEL_SKIP_NETWORK=1 node scripts/peds-strategy-orchestrator.mjs"
+    "qa:peds:intel:offline": "PEDS_INTEL_SKIP_NETWORK=1 node scripts/peds-strategy-orchestrator.mjs",
+    "qa:calc:plan": "node scripts/calculator-rollout-orchestrator.mjs",
+    "qa:calc:orchestrate": "node scripts/calculator-rollout-orchestrator.mjs --apply",
+    "qa:calc:seo": "node scripts/build-seo-artifacts.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.63.0"
